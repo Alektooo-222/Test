@@ -1,0 +1,11 @@
+{
+	"InstallScripts" : 
+	[
+		"C:/GitHub/TEST/Software/build/Debug/cmake_install.cmake",
+		"C:/GitHub/TEST/Software/build/Debug/etl/cmake_install.cmake",
+		"C:/GitHub/TEST/Software/build/Debug/cmake/stm32cubemx/cmake_install.cmake",
+		"C:/GitHub/TEST/Software/build/Debug/swoTrace/cmake_install.cmake",
+		"C:/GitHub/TEST/Software/build/Debug/dwt/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

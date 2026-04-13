@@ -1,0 +1,23 @@
+{
+    // "config": "Release",
+    "config": "Debug",
+
+    "mcu_server": "localhost",
+
+    "files.associations": {
+        "main.h": "c",
+        "rte_components.h": "c",
+        "core_cm3.h": "c",
+        "stm32f103xb.h": "c",
+        "stm32f1xx_hal.h": "c",
+        "stm32f1xx_hal_conf.h": "c",
+        "stdio.h": "c",
+        "swodebug.h": "c",
+        "stdint.h": "c",
+        "stdlib.h": "c",
+        "math.h": "c",
+        "swotrace.h": "c"
+    },
+    "cortex-debug.variableUseNaturalFormat": true,
+    "cmake.cmakePath": "C:/Program Files/CMake/bin/cmake.exe"
+}
