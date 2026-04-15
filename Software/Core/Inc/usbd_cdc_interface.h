@@ -56,6 +56,14 @@
 #define USARTx_DMA_TX_IRQHandler         DMA2_Stream7_IRQHandler
 #define USARTx_DMA_TX_IRQn               DMA2_Stream7_IRQn
 
+/* #define USARTx_RX_DMA_CHANNEL            DMA_CHANNEL_4
+#define USARTx_RX_DMA_STREAM             DMA2_Stream2
+
+#define USARTx_DMA_RX_IRQHandler         DMA2_Stream2_IRQHandler
+#define USARTx_DMA_RX_IRQn               DMA2_Stream2_IRQn */
+
+
+
 /* Definition for TIMx clock resources */
 #define TIMx                             TIM3
 #define TIMx_CLK_ENABLE                  __HAL_RCC_TIM3_CLK_ENABLE

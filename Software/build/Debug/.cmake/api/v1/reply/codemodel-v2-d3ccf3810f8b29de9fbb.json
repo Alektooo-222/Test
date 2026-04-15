@@ -128,21 +128,21 @@
 				{
 					"directoryIndex" : 2,
 					"id" : "STM32_Drivers::@768a070a0fe75716b479",
-					"jsonFile" : "target-STM32_Drivers-Debug-9a824edeb8d8d097b79c.json",
+					"jsonFile" : "target-STM32_Drivers-Debug-f152d820afbd223361b8.json",
 					"name" : "STM32_Drivers",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 2,
 					"id" : "USB_Device_Library::@768a070a0fe75716b479",
-					"jsonFile" : "target-USB_Device_Library-Debug-4c067b6b0fa3555331f4.json",
+					"jsonFile" : "target-USB_Device_Library-Debug-a3381917d7ee33fc167b.json",
 					"name" : "USB_Device_Library",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "VCP_F446::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-VCP_F446-Debug-a1d4445bc9b3008d3a97.json",
+					"jsonFile" : "target-VCP_F446-Debug-bb4599b8a1be6b2b13c3.json",
 					"name" : "VCP_F446",
 					"projectIndex" : 0
 				}

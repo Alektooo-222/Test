@@ -86,8 +86,8 @@ void cmd_config_measure_handler(string_rx_mess &str)
 
     if (first_space == string_rx_mess::npos)
     {
-        add_str(mes, "Incorrect command\n");
-        push_with_timeout(tx_queue, mes, 100);
+        add_str(mes, "Incorrect command\n", tx_uart_queue);
+        push_with_timeout(tx_uart_queue, mes, 100);
         return;
     }
 
@@ -111,18 +111,18 @@ void cmd_config_measure_handler(string_rx_mess &str)
                     if (status_config_software_measure == StatusConfigMeasure::CONFIG_SW_MEASURE_PIN_OK)
                     {
                         pin.conf = Pin_configured::MEASURE_SOFT;
-                        add_str(mes, "MEASURE CONFIGURED on ");
-                        add_str(mes, pin.name.pin_name);
-                        add_str(mes, " (software)\n");
-                        push_with_timeout(tx_queue, mes, 100);
+                        add_str(mes, "MEASURE CONFIGURED on ", tx_uart_queue);
+                        add_str(mes, pin.name.pin_name, tx_uart_queue);
+                        add_str(mes, " (software)\n", tx_uart_queue);
+                        push_with_timeout(tx_uart_queue, mes, 100);
                         break;
                     }
                     else if (status_config_software_measure == StatusConfigMeasure::CONFIG_SW_MEASURE_PIN_FAIL)
                     {
-                        add_str(mes, "CANNOT MEASURE CONFIGURED on ");
-                        add_str(mes, pin.name.pin_name);
-                        add_str(mes, " (software)\n");
-                        push_with_timeout(tx_queue, mes, 100);
+                        add_str(mes, "CANNOT MEASURE CONFIGURED on ", tx_uart_queue);
+                        add_str(mes, pin.name.pin_name, tx_uart_queue);
+                        add_str(mes, " (software)\n", tx_uart_queue);
+                        push_with_timeout(tx_uart_queue, mes, 100);
                         break;
                     }
                 }
@@ -142,10 +142,10 @@ void cmd_config_measure_handler(string_rx_mess &str)
                             pin.conf = Pin_configured::MEASURE_HARD;
                             measure_pin.tim_measure = tim;
                             status_measure_hard = 1;
-                            add_str(mes, "MEASURE CONFIGURED on ");
-                            add_str(mes, pin.name.pin_name);
-                            add_str(mes, " (hardware)\n");
-                            push_with_timeout(tx_queue, mes, 100);
+                            add_str(mes, "MEASURE CONFIGURED on ", tx_uart_queue);
+                            add_str(mes, pin.name.pin_name, tx_uart_queue);
+                            add_str(mes, " (hardware)\n", tx_uart_queue);
+                            push_with_timeout(tx_uart_queue, mes, 100);
                             break;
                         }
                     }
@@ -157,18 +157,18 @@ void cmd_config_measure_handler(string_rx_mess &str)
                         if (status_config_software_measure == StatusConfigMeasure::CONFIG_SW_MEASURE_PIN_OK)
                         {
                             pin.conf = Pin_configured::MEASURE_SOFT;
-                            add_str(mes, "MEASURE CONFIGURED on ");
-                            add_str(mes, pin.name.pin_name);
-                            add_str(mes, " (software)\n");
-                            push_with_timeout(tx_queue, mes, 100);
+                            add_str(mes, "MEASURE CONFIGURED on ", tx_uart_queue);
+                            add_str(mes, pin.name.pin_name, tx_uart_queue);
+                            add_str(mes, " (software)\n", tx_uart_queue);
+                            push_with_timeout(tx_uart_queue, mes, 100);
                             break;
                         }
                         else if (status_config_software_measure == StatusConfigMeasure::CONFIG_SW_MEASURE_PIN_FAIL)
                         {
-                            add_str(mes, "CANNOT MEASURE CONFIGURED on ");
-                            add_str(mes, pin.name.pin_name);
-                            add_str(mes, " (software)\n");
-                            push_with_timeout(tx_queue, mes, 100);
+                            add_str(mes, "CANNOT MEASURE CONFIGURED on ", tx_uart_queue);
+                            add_str(mes, pin.name.pin_name, tx_uart_queue);
+                            add_str(mes, " (software)\n", tx_uart_queue);
+                            push_with_timeout(tx_uart_queue, mes, 100);
                             break;
                         }
                     }
@@ -181,7 +181,7 @@ void cmd_config_measure_handler(string_rx_mess &str)
                 mes += " is used by ";
                 mes += staus_table[pin.conf];
                 mes += "\n";
-                push_with_timeout(tx_queue, mes, 100);
+                push_with_timeout(tx_uart_queue, mes, 100);
             }
         }
     }
@@ -289,15 +289,15 @@ void cmd_measure_params_handler(string_rx_mess &str)
     measure_pin.filter_func_name = filter_func_str;
     measure_pin.timeout_ms = timeout_ms;
 
-    add_str(mes, "MEASURE PARAMS: avg=");
-    add_str(mes, avg_str);
-    add_str(mes, ", filter=");
-    add_str(mes, measure_pin.filter_func_name);
-    add_str(mes, ", timeout=");
-    add_str(mes, timeout_ms_str);
-    add_str(mes, ", ms\n");
+    add_str(mes, "MEASURE PARAMS: avg=", tx_uart_queue);
+    add_str(mes, avg_str, tx_uart_queue);
+    add_str(mes, ", filter=", tx_uart_queue);
+    add_str(mes, measure_pin.filter_func_name, tx_uart_queue);
+    add_str(mes, ", timeout=", tx_uart_queue);
+    add_str(mes, timeout_ms_str, tx_uart_queue);
+    add_str(mes, ", ms\n", tx_uart_queue);
 
-    push_with_timeout(tx_queue, mes, 100);
+    push_with_timeout(tx_uart_queue, mes, 100);
 }
 
 void cmd_freq_handler(string_rx_mess &str)
@@ -325,22 +325,22 @@ void cmd_freq_handler(string_rx_mess &str)
         {
             if ((HAL_GetTick() - measure_pin.start_measurement) >= measure_pin.timeout_ms  && measure_pin.array.size() == 0)
             {
-                add_str(mes, "TIMEOUT\n");
+                add_str(mes, "TIMEOUT\n", tx_uart_queue);
                 measure_pin.number_measurement = 0;
                 measure_pin.array.clear();
                 measure_pin.measurement_state = StateMeasurement::MEASURMENT_NONE;
-                push_with_timeout(tx_queue, mes, 100);
+                push_with_timeout(tx_uart_queue, mes, 100);
                 HAL_NVIC_DisableIRQ(exti_irq_table[measure_pin.pin.pin_number]);
                 return;
             }
 
             if ((HAL_GetTick() - measure_pin.last_pulse_time) >= measure_pin.timeout_ms  && measure_pin.array.size() == 0)
             {
-                add_str(mes, "TIMEOUT\n");
+                add_str(mes, "TIMEOUT\n", tx_uart_queue);
                 measure_pin.number_measurement = 0;
                 measure_pin.array.clear();
                 measure_pin.measurement_state = StateMeasurement::MEASURMENT_NONE;
-                push_with_timeout(tx_queue, mes, 100);
+                push_with_timeout(tx_uart_queue, mes, 100);
                 HAL_NVIC_DisableIRQ(exti_irq_table[measure_pin.pin.pin_number]);
                 return;
             }
@@ -355,22 +355,22 @@ void cmd_freq_handler(string_rx_mess &str)
 
         /* LOGI("measured_freq: %d", measured_freq); */
 
-        add_str(mes, "FREQ ");
+        add_str(mes, "FREQ ", tx_uart_queue);
         etl::to_string(measured_freq, str_temp);
-        add_str(mes, str_temp);
+        add_str(mes, str_temp, tx_uart_queue);
         str_temp.clear();
-        add_str(mes, " (avg=");
+        add_str(mes, " (avg=", tx_uart_queue);
         etl::to_string(measure_pin.avg, str_temp);
-        add_str(mes, str_temp);
-        add_str(mes, ", filter=");
-        add_str(mes, measure_pin.filter_func_name);
-        add_str(mes, ", raw: ");
+        add_str(mes, str_temp, tx_uart_queue);
+        add_str(mes, ", filter=", tx_uart_queue);
+        add_str(mes, measure_pin.filter_func_name, tx_uart_queue);
+        add_str(mes, ", raw: ", tx_uart_queue);
         for (auto &raw_freq : measure_pin.array)
         {
             str_temp.clear();
             etl::to_string(raw_freq, str_temp);
-            add_str(mes, str_temp);
-            add_str(mes, " ");
+            add_str(mes, str_temp, tx_uart_queue);
+            add_str(mes, " ", tx_uart_queue);
         }
 
         measure_pin.number_measurement = 0;
@@ -393,21 +393,21 @@ void cmd_freq_handler(string_rx_mess &str)
         {
             if ((HAL_GetTick() - measure_pin.start_measurement) >= measure_pin.timeout_ms && measure_pin.array.size() == 0)
             {
-                add_str(mes, "TIMEOUT\n");
+                add_str(mes, "TIMEOUT\n", tx_uart_queue);
                 measure_pin.number_measurement = 0;
                 measure_pin.array.clear();
                 measure_pin.measurement_state = StateMeasurement::MEASURMENT_NONE;
-                push_with_timeout(tx_queue, mes, 100);
+                push_with_timeout(tx_uart_queue, mes, 100);
                 return;
             }
 
             if ((HAL_GetTick() - measure_pin.last_pulse_time) >= measure_pin.timeout_ms  && measure_pin.array.size() == 0)
             {
-                add_str(mes, "TIMEOUT\n");
+                add_str(mes, "TIMEOUT\n", tx_uart_queue);
                 measure_pin.number_measurement = 0;
                 measure_pin.array.clear();
                 measure_pin.measurement_state = StateMeasurement::MEASURMENT_NONE;
-                push_with_timeout(tx_queue, mes, 100);
+                push_with_timeout(tx_uart_queue, mes, 100);
                 return;
             }
         }
@@ -431,22 +431,22 @@ void cmd_freq_handler(string_rx_mess &str)
         }
         LOGI("measured_freq: %d", measured_freq); */
 
-        add_str(mes, "FREQ ");
+        add_str(mes, "FREQ ", tx_uart_queue);
         etl::to_string(measured_freq, str_temp);
-        add_str(mes, str_temp);
+        add_str(mes, str_temp, tx_uart_queue);
         str_temp.clear();
-        add_str(mes, " (avg=");
+        add_str(mes, " (avg=", tx_uart_queue);
         etl::to_string(measure_pin.avg, str_temp);
-        add_str(mes, str_temp);
-        add_str(mes, ", filter=");
-        add_str(mes, measure_pin.filter_func_name);
-        add_str(mes, ", raw: ");
+        add_str(mes, str_temp, tx_uart_queue);
+        add_str(mes, ", filter=", tx_uart_queue);
+        add_str(mes, measure_pin.filter_func_name, tx_uart_queue);
+        add_str(mes, ", raw: ", tx_uart_queue);
         for (auto &raw_freq : array_period)
         {
             str_temp.clear();
             etl::to_string(raw_freq, str_temp);
-            add_str(mes, str_temp);
-            add_str(mes, " ");
+            add_str(mes, str_temp, tx_uart_queue);
+            add_str(mes, " ", tx_uart_queue);
         }
 
         measure_pin.number_measurement = 0;
@@ -454,8 +454,8 @@ void cmd_freq_handler(string_rx_mess &str)
         measure_pin.measurement_state = StateMeasurement::MEASURMENT_NONE;
     }
 
-    add_str(mes, "\n");
-    push_with_timeout(tx_queue, mes, 100);
+    add_str(mes, "\n", tx_uart_queue);
+    push_with_timeout(tx_uart_queue, mes, 100);
 
     return;
 }

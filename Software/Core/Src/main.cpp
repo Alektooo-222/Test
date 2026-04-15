@@ -24,7 +24,7 @@
 /* USER CODE BEGIN Includes */
 #include "application.h"
 #include "tim.h"
-#include "dwt.h"
+
 
 /* USER CODE END Includes */
 
@@ -48,8 +48,11 @@
 /* USER CODE BEGIN PV */
 USBD_HandleTypeDef USBD_Device;
 extern uint8_t UserTxBuffer[APP_TX_DATA_SIZE];
+extern uint8_t UserRxBufferUSB[APP_TX_DATA_SIZE];
+extern uint8_t UserRxBufferUART[APP_TX_DATA_SIZE];
 extern uint32_t UserTxBufPtrIn;
 extern uint8_t RxMessFlag_USB;
+extern uint8_t RxMessFlag_UART;
 // extern PCD_HandleTypeDef hpcd;
 /* USER CODE END PV */
 
@@ -141,8 +144,14 @@ int main(void)
 
     if (RxMessFlag_USB == 1)
     {
-      CommandManager();
+      CommandManager(UserRxBufferUSB);
       RxMessFlag_USB = 0;
+    }
+
+    if (RxMessFlag_UART == 1)
+    {
+      CommandManager(UserRxBufferUART);
+      RxMessFlag_UART = 0;
     }
 
     /* USER CODE END WHILE */

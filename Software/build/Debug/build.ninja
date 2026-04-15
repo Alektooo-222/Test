@@ -53,210 +53,172 @@ build CMakeFiles/VCP_F446.dir/Core/Src/main.cpp.obj: CXX_COMPILER__VCP_F446_unsc
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F446xx -DUSE_HAL_DRIVER -DUSE_USB_FS=1
   DEP_FILE = CMakeFiles\VCP_F446.dir\Core\Src\main.cpp.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -fno-rtti -fno-exceptions -fno-threadsafe-statics -O0 -g3
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -fno-rtti -fno-exceptions -fno-threadsafe-statics -O0 -g3
   INCLUDES = -IC:/GitHub/TEST/Software/App/Inc -IC:/GitHub/TEST/Software/Core/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F4xx_HAL_Driver/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Core/Inc -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -IC:/GitHub/TEST/Software/Drivers/CMSIS/Device/ST/STM32F4xx/Include -IC:/GitHub/TEST/Software/Drivers/CMSIS/Include -IC:/GitHub/TEST/Software/swoTrace -IC:/GitHub/TEST/Software/dwt -isystem C:/GitHub/TEST/Software/etl/include
   OBJECT_DIR = CMakeFiles\VCP_F446.dir
   OBJECT_FILE_DIR = CMakeFiles\VCP_F446.dir\Core\Src
-  TARGET_COMPILE_PDB = CMakeFiles\VCP_F446.dir\
-  TARGET_PDB = VCP_F446.pdb
 
 build CMakeFiles/VCP_F446.dir/Core/Src/stm32f4xx_it.c.obj: C_COMPILER__VCP_F446_unscanned_Debug C$:/GitHub/TEST/Software/Core/Src/stm32f4xx_it.c || cmake_object_order_depends_target_VCP_F446
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F446xx -DUSE_HAL_DRIVER -DUSE_USB_FS=1
   DEP_FILE = CMakeFiles\VCP_F446.dir\Core\Src\stm32f4xx_it.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
   INCLUDES = -IC:/GitHub/TEST/Software/App/Inc -IC:/GitHub/TEST/Software/Core/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F4xx_HAL_Driver/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Core/Inc -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -IC:/GitHub/TEST/Software/Drivers/CMSIS/Device/ST/STM32F4xx/Include -IC:/GitHub/TEST/Software/Drivers/CMSIS/Include -IC:/GitHub/TEST/Software/swoTrace -IC:/GitHub/TEST/Software/dwt -isystem C:/GitHub/TEST/Software/etl/include
   OBJECT_DIR = CMakeFiles\VCP_F446.dir
   OBJECT_FILE_DIR = CMakeFiles\VCP_F446.dir\Core\Src
-  TARGET_COMPILE_PDB = CMakeFiles\VCP_F446.dir\
-  TARGET_PDB = VCP_F446.pdb
 
 build CMakeFiles/VCP_F446.dir/Core/Src/stm32f4xx_hal_msp.c.obj: C_COMPILER__VCP_F446_unscanned_Debug C$:/GitHub/TEST/Software/Core/Src/stm32f4xx_hal_msp.c || cmake_object_order_depends_target_VCP_F446
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F446xx -DUSE_HAL_DRIVER -DUSE_USB_FS=1
   DEP_FILE = CMakeFiles\VCP_F446.dir\Core\Src\stm32f4xx_hal_msp.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
   INCLUDES = -IC:/GitHub/TEST/Software/App/Inc -IC:/GitHub/TEST/Software/Core/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F4xx_HAL_Driver/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Core/Inc -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -IC:/GitHub/TEST/Software/Drivers/CMSIS/Device/ST/STM32F4xx/Include -IC:/GitHub/TEST/Software/Drivers/CMSIS/Include -IC:/GitHub/TEST/Software/swoTrace -IC:/GitHub/TEST/Software/dwt -isystem C:/GitHub/TEST/Software/etl/include
   OBJECT_DIR = CMakeFiles\VCP_F446.dir
   OBJECT_FILE_DIR = CMakeFiles\VCP_F446.dir\Core\Src
-  TARGET_COMPILE_PDB = CMakeFiles\VCP_F446.dir\
-  TARGET_PDB = VCP_F446.pdb
 
 build CMakeFiles/VCP_F446.dir/Core/Src/sysmem.c.obj: C_COMPILER__VCP_F446_unscanned_Debug C$:/GitHub/TEST/Software/Core/Src/sysmem.c || cmake_object_order_depends_target_VCP_F446
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F446xx -DUSE_HAL_DRIVER -DUSE_USB_FS=1
   DEP_FILE = CMakeFiles\VCP_F446.dir\Core\Src\sysmem.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
   INCLUDES = -IC:/GitHub/TEST/Software/App/Inc -IC:/GitHub/TEST/Software/Core/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F4xx_HAL_Driver/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Core/Inc -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -IC:/GitHub/TEST/Software/Drivers/CMSIS/Device/ST/STM32F4xx/Include -IC:/GitHub/TEST/Software/Drivers/CMSIS/Include -IC:/GitHub/TEST/Software/swoTrace -IC:/GitHub/TEST/Software/dwt -isystem C:/GitHub/TEST/Software/etl/include
   OBJECT_DIR = CMakeFiles\VCP_F446.dir
   OBJECT_FILE_DIR = CMakeFiles\VCP_F446.dir\Core\Src
-  TARGET_COMPILE_PDB = CMakeFiles\VCP_F446.dir\
-  TARGET_PDB = VCP_F446.pdb
 
 build CMakeFiles/VCP_F446.dir/Core/Src/syscalls.c.obj: C_COMPILER__VCP_F446_unscanned_Debug C$:/GitHub/TEST/Software/Core/Src/syscalls.c || cmake_object_order_depends_target_VCP_F446
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F446xx -DUSE_HAL_DRIVER -DUSE_USB_FS=1
   DEP_FILE = CMakeFiles\VCP_F446.dir\Core\Src\syscalls.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
   INCLUDES = -IC:/GitHub/TEST/Software/App/Inc -IC:/GitHub/TEST/Software/Core/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F4xx_HAL_Driver/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Core/Inc -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -IC:/GitHub/TEST/Software/Drivers/CMSIS/Device/ST/STM32F4xx/Include -IC:/GitHub/TEST/Software/Drivers/CMSIS/Include -IC:/GitHub/TEST/Software/swoTrace -IC:/GitHub/TEST/Software/dwt -isystem C:/GitHub/TEST/Software/etl/include
   OBJECT_DIR = CMakeFiles\VCP_F446.dir
   OBJECT_FILE_DIR = CMakeFiles\VCP_F446.dir\Core\Src
-  TARGET_COMPILE_PDB = CMakeFiles\VCP_F446.dir\
-  TARGET_PDB = VCP_F446.pdb
 
 build CMakeFiles/VCP_F446.dir/startup_stm32f446xx.s.obj: ASM_COMPILER__VCP_F446_unscanned_Debug C$:/GitHub/TEST/Software/startup_stm32f446xx.s || cmake_object_order_depends_target_VCP_F446
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F446xx -DUSE_HAL_DRIVER -DUSE_USB_FS=1
   DEP_FILE = CMakeFiles\VCP_F446.dir\startup_stm32f446xx.s.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -x assembler-with-cpp -MMD -MP -g
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -x assembler-with-cpp -MMD -MP -g
   INCLUDES = -IC:/GitHub/TEST/Software/App/Inc -IC:/GitHub/TEST/Software/Core/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F4xx_HAL_Driver/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Core/Inc -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -IC:/GitHub/TEST/Software/Drivers/CMSIS/Device/ST/STM32F4xx/Include -IC:/GitHub/TEST/Software/Drivers/CMSIS/Include -IC:/GitHub/TEST/Software/swoTrace -IC:/GitHub/TEST/Software/dwt -isystem C:/GitHub/TEST/Software/etl/include
   OBJECT_DIR = CMakeFiles\VCP_F446.dir
   OBJECT_FILE_DIR = CMakeFiles\VCP_F446.dir
-  TARGET_COMPILE_PDB = CMakeFiles\VCP_F446.dir\
-  TARGET_PDB = VCP_F446.pdb
 
 build CMakeFiles/VCP_F446.dir/Core/Src/usbd_cdc_interface.c.obj: C_COMPILER__VCP_F446_unscanned_Debug C$:/GitHub/TEST/Software/Core/Src/usbd_cdc_interface.c || cmake_object_order_depends_target_VCP_F446
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F446xx -DUSE_HAL_DRIVER -DUSE_USB_FS=1
   DEP_FILE = CMakeFiles\VCP_F446.dir\Core\Src\usbd_cdc_interface.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
   INCLUDES = -IC:/GitHub/TEST/Software/App/Inc -IC:/GitHub/TEST/Software/Core/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F4xx_HAL_Driver/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Core/Inc -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -IC:/GitHub/TEST/Software/Drivers/CMSIS/Device/ST/STM32F4xx/Include -IC:/GitHub/TEST/Software/Drivers/CMSIS/Include -IC:/GitHub/TEST/Software/swoTrace -IC:/GitHub/TEST/Software/dwt -isystem C:/GitHub/TEST/Software/etl/include
   OBJECT_DIR = CMakeFiles\VCP_F446.dir
   OBJECT_FILE_DIR = CMakeFiles\VCP_F446.dir\Core\Src
-  TARGET_COMPILE_PDB = CMakeFiles\VCP_F446.dir\
-  TARGET_PDB = VCP_F446.pdb
 
 build CMakeFiles/VCP_F446.dir/Core/Src/usbd_conf.c.obj: C_COMPILER__VCP_F446_unscanned_Debug C$:/GitHub/TEST/Software/Core/Src/usbd_conf.c || cmake_object_order_depends_target_VCP_F446
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F446xx -DUSE_HAL_DRIVER -DUSE_USB_FS=1
   DEP_FILE = CMakeFiles\VCP_F446.dir\Core\Src\usbd_conf.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
   INCLUDES = -IC:/GitHub/TEST/Software/App/Inc -IC:/GitHub/TEST/Software/Core/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F4xx_HAL_Driver/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Core/Inc -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -IC:/GitHub/TEST/Software/Drivers/CMSIS/Device/ST/STM32F4xx/Include -IC:/GitHub/TEST/Software/Drivers/CMSIS/Include -IC:/GitHub/TEST/Software/swoTrace -IC:/GitHub/TEST/Software/dwt -isystem C:/GitHub/TEST/Software/etl/include
   OBJECT_DIR = CMakeFiles\VCP_F446.dir
   OBJECT_FILE_DIR = CMakeFiles\VCP_F446.dir\Core\Src
-  TARGET_COMPILE_PDB = CMakeFiles\VCP_F446.dir\
-  TARGET_PDB = VCP_F446.pdb
 
 build CMakeFiles/VCP_F446.dir/Core/Src/usbd_desc.c.obj: C_COMPILER__VCP_F446_unscanned_Debug C$:/GitHub/TEST/Software/Core/Src/usbd_desc.c || cmake_object_order_depends_target_VCP_F446
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F446xx -DUSE_HAL_DRIVER -DUSE_USB_FS=1
   DEP_FILE = CMakeFiles\VCP_F446.dir\Core\Src\usbd_desc.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
   INCLUDES = -IC:/GitHub/TEST/Software/App/Inc -IC:/GitHub/TEST/Software/Core/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F4xx_HAL_Driver/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Core/Inc -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -IC:/GitHub/TEST/Software/Drivers/CMSIS/Device/ST/STM32F4xx/Include -IC:/GitHub/TEST/Software/Drivers/CMSIS/Include -IC:/GitHub/TEST/Software/swoTrace -IC:/GitHub/TEST/Software/dwt -isystem C:/GitHub/TEST/Software/etl/include
   OBJECT_DIR = CMakeFiles\VCP_F446.dir
   OBJECT_FILE_DIR = CMakeFiles\VCP_F446.dir\Core\Src
-  TARGET_COMPILE_PDB = CMakeFiles\VCP_F446.dir\
-  TARGET_PDB = VCP_F446.pdb
 
 build CMakeFiles/VCP_F446.dir/App/Src/application.cpp.obj: CXX_COMPILER__VCP_F446_unscanned_Debug C$:/GitHub/TEST/Software/App/Src/application.cpp || cmake_object_order_depends_target_VCP_F446
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F446xx -DUSE_HAL_DRIVER -DUSE_USB_FS=1
   DEP_FILE = CMakeFiles\VCP_F446.dir\App\Src\application.cpp.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -fno-rtti -fno-exceptions -fno-threadsafe-statics -O0 -g3
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -fno-rtti -fno-exceptions -fno-threadsafe-statics -O0 -g3
   INCLUDES = -IC:/GitHub/TEST/Software/App/Inc -IC:/GitHub/TEST/Software/Core/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F4xx_HAL_Driver/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Core/Inc -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -IC:/GitHub/TEST/Software/Drivers/CMSIS/Device/ST/STM32F4xx/Include -IC:/GitHub/TEST/Software/Drivers/CMSIS/Include -IC:/GitHub/TEST/Software/swoTrace -IC:/GitHub/TEST/Software/dwt -isystem C:/GitHub/TEST/Software/etl/include
   OBJECT_DIR = CMakeFiles\VCP_F446.dir
   OBJECT_FILE_DIR = CMakeFiles\VCP_F446.dir\App\Src
-  TARGET_COMPILE_PDB = CMakeFiles\VCP_F446.dir\
-  TARGET_PDB = VCP_F446.pdb
 
 build CMakeFiles/VCP_F446.dir/App/Src/application_callbacks.cpp.obj: CXX_COMPILER__VCP_F446_unscanned_Debug C$:/GitHub/TEST/Software/App/Src/application_callbacks.cpp || cmake_object_order_depends_target_VCP_F446
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F446xx -DUSE_HAL_DRIVER -DUSE_USB_FS=1
   DEP_FILE = CMakeFiles\VCP_F446.dir\App\Src\application_callbacks.cpp.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -fno-rtti -fno-exceptions -fno-threadsafe-statics -O0 -g3
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -fno-rtti -fno-exceptions -fno-threadsafe-statics -O0 -g3
   INCLUDES = -IC:/GitHub/TEST/Software/App/Inc -IC:/GitHub/TEST/Software/Core/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F4xx_HAL_Driver/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Core/Inc -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -IC:/GitHub/TEST/Software/Drivers/CMSIS/Device/ST/STM32F4xx/Include -IC:/GitHub/TEST/Software/Drivers/CMSIS/Include -IC:/GitHub/TEST/Software/swoTrace -IC:/GitHub/TEST/Software/dwt -isystem C:/GitHub/TEST/Software/etl/include
   OBJECT_DIR = CMakeFiles\VCP_F446.dir
   OBJECT_FILE_DIR = CMakeFiles\VCP_F446.dir\App\Src
-  TARGET_COMPILE_PDB = CMakeFiles\VCP_F446.dir\
-  TARGET_PDB = VCP_F446.pdb
 
 build CMakeFiles/VCP_F446.dir/App/Src/application_pwm.cpp.obj: CXX_COMPILER__VCP_F446_unscanned_Debug C$:/GitHub/TEST/Software/App/Src/application_pwm.cpp || cmake_object_order_depends_target_VCP_F446
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F446xx -DUSE_HAL_DRIVER -DUSE_USB_FS=1
   DEP_FILE = CMakeFiles\VCP_F446.dir\App\Src\application_pwm.cpp.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -fno-rtti -fno-exceptions -fno-threadsafe-statics -O0 -g3
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -fno-rtti -fno-exceptions -fno-threadsafe-statics -O0 -g3
   INCLUDES = -IC:/GitHub/TEST/Software/App/Inc -IC:/GitHub/TEST/Software/Core/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F4xx_HAL_Driver/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Core/Inc -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -IC:/GitHub/TEST/Software/Drivers/CMSIS/Device/ST/STM32F4xx/Include -IC:/GitHub/TEST/Software/Drivers/CMSIS/Include -IC:/GitHub/TEST/Software/swoTrace -IC:/GitHub/TEST/Software/dwt -isystem C:/GitHub/TEST/Software/etl/include
   OBJECT_DIR = CMakeFiles\VCP_F446.dir
   OBJECT_FILE_DIR = CMakeFiles\VCP_F446.dir\App\Src
-  TARGET_COMPILE_PDB = CMakeFiles\VCP_F446.dir\
-  TARGET_PDB = VCP_F446.pdb
 
 build CMakeFiles/VCP_F446.dir/App/Src/application_measure.cpp.obj: CXX_COMPILER__VCP_F446_unscanned_Debug C$:/GitHub/TEST/Software/App/Src/application_measure.cpp || cmake_object_order_depends_target_VCP_F446
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F446xx -DUSE_HAL_DRIVER -DUSE_USB_FS=1
   DEP_FILE = CMakeFiles\VCP_F446.dir\App\Src\application_measure.cpp.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -fno-rtti -fno-exceptions -fno-threadsafe-statics -O0 -g3
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -fno-rtti -fno-exceptions -fno-threadsafe-statics -O0 -g3
   INCLUDES = -IC:/GitHub/TEST/Software/App/Inc -IC:/GitHub/TEST/Software/Core/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F4xx_HAL_Driver/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Core/Inc -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -IC:/GitHub/TEST/Software/Drivers/CMSIS/Device/ST/STM32F4xx/Include -IC:/GitHub/TEST/Software/Drivers/CMSIS/Include -IC:/GitHub/TEST/Software/swoTrace -IC:/GitHub/TEST/Software/dwt -isystem C:/GitHub/TEST/Software/etl/include
   OBJECT_DIR = CMakeFiles\VCP_F446.dir
   OBJECT_FILE_DIR = CMakeFiles\VCP_F446.dir\App\Src
-  TARGET_COMPILE_PDB = CMakeFiles\VCP_F446.dir\
-  TARGET_PDB = VCP_F446.pdb
 
 build CMakeFiles/VCP_F446.dir/App/Src/application_transmit.cpp.obj: CXX_COMPILER__VCP_F446_unscanned_Debug C$:/GitHub/TEST/Software/App/Src/application_transmit.cpp || cmake_object_order_depends_target_VCP_F446
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F446xx -DUSE_HAL_DRIVER -DUSE_USB_FS=1
   DEP_FILE = CMakeFiles\VCP_F446.dir\App\Src\application_transmit.cpp.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -fno-rtti -fno-exceptions -fno-threadsafe-statics -O0 -g3
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -fno-rtti -fno-exceptions -fno-threadsafe-statics -O0 -g3
   INCLUDES = -IC:/GitHub/TEST/Software/App/Inc -IC:/GitHub/TEST/Software/Core/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F4xx_HAL_Driver/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Core/Inc -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -IC:/GitHub/TEST/Software/Drivers/CMSIS/Device/ST/STM32F4xx/Include -IC:/GitHub/TEST/Software/Drivers/CMSIS/Include -IC:/GitHub/TEST/Software/swoTrace -IC:/GitHub/TEST/Software/dwt -isystem C:/GitHub/TEST/Software/etl/include
   OBJECT_DIR = CMakeFiles\VCP_F446.dir
   OBJECT_FILE_DIR = CMakeFiles\VCP_F446.dir\App\Src
-  TARGET_COMPILE_PDB = CMakeFiles\VCP_F446.dir\
-  TARGET_PDB = VCP_F446.pdb
 
 build CMakeFiles/VCP_F446.dir/App/Src/pins.cpp.obj: CXX_COMPILER__VCP_F446_unscanned_Debug C$:/GitHub/TEST/Software/App/Src/pins.cpp || cmake_object_order_depends_target_VCP_F446
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F446xx -DUSE_HAL_DRIVER -DUSE_USB_FS=1
   DEP_FILE = CMakeFiles\VCP_F446.dir\App\Src\pins.cpp.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -fno-rtti -fno-exceptions -fno-threadsafe-statics -O0 -g3
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -fno-rtti -fno-exceptions -fno-threadsafe-statics -O0 -g3
   INCLUDES = -IC:/GitHub/TEST/Software/App/Inc -IC:/GitHub/TEST/Software/Core/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F4xx_HAL_Driver/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Core/Inc -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -IC:/GitHub/TEST/Software/Drivers/CMSIS/Device/ST/STM32F4xx/Include -IC:/GitHub/TEST/Software/Drivers/CMSIS/Include -IC:/GitHub/TEST/Software/swoTrace -IC:/GitHub/TEST/Software/dwt -isystem C:/GitHub/TEST/Software/etl/include
   OBJECT_DIR = CMakeFiles\VCP_F446.dir
   OBJECT_FILE_DIR = CMakeFiles\VCP_F446.dir\App\Src
-  TARGET_COMPILE_PDB = CMakeFiles\VCP_F446.dir\
-  TARGET_PDB = VCP_F446.pdb
 
 build CMakeFiles/VCP_F446.dir/App/Src/tables.cpp.obj: CXX_COMPILER__VCP_F446_unscanned_Debug C$:/GitHub/TEST/Software/App/Src/tables.cpp || cmake_object_order_depends_target_VCP_F446
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F446xx -DUSE_HAL_DRIVER -DUSE_USB_FS=1
   DEP_FILE = CMakeFiles\VCP_F446.dir\App\Src\tables.cpp.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -fno-rtti -fno-exceptions -fno-threadsafe-statics -O0 -g3
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -fno-rtti -fno-exceptions -fno-threadsafe-statics -O0 -g3
   INCLUDES = -IC:/GitHub/TEST/Software/App/Inc -IC:/GitHub/TEST/Software/Core/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F4xx_HAL_Driver/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Core/Inc -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -IC:/GitHub/TEST/Software/Drivers/CMSIS/Device/ST/STM32F4xx/Include -IC:/GitHub/TEST/Software/Drivers/CMSIS/Include -IC:/GitHub/TEST/Software/swoTrace -IC:/GitHub/TEST/Software/dwt -isystem C:/GitHub/TEST/Software/etl/include
   OBJECT_DIR = CMakeFiles\VCP_F446.dir
   OBJECT_FILE_DIR = CMakeFiles\VCP_F446.dir\App\Src
-  TARGET_COMPILE_PDB = CMakeFiles\VCP_F446.dir\
-  TARGET_PDB = VCP_F446.pdb
 
 build CMakeFiles/VCP_F446.dir/App/Src/tim.cpp.obj: CXX_COMPILER__VCP_F446_unscanned_Debug C$:/GitHub/TEST/Software/App/Src/tim.cpp || cmake_object_order_depends_target_VCP_F446
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F446xx -DUSE_HAL_DRIVER -DUSE_USB_FS=1
   DEP_FILE = CMakeFiles\VCP_F446.dir\App\Src\tim.cpp.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -fno-rtti -fno-exceptions -fno-threadsafe-statics -O0 -g3
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -fno-rtti -fno-exceptions -fno-threadsafe-statics -O0 -g3
   INCLUDES = -IC:/GitHub/TEST/Software/App/Inc -IC:/GitHub/TEST/Software/Core/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F4xx_HAL_Driver/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Core/Inc -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -IC:/GitHub/TEST/Software/Drivers/CMSIS/Device/ST/STM32F4xx/Include -IC:/GitHub/TEST/Software/Drivers/CMSIS/Include -IC:/GitHub/TEST/Software/swoTrace -IC:/GitHub/TEST/Software/dwt -isystem C:/GitHub/TEST/Software/etl/include
   OBJECT_DIR = CMakeFiles\VCP_F446.dir
   OBJECT_FILE_DIR = CMakeFiles\VCP_F446.dir\App\Src
-  TARGET_COMPILE_PDB = CMakeFiles\VCP_F446.dir\
-  TARGET_PDB = VCP_F446.pdb
 
 build CMakeFiles/VCP_F446.dir/swoTrace/swoTrace.c.obj: C_COMPILER__VCP_F446_unscanned_Debug C$:/GitHub/TEST/Software/swoTrace/swoTrace.c || cmake_object_order_depends_target_VCP_F446
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F446xx -DUSE_HAL_DRIVER -DUSE_USB_FS=1
   DEP_FILE = CMakeFiles\VCP_F446.dir\swoTrace\swoTrace.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
   INCLUDES = -IC:/GitHub/TEST/Software/App/Inc -IC:/GitHub/TEST/Software/Core/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F4xx_HAL_Driver/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Core/Inc -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -IC:/GitHub/TEST/Software/Drivers/CMSIS/Device/ST/STM32F4xx/Include -IC:/GitHub/TEST/Software/Drivers/CMSIS/Include -IC:/GitHub/TEST/Software/swoTrace -IC:/GitHub/TEST/Software/dwt -isystem C:/GitHub/TEST/Software/etl/include
   OBJECT_DIR = CMakeFiles\VCP_F446.dir
   OBJECT_FILE_DIR = CMakeFiles\VCP_F446.dir\swoTrace
-  TARGET_COMPILE_PDB = CMakeFiles\VCP_F446.dir\
-  TARGET_PDB = VCP_F446.pdb
 
 build CMakeFiles/VCP_F446.dir/dwt/dwt.cpp.obj: CXX_COMPILER__VCP_F446_unscanned_Debug C$:/GitHub/TEST/Software/dwt/dwt.cpp || cmake_object_order_depends_target_VCP_F446
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F446xx -DUSE_HAL_DRIVER -DUSE_USB_FS=1
   DEP_FILE = CMakeFiles\VCP_F446.dir\dwt\dwt.cpp.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -fno-rtti -fno-exceptions -fno-threadsafe-statics -O0 -g3
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -fno-rtti -fno-exceptions -fno-threadsafe-statics -O0 -g3
   INCLUDES = -IC:/GitHub/TEST/Software/App/Inc -IC:/GitHub/TEST/Software/Core/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F4xx_HAL_Driver/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Core/Inc -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -IC:/GitHub/TEST/Software/Drivers/CMSIS/Device/ST/STM32F4xx/Include -IC:/GitHub/TEST/Software/Drivers/CMSIS/Include -IC:/GitHub/TEST/Software/swoTrace -IC:/GitHub/TEST/Software/dwt -isystem C:/GitHub/TEST/Software/etl/include
   OBJECT_DIR = CMakeFiles\VCP_F446.dir
   OBJECT_FILE_DIR = CMakeFiles\VCP_F446.dir\dwt
-  TARGET_COMPILE_PDB = CMakeFiles\VCP_F446.dir\
-  TARGET_PDB = VCP_F446.pdb
 
 
 # =============================================================================
@@ -268,13 +230,12 @@ build CMakeFiles/VCP_F446.dir/dwt/dwt.cpp.obj: CXX_COMPILER__VCP_F446_unscanned_
 
 build VCP_F446.elf: CXX_EXECUTABLE_LINKER__VCP_F446_Debug cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32f4xx.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj cmake/stm32cubemx/CMakeFiles/USB_Device_Library.dir/__/__/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c.obj cmake/stm32cubemx/CMakeFiles/USB_Device_Library.dir/__/__/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c.obj cmake/stm32cubemx/CMakeFiles/USB_Device_Library.dir/__/__/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c.obj cmake/stm32cubemx/CMakeFiles/USB_Device_Library.dir/__/__/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src/usbd_cdc.c.obj CMakeFiles/VCP_F446.dir/Core/Src/main.cpp.obj CMakeFiles/VCP_F446.dir/Core/Src/stm32f4xx_it.c.obj CMakeFiles/VCP_F446.dir/Core/Src/stm32f4xx_hal_msp.c.obj CMakeFiles/VCP_F446.dir/Core/Src/sysmem.c.obj CMakeFiles/VCP_F446.dir/Core/Src/syscalls.c.obj CMakeFiles/VCP_F446.dir/startup_stm32f446xx.s.obj CMakeFiles/VCP_F446.dir/Core/Src/usbd_cdc_interface.c.obj CMakeFiles/VCP_F446.dir/Core/Src/usbd_conf.c.obj CMakeFiles/VCP_F446.dir/Core/Src/usbd_desc.c.obj CMakeFiles/VCP_F446.dir/App/Src/application.cpp.obj CMakeFiles/VCP_F446.dir/App/Src/application_callbacks.cpp.obj CMakeFiles/VCP_F446.dir/App/Src/application_pwm.cpp.obj CMakeFiles/VCP_F446.dir/App/Src/application_measure.cpp.obj CMakeFiles/VCP_F446.dir/App/Src/application_transmit.cpp.obj CMakeFiles/VCP_F446.dir/App/Src/pins.cpp.obj CMakeFiles/VCP_F446.dir/App/Src/tables.cpp.obj CMakeFiles/VCP_F446.dir/App/Src/tim.cpp.obj CMakeFiles/VCP_F446.dir/swoTrace/swoTrace.c.obj CMakeFiles/VCP_F446.dir/dwt/dwt.cpp.obj || cmake/stm32cubemx/STM32_Drivers cmake/stm32cubemx/USB_Device_Library
   CONFIG = Debug
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -fno-rtti -fno-exceptions -fno-threadsafe-statics -O0 -g3
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -fno-rtti -fno-exceptions -fno-threadsafe-statics -O0 -g3
   OBJECT_DIR = CMakeFiles\VCP_F446.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_COMPILE_PDB = CMakeFiles\VCP_F446.dir\
   TARGET_FILE = VCP_F446.elf
-  TARGET_PDB = VCP_F446.pdb
+  TARGET_PDB = VCP_F446.elf.dbg
 
 
 #############################################
@@ -347,221 +308,181 @@ build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F446xx -DUSE_HAL_DRIVER
   DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Core\Src\system_stm32f4xx.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
   INCLUDES = -IC:/GitHub/TEST/Software/Core/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F4xx_HAL_Driver/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Core/Inc -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -IC:/GitHub/TEST/Software/Drivers/CMSIS/Device/ST/STM32F4xx/Include -IC:/GitHub/TEST/Software/Drivers/CMSIS/Include
   OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Core\Src
-  TARGET_COMPILE_PDB = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\
-  TARGET_PDB = ""
 
 build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd.c.obj: C_COMPILER__STM32_Drivers_unscanned_Debug C$:/GitHub/TEST/Software/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd.c || cmake_object_order_depends_target_STM32_Drivers
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F446xx -DUSE_HAL_DRIVER
   DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pcd.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
   INCLUDES = -IC:/GitHub/TEST/Software/Core/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F4xx_HAL_Driver/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Core/Inc -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -IC:/GitHub/TEST/Software/Drivers/CMSIS/Device/ST/STM32F4xx/Include -IC:/GitHub/TEST/Software/Drivers/CMSIS/Include
   OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32F4xx_HAL_Driver\Src
-  TARGET_COMPILE_PDB = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\
-  TARGET_PDB = ""
 
 build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.c.obj: C_COMPILER__STM32_Drivers_unscanned_Debug C$:/GitHub/TEST/Software/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.c || cmake_object_order_depends_target_STM32_Drivers
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F446xx -DUSE_HAL_DRIVER
   DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pcd_ex.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
   INCLUDES = -IC:/GitHub/TEST/Software/Core/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F4xx_HAL_Driver/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Core/Inc -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -IC:/GitHub/TEST/Software/Drivers/CMSIS/Device/ST/STM32F4xx/Include -IC:/GitHub/TEST/Software/Drivers/CMSIS/Include
   OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32F4xx_HAL_Driver\Src
-  TARGET_COMPILE_PDB = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\
-  TARGET_PDB = ""
 
 build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c.obj: C_COMPILER__STM32_Drivers_unscanned_Debug C$:/GitHub/TEST/Software/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c || cmake_object_order_depends_target_STM32_Drivers
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F446xx -DUSE_HAL_DRIVER
   DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_ll_usb.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
   INCLUDES = -IC:/GitHub/TEST/Software/Core/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F4xx_HAL_Driver/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Core/Inc -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -IC:/GitHub/TEST/Software/Drivers/CMSIS/Device/ST/STM32F4xx/Include -IC:/GitHub/TEST/Software/Drivers/CMSIS/Include
   OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32F4xx_HAL_Driver\Src
-  TARGET_COMPILE_PDB = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\
-  TARGET_PDB = ""
 
 build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj: C_COMPILER__STM32_Drivers_unscanned_Debug C$:/GitHub/TEST/Software/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c || cmake_object_order_depends_target_STM32_Drivers
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F446xx -DUSE_HAL_DRIVER
   DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
   INCLUDES = -IC:/GitHub/TEST/Software/Core/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F4xx_HAL_Driver/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Core/Inc -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -IC:/GitHub/TEST/Software/Drivers/CMSIS/Device/ST/STM32F4xx/Include -IC:/GitHub/TEST/Software/Drivers/CMSIS/Include
   OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32F4xx_HAL_Driver\Src
-  TARGET_COMPILE_PDB = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\
-  TARGET_PDB = ""
 
 build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj: C_COMPILER__STM32_Drivers_unscanned_Debug C$:/GitHub/TEST/Software/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c || cmake_object_order_depends_target_STM32_Drivers
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F446xx -DUSE_HAL_DRIVER
   DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc_ex.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
   INCLUDES = -IC:/GitHub/TEST/Software/Core/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F4xx_HAL_Driver/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Core/Inc -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -IC:/GitHub/TEST/Software/Drivers/CMSIS/Device/ST/STM32F4xx/Include -IC:/GitHub/TEST/Software/Drivers/CMSIS/Include
   OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32F4xx_HAL_Driver\Src
-  TARGET_COMPILE_PDB = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\
-  TARGET_PDB = ""
 
 build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj: C_COMPILER__STM32_Drivers_unscanned_Debug C$:/GitHub/TEST/Software/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c || cmake_object_order_depends_target_STM32_Drivers
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F446xx -DUSE_HAL_DRIVER
   DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
   INCLUDES = -IC:/GitHub/TEST/Software/Core/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F4xx_HAL_Driver/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Core/Inc -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -IC:/GitHub/TEST/Software/Drivers/CMSIS/Device/ST/STM32F4xx/Include -IC:/GitHub/TEST/Software/Drivers/CMSIS/Include
   OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32F4xx_HAL_Driver\Src
-  TARGET_COMPILE_PDB = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\
-  TARGET_PDB = ""
 
 build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.obj: C_COMPILER__STM32_Drivers_unscanned_Debug C$:/GitHub/TEST/Software/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c || cmake_object_order_depends_target_STM32_Drivers
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F446xx -DUSE_HAL_DRIVER
   DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ex.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
   INCLUDES = -IC:/GitHub/TEST/Software/Core/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F4xx_HAL_Driver/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Core/Inc -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -IC:/GitHub/TEST/Software/Drivers/CMSIS/Device/ST/STM32F4xx/Include -IC:/GitHub/TEST/Software/Drivers/CMSIS/Include
   OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32F4xx_HAL_Driver\Src
-  TARGET_COMPILE_PDB = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\
-  TARGET_PDB = ""
 
 build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c.obj: C_COMPILER__STM32_Drivers_unscanned_Debug C$:/GitHub/TEST/Software/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c || cmake_object_order_depends_target_STM32_Drivers
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F446xx -DUSE_HAL_DRIVER
   DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ramfunc.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
   INCLUDES = -IC:/GitHub/TEST/Software/Core/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F4xx_HAL_Driver/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Core/Inc -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -IC:/GitHub/TEST/Software/Drivers/CMSIS/Device/ST/STM32F4xx/Include -IC:/GitHub/TEST/Software/Drivers/CMSIS/Include
   OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32F4xx_HAL_Driver\Src
-  TARGET_COMPILE_PDB = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\
-  TARGET_PDB = ""
 
 build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj: C_COMPILER__STM32_Drivers_unscanned_Debug C$:/GitHub/TEST/Software/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c || cmake_object_order_depends_target_STM32_Drivers
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F446xx -DUSE_HAL_DRIVER
   DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_gpio.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
   INCLUDES = -IC:/GitHub/TEST/Software/Core/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F4xx_HAL_Driver/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Core/Inc -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -IC:/GitHub/TEST/Software/Drivers/CMSIS/Device/ST/STM32F4xx/Include -IC:/GitHub/TEST/Software/Drivers/CMSIS/Include
   OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32F4xx_HAL_Driver\Src
-  TARGET_COMPILE_PDB = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\
-  TARGET_PDB = ""
 
 build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c.obj: C_COMPILER__STM32_Drivers_unscanned_Debug C$:/GitHub/TEST/Software/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c || cmake_object_order_depends_target_STM32_Drivers
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F446xx -DUSE_HAL_DRIVER
   DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma_ex.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
   INCLUDES = -IC:/GitHub/TEST/Software/Core/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F4xx_HAL_Driver/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Core/Inc -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -IC:/GitHub/TEST/Software/Drivers/CMSIS/Device/ST/STM32F4xx/Include -IC:/GitHub/TEST/Software/Drivers/CMSIS/Include
   OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32F4xx_HAL_Driver\Src
-  TARGET_COMPILE_PDB = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\
-  TARGET_PDB = ""
 
 build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj: C_COMPILER__STM32_Drivers_unscanned_Debug C$:/GitHub/TEST/Software/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c || cmake_object_order_depends_target_STM32_Drivers
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F446xx -DUSE_HAL_DRIVER
   DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
   INCLUDES = -IC:/GitHub/TEST/Software/Core/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F4xx_HAL_Driver/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Core/Inc -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -IC:/GitHub/TEST/Software/Drivers/CMSIS/Device/ST/STM32F4xx/Include -IC:/GitHub/TEST/Software/Drivers/CMSIS/Include
   OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32F4xx_HAL_Driver\Src
-  TARGET_COMPILE_PDB = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\
-  TARGET_PDB = ""
 
 build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c.obj: C_COMPILER__STM32_Drivers_unscanned_Debug C$:/GitHub/TEST/Software/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c || cmake_object_order_depends_target_STM32_Drivers
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F446xx -DUSE_HAL_DRIVER
   DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
   INCLUDES = -IC:/GitHub/TEST/Software/Core/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F4xx_HAL_Driver/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Core/Inc -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -IC:/GitHub/TEST/Software/Drivers/CMSIS/Device/ST/STM32F4xx/Include -IC:/GitHub/TEST/Software/Drivers/CMSIS/Include
   OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32F4xx_HAL_Driver\Src
-  TARGET_COMPILE_PDB = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\
-  TARGET_PDB = ""
 
 build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.obj: C_COMPILER__STM32_Drivers_unscanned_Debug C$:/GitHub/TEST/Software/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c || cmake_object_order_depends_target_STM32_Drivers
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F446xx -DUSE_HAL_DRIVER
   DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr_ex.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
   INCLUDES = -IC:/GitHub/TEST/Software/Core/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F4xx_HAL_Driver/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Core/Inc -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -IC:/GitHub/TEST/Software/Drivers/CMSIS/Device/ST/STM32F4xx/Include -IC:/GitHub/TEST/Software/Drivers/CMSIS/Include
   OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32F4xx_HAL_Driver\Src
-  TARGET_COMPILE_PDB = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\
-  TARGET_PDB = ""
 
 build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj: C_COMPILER__STM32_Drivers_unscanned_Debug C$:/GitHub/TEST/Software/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c || cmake_object_order_depends_target_STM32_Drivers
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F446xx -DUSE_HAL_DRIVER
   DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_cortex.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
   INCLUDES = -IC:/GitHub/TEST/Software/Core/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F4xx_HAL_Driver/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Core/Inc -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -IC:/GitHub/TEST/Software/Drivers/CMSIS/Device/ST/STM32F4xx/Include -IC:/GitHub/TEST/Software/Drivers/CMSIS/Include
   OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32F4xx_HAL_Driver\Src
-  TARGET_COMPILE_PDB = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\
-  TARGET_PDB = ""
 
 build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj: C_COMPILER__STM32_Drivers_unscanned_Debug C$:/GitHub/TEST/Software/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c || cmake_object_order_depends_target_STM32_Drivers
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F446xx -DUSE_HAL_DRIVER
   DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
   INCLUDES = -IC:/GitHub/TEST/Software/Core/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F4xx_HAL_Driver/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Core/Inc -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -IC:/GitHub/TEST/Software/Drivers/CMSIS/Device/ST/STM32F4xx/Include -IC:/GitHub/TEST/Software/Drivers/CMSIS/Include
   OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32F4xx_HAL_Driver\Src
-  TARGET_COMPILE_PDB = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\
-  TARGET_PDB = ""
 
 build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c.obj: C_COMPILER__STM32_Drivers_unscanned_Debug C$:/GitHub/TEST/Software/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c || cmake_object_order_depends_target_STM32_Drivers
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F446xx -DUSE_HAL_DRIVER
   DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_exti.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
   INCLUDES = -IC:/GitHub/TEST/Software/Core/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F4xx_HAL_Driver/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Core/Inc -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -IC:/GitHub/TEST/Software/Drivers/CMSIS/Device/ST/STM32F4xx/Include -IC:/GitHub/TEST/Software/Drivers/CMSIS/Include
   OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32F4xx_HAL_Driver\Src
-  TARGET_COMPILE_PDB = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\
-  TARGET_PDB = ""
 
 build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj: C_COMPILER__STM32_Drivers_unscanned_Debug C$:/GitHub/TEST/Software/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c || cmake_object_order_depends_target_STM32_Drivers
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F446xx -DUSE_HAL_DRIVER
   DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_uart.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
   INCLUDES = -IC:/GitHub/TEST/Software/Core/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F4xx_HAL_Driver/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Core/Inc -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -IC:/GitHub/TEST/Software/Drivers/CMSIS/Device/ST/STM32F4xx/Include -IC:/GitHub/TEST/Software/Drivers/CMSIS/Include
   OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32F4xx_HAL_Driver\Src
-  TARGET_COMPILE_PDB = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\
-  TARGET_PDB = ""
 
 build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj: C_COMPILER__STM32_Drivers_unscanned_Debug C$:/GitHub/TEST/Software/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c || cmake_object_order_depends_target_STM32_Drivers
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F446xx -DUSE_HAL_DRIVER
   DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
   INCLUDES = -IC:/GitHub/TEST/Software/Core/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F4xx_HAL_Driver/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Core/Inc -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -IC:/GitHub/TEST/Software/Drivers/CMSIS/Device/ST/STM32F4xx/Include -IC:/GitHub/TEST/Software/Drivers/CMSIS/Include
   OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32F4xx_HAL_Driver\Src
-  TARGET_COMPILE_PDB = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\
-  TARGET_PDB = ""
 
 build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj: C_COMPILER__STM32_Drivers_unscanned_Debug C$:/GitHub/TEST/Software/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c || cmake_object_order_depends_target_STM32_Drivers
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F446xx -DUSE_HAL_DRIVER
   DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim_ex.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
   INCLUDES = -IC:/GitHub/TEST/Software/Core/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F4xx_HAL_Driver/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Core/Inc -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -IC:/GitHub/TEST/Software/Drivers/CMSIS/Device/ST/STM32F4xx/Include -IC:/GitHub/TEST/Software/Drivers/CMSIS/Include
   OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32F4xx_HAL_Driver\Src
-  TARGET_COMPILE_PDB = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\
-  TARGET_PDB = ""
 
 
 
@@ -583,45 +504,37 @@ build cmake/stm32cubemx/CMakeFiles/USB_Device_Library.dir/__/__/Middlewares/ST/S
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F446xx -DUSE_HAL_DRIVER
   DEP_FILE = cmake\stm32cubemx\CMakeFiles\USB_Device_Library.dir\__\__\Middlewares\ST\STM32_USB_Device_Library\Core\Src\usbd_core.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
   INCLUDES = -IC:/GitHub/TEST/Software/Core/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F4xx_HAL_Driver/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Core/Inc -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -IC:/GitHub/TEST/Software/Drivers/CMSIS/Device/ST/STM32F4xx/Include -IC:/GitHub/TEST/Software/Drivers/CMSIS/Include
   OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\USB_Device_Library.dir
   OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\USB_Device_Library.dir\__\__\Middlewares\ST\STM32_USB_Device_Library\Core\Src
-  TARGET_COMPILE_PDB = cmake\stm32cubemx\CMakeFiles\USB_Device_Library.dir\
-  TARGET_PDB = ""
 
 build cmake/stm32cubemx/CMakeFiles/USB_Device_Library.dir/__/__/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c.obj: C_COMPILER__USB_Device_Library_unscanned_Debug C$:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c || cmake_object_order_depends_target_USB_Device_Library
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F446xx -DUSE_HAL_DRIVER
   DEP_FILE = cmake\stm32cubemx\CMakeFiles\USB_Device_Library.dir\__\__\Middlewares\ST\STM32_USB_Device_Library\Core\Src\usbd_ctlreq.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
   INCLUDES = -IC:/GitHub/TEST/Software/Core/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F4xx_HAL_Driver/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Core/Inc -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -IC:/GitHub/TEST/Software/Drivers/CMSIS/Device/ST/STM32F4xx/Include -IC:/GitHub/TEST/Software/Drivers/CMSIS/Include
   OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\USB_Device_Library.dir
   OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\USB_Device_Library.dir\__\__\Middlewares\ST\STM32_USB_Device_Library\Core\Src
-  TARGET_COMPILE_PDB = cmake\stm32cubemx\CMakeFiles\USB_Device_Library.dir\
-  TARGET_PDB = ""
 
 build cmake/stm32cubemx/CMakeFiles/USB_Device_Library.dir/__/__/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c.obj: C_COMPILER__USB_Device_Library_unscanned_Debug C$:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c || cmake_object_order_depends_target_USB_Device_Library
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F446xx -DUSE_HAL_DRIVER
   DEP_FILE = cmake\stm32cubemx\CMakeFiles\USB_Device_Library.dir\__\__\Middlewares\ST\STM32_USB_Device_Library\Core\Src\usbd_ioreq.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
   INCLUDES = -IC:/GitHub/TEST/Software/Core/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F4xx_HAL_Driver/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Core/Inc -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -IC:/GitHub/TEST/Software/Drivers/CMSIS/Device/ST/STM32F4xx/Include -IC:/GitHub/TEST/Software/Drivers/CMSIS/Include
   OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\USB_Device_Library.dir
   OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\USB_Device_Library.dir\__\__\Middlewares\ST\STM32_USB_Device_Library\Core\Src
-  TARGET_COMPILE_PDB = cmake\stm32cubemx\CMakeFiles\USB_Device_Library.dir\
-  TARGET_PDB = ""
 
 build cmake/stm32cubemx/CMakeFiles/USB_Device_Library.dir/__/__/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src/usbd_cdc.c.obj: C_COMPILER__USB_Device_Library_unscanned_Debug C$:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src/usbd_cdc.c || cmake_object_order_depends_target_USB_Device_Library
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F446xx -DUSE_HAL_DRIVER
   DEP_FILE = cmake\stm32cubemx\CMakeFiles\USB_Device_Library.dir\__\__\Middlewares\ST\STM32_USB_Device_Library\Class\CDC\Src\usbd_cdc.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
   INCLUDES = -IC:/GitHub/TEST/Software/Core/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F4xx_HAL_Driver/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Core/Inc -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -IC:/GitHub/TEST/Software/Drivers/CMSIS/Device/ST/STM32F4xx/Include -IC:/GitHub/TEST/Software/Drivers/CMSIS/Include
   OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\USB_Device_Library.dir
   OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\USB_Device_Library.dir\__\__\Middlewares\ST\STM32_USB_Device_Library\Class\CDC\Src
-  TARGET_COMPILE_PDB = cmake\stm32cubemx\CMakeFiles\USB_Device_Library.dir\
-  TARGET_PDB = ""
 
 
 
@@ -766,14 +679,14 @@ build swoTrace/all: phony
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja C$:/GitHub/TEST/Software/build/Debug/cmake_install.cmake C$:/GitHub/TEST/Software/build/Debug/etl/cmake_install.cmake C$:/GitHub/TEST/Software/build/Debug/cmake/stm32cubemx/cmake_install.cmake C$:/GitHub/TEST/Software/build/Debug/swoTrace/cmake_install.cmake C$:/GitHub/TEST/Software/build/Debug/dwt/cmake_install.cmake: RERUN_CMAKE | C$:/GitHub/TEST/Software/CMakeLists.txt C$:/GitHub/TEST/Software/cmake/gcc-arm-none-eabi.cmake C$:/GitHub/TEST/Software/cmake/stm32cubemx/CMakeLists.txt C$:/GitHub/TEST/Software/dwt/CMakeLists.txt C$:/GitHub/TEST/Software/etl/CMakeLists.txt C$:/GitHub/TEST/Software/etl/cmake/GetGitRevisionDescription.cmake C$:/GitHub/TEST/Software/etl/cmake/helpers.cmake C$:/GitHub/TEST/Software/swoTrace/CMakeLists.txt C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeASMCompiler.cmake.in C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeASMInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeCCompiler.cmake.in C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeCCompilerABI.c C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeCInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeCXXCompiler.cmake.in C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeCXXCompilerABI.cpp C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeCompilerIdDetection.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeDetermineASMCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeDetermineCCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeDetermineCXXCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeDetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeDetermineCompilerABI.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeDetermineCompilerId.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeDetermineCompilerSupport.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeDetermineSystem.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeFindBinUtils.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeNinjaFindMake.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeParseImplicitIncludeInfo.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeParseImplicitLinkInfo.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeParseLibraryArchitecture.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeSystem.cmake.in C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeTestASMCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeTestCCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeTestCXXCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeTestCompilerCommon.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/ADSP-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/ARMCC-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/ARMClang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/AppleClang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/Borland-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/Bruce-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/Clang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/Clang-DetermineCompilerInternal.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/Compaq-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/Cray-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/CrayClang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/Embarcadero-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/Fujitsu-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/GHS-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/GNU-ASM.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/GNU-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/GNU-CXX-CXXImportStd.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/GNU-FindBinUtils.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/GNU.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/HP-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/HP-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/IAR-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/Intel-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/LCC-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/MSVC-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/NVHPC-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/NVIDIA-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/OrangeC-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/PGI-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/PathScale-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/SCO-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/SDCC-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/SunPro-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/TI-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/TIClang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/Tasking-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/Watcom-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/XL-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/XL-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/XLClang-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/zOS-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/FindGit.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/FindPackageHandleStandardArgs.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/FindPackageMessage.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/GNUInstallDirs.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Internal/CMakeASMLinkerInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Internal/CMakeCLinkerInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Internal/CMakeCXXLinkerInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Internal/CMakeCommonLinkerInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Internal/CMakeDetermineLinkerId.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Internal/CMakeInspectASMLinker.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Internal/CMakeInspectCLinker.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Internal/CMakeInspectCXXLinker.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Internal/FeatureTesting.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Platform/Generic.cmake CMakeCache.txt CMakeFiles/4.0.3/CMakeASMCompiler.cmake CMakeFiles/4.0.3/CMakeCCompiler.cmake CMakeFiles/4.0.3/CMakeCXXCompiler.cmake CMakeFiles/4.0.3/CMakeSystem.cmake
+build build.ninja C$:/GitHub/TEST/Software/build/Debug/cmake_install.cmake C$:/GitHub/TEST/Software/build/Debug/etl/cmake_install.cmake C$:/GitHub/TEST/Software/build/Debug/cmake/stm32cubemx/cmake_install.cmake C$:/GitHub/TEST/Software/build/Debug/swoTrace/cmake_install.cmake C$:/GitHub/TEST/Software/build/Debug/dwt/cmake_install.cmake: RERUN_CMAKE | C$:/GitHub/TEST/Software/CMakeLists.txt C$:/GitHub/TEST/Software/cmake/gcc-arm-none-eabi.cmake C$:/GitHub/TEST/Software/cmake/stm32cubemx/CMakeLists.txt C$:/GitHub/TEST/Software/dwt/CMakeLists.txt C$:/GitHub/TEST/Software/etl/CMakeLists.txt C$:/GitHub/TEST/Software/etl/cmake/GetGitRevisionDescription.cmake C$:/GitHub/TEST/Software/etl/cmake/helpers.cmake C$:/GitHub/TEST/Software/swoTrace/CMakeLists.txt C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeASMInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeCInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/GNU-ASM.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/GNU.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/FindGit.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/FindPackageHandleStandardArgs.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/FindPackageMessage.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/GNUInstallDirs.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Internal/CMakeASMLinkerInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Internal/CMakeCLinkerInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Internal/CMakeCXXLinkerInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Internal/CMakeCommonLinkerInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Platform/Generic.cmake CMakeCache.txt CMakeFiles/4.0.3/CMakeASMCompiler.cmake CMakeFiles/4.0.3/CMakeCCompiler.cmake CMakeFiles/4.0.3/CMakeCXXCompiler.cmake CMakeFiles/4.0.3/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build C$:/GitHub/TEST/Software/CMakeLists.txt C$:/GitHub/TEST/Software/cmake/gcc-arm-none-eabi.cmake C$:/GitHub/TEST/Software/cmake/stm32cubemx/CMakeLists.txt C$:/GitHub/TEST/Software/dwt/CMakeLists.txt C$:/GitHub/TEST/Software/etl/CMakeLists.txt C$:/GitHub/TEST/Software/etl/cmake/GetGitRevisionDescription.cmake C$:/GitHub/TEST/Software/etl/cmake/helpers.cmake C$:/GitHub/TEST/Software/swoTrace/CMakeLists.txt C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeASMCompiler.cmake.in C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeASMInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeCCompiler.cmake.in C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeCCompilerABI.c C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeCInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeCXXCompiler.cmake.in C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeCXXCompilerABI.cpp C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeCompilerIdDetection.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeDetermineASMCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeDetermineCCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeDetermineCXXCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeDetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeDetermineCompilerABI.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeDetermineCompilerId.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeDetermineCompilerSupport.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeDetermineSystem.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeFindBinUtils.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeNinjaFindMake.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeParseImplicitIncludeInfo.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeParseImplicitLinkInfo.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeParseLibraryArchitecture.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeSystem.cmake.in C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeTestASMCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeTestCCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeTestCXXCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeTestCompilerCommon.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/ADSP-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/ARMCC-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/ARMClang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/AppleClang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/Borland-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/Bruce-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/Clang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/Clang-DetermineCompilerInternal.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/Compaq-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/Cray-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/CrayClang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/Embarcadero-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/Fujitsu-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/GHS-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/GNU-ASM.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/GNU-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/GNU-CXX-CXXImportStd.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/GNU-FindBinUtils.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/GNU.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/HP-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/HP-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/IAR-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/Intel-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/LCC-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/MSVC-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/NVHPC-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/NVIDIA-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/OrangeC-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/PGI-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/PathScale-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/SCO-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/SDCC-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/SunPro-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/TI-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/TIClang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/Tasking-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/Watcom-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/XL-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/XL-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/XLClang-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/zOS-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/FindGit.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/FindPackageHandleStandardArgs.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/FindPackageMessage.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/GNUInstallDirs.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Internal/CMakeASMLinkerInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Internal/CMakeCLinkerInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Internal/CMakeCXXLinkerInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Internal/CMakeCommonLinkerInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Internal/CMakeDetermineLinkerId.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Internal/CMakeInspectASMLinker.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Internal/CMakeInspectCLinker.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Internal/CMakeInspectCXXLinker.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Internal/FeatureTesting.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Platform/Generic.cmake CMakeCache.txt CMakeFiles/4.0.3/CMakeASMCompiler.cmake CMakeFiles/4.0.3/CMakeCCompiler.cmake CMakeFiles/4.0.3/CMakeCXXCompiler.cmake CMakeFiles/4.0.3/CMakeSystem.cmake: phony
+build C$:/GitHub/TEST/Software/CMakeLists.txt C$:/GitHub/TEST/Software/cmake/gcc-arm-none-eabi.cmake C$:/GitHub/TEST/Software/cmake/stm32cubemx/CMakeLists.txt C$:/GitHub/TEST/Software/dwt/CMakeLists.txt C$:/GitHub/TEST/Software/etl/CMakeLists.txt C$:/GitHub/TEST/Software/etl/cmake/GetGitRevisionDescription.cmake C$:/GitHub/TEST/Software/etl/cmake/helpers.cmake C$:/GitHub/TEST/Software/swoTrace/CMakeLists.txt C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeASMInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeCInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/GNU-ASM.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/GNU.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/FindGit.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/FindPackageHandleStandardArgs.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/FindPackageMessage.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/GNUInstallDirs.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Internal/CMakeASMLinkerInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Internal/CMakeCLinkerInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Internal/CMakeCXXLinkerInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Internal/CMakeCommonLinkerInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Platform/Generic.cmake CMakeCache.txt CMakeFiles/4.0.3/CMakeASMCompiler.cmake CMakeFiles/4.0.3/CMakeCCompiler.cmake CMakeFiles/4.0.3/CMakeCXXCompiler.cmake CMakeFiles/4.0.3/CMakeSystem.cmake: phony
 
 
 #############################################

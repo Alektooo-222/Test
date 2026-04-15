@@ -9,6 +9,10 @@ extern uint32_t software_counter_ic;
 extern USBD_HandleTypeDef USBD_Device;
 
 extern UART_HandleTypeDef UartHandle;
+extern uint8_t UserTxBuffer[APP_TX_DATA_SIZE];
+
+bool USBTxReady = 1;
+uint32_t tic = 0;
 
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
@@ -49,7 +53,9 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 
         for (auto &sw_pwm_pin : registered_sw_pins)
         {
+            DWT_CYCCNT = 0;
             uint32_t phase = software_counter_pwm % sw_pwm_pin.period;
+            tic = DWT_CYCCNT;
 
             if (phase < sw_pwm_pin.pulse_t)
             {
@@ -64,24 +70,33 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 
     if (htim->Instance == TIM3)
     {
-        if (!tx_queue.empty())
+        if (!tx_uart_queue.empty())
         {
-            auto &str = tx_queue.front();
+            auto &str = tx_uart_queue.front();
 
             HAL_UART_Transmit_DMA(&UartHandle, reinterpret_cast<const uint8_t *>(str.c_str()), str.size());
         }
 
         /* ДОРАБОТАТЬ ОТПРАВКУ СООБЩЕНИЙ ПО USB */
-        if (!tx_usb_queue.empty())
+        if (!tx_usb_queue.empty() && USBTxReady)
         {
-            auto &str = tx_queue.front();
+            USBTxReady = 0;
 
-            uint8_t *data = reinterpret_cast<uint8_t *>(const_cast<char *>(str.c_str()));
+            auto &str = tx_usb_queue.front();
+
+            memcpy(UserTxBuffer, str.c_str(), str.size());
+
+            /* uint8_t *data = reinterpret_cast<uint8_t *>(const_cast<char *>(str.c_str())); */
 
             ret1 = static_cast<USBD_StatusTypeDef>(
-                USBD_CDC_SetTxBuffer(&USBD_Device, data, str.size()));
+                USBD_CDC_SetTxBuffer(&USBD_Device, UserTxBuffer, str.size()));
 
             ret2 = static_cast<USBD_StatusTypeDef>(USBD_CDC_TransmitPacket(&USBD_Device));
+
+            if (ret1 != USBD_OK || ret2 != USBD_OK)
+            {
+                count_err_1++;
+            }
         }
     }
 }
@@ -114,9 +129,9 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 
 void HAL_UART_TxCpltCallback(UART_HandleTypeDef *huart)
 {
-    if (!tx_queue.empty())
+    if (!tx_uart_queue.empty())
     {
-        tx_queue.pop();
+        tx_uart_queue.pop();
     }
 }
 
@@ -125,6 +140,7 @@ extern "C" void cdc_transmit_cplt(void)
     if (!tx_usb_queue.empty())
     {
         tx_usb_queue.pop();
+        USBTxReady = 1;
     }
     /* return (0); */
 }

@@ -129,8 +129,8 @@ void cmd_config_gen_handler(string_rx_mess &str)
 
     if (first_space == string_rx_mess::npos || second_space == string_rx_mess::npos || third_space == string_rx_mess::npos)
     {
-        add_str(mes, "Incorrect command\n");
-        push_with_timeout(tx_queue, mes, 100);
+        add_str(mes, "Incorrect command\n", tx_uart_queue);
+        push_with_timeout(tx_uart_queue, mes, 100);
         return;
     }
 
@@ -159,34 +159,34 @@ void cmd_config_gen_handler(string_rx_mess &str)
                     if (status_config_software_pwm == StatusConfigPWM::CONFIG_SW_PWM_PIN_OK)
                     {
                         pin.conf = Pin_configured::PWM_SOFT;
-                        add_str(mes, "GEN CONFIGURED on ");
-                        add_str(mes, pin.name.pin_name);
-                        add_str(mes, ": ");
-                        add_str(mes, freq_str);
-                        add_str(mes, " Hz, ");
-                        add_str(mes, pulse_str);
-                        add_str(mes, "% (software)\n");
-                        push_with_timeout(tx_queue, mes, 100);
+                        add_str(mes, "GEN CONFIGURED on ", tx_uart_queue);
+                        add_str(mes, pin.name.pin_name, tx_uart_queue);
+                        add_str(mes, ": ", tx_uart_queue);
+                        add_str(mes, freq_str, tx_uart_queue);
+                        add_str(mes, " Hz, ", tx_uart_queue);
+                        add_str(mes, pulse_str, tx_uart_queue);
+                        add_str(mes, "% (software)\n", tx_uart_queue);
+                        push_with_timeout(tx_uart_queue, mes, 100);
                         return;
                     }
                     else if (status_config_software_pwm == StatusConfigPWM::CONFIG_SW_PWM_PIN_ERROR_FREQ_MORE_MAX)
                     {
                         etl::to_string(MAX_SW_PWM_FREQ, max_sw_pwm_freq_pulse_str);
 
-                        add_str(mes, "Can not set Freq Software PWM more ");
-                        add_str(mes, max_sw_pwm_freq_pulse_str);
-                        add_str(mes, "\n");
-                        push_with_timeout(tx_queue, mes, 100);
+                        add_str(mes, "Can not set Freq Software PWM more ", tx_uart_queue);
+                        add_str(mes, max_sw_pwm_freq_pulse_str, tx_uart_queue);
+                        add_str(mes, "\n", tx_uart_queue);
+                        push_with_timeout(tx_uart_queue, mes, 100);
                         return;
                     }
                     else if (status_config_software_pwm == StatusConfigPWM::CONFIG_SW_PWM_PIN_ERROR_PULSE_MORE_100)
                     {
                         etl::to_string(100, max_sw_pwm_freq_pulse_str);
 
-                        add_str(mes, "Can not set Pulse Software PWM more ");
-                        add_str(mes, max_sw_pwm_freq_pulse_str);
-                        add_str(mes, "%\n");
-                        push_with_timeout(tx_queue, mes, 100);
+                        add_str(mes, "Can not set Pulse Software PWM more ", tx_uart_queue);
+                        add_str(mes, max_sw_pwm_freq_pulse_str, tx_uart_queue);
+                        add_str(mes, "%\n", tx_uart_queue);
+                        push_with_timeout(tx_uart_queue, mes, 100);
                         return;
                     }
                 }
@@ -222,14 +222,14 @@ void cmd_config_gen_handler(string_rx_mess &str)
                         {
                             pin.conf = Pin_configured::PWM_HARD;
                             status_pwm_hard = 1;
-                            add_str(mes, "GEN CONFIGURED on ");
-                            add_str(mes, pin.name.pin_name);
-                            add_str(mes, ": ");
-                            add_str(mes, freq_str);
-                            add_str(mes, " Hz, ");
-                            add_str(mes, pulse_str);
-                            add_str(mes, "% (hardware)\n");
-                            push_with_timeout(tx_queue, mes, 100);
+                            add_str(mes, "GEN CONFIGURED on ", tx_uart_queue);
+                            add_str(mes, pin.name.pin_name, tx_uart_queue);
+                            add_str(mes, ": ", tx_uart_queue);
+                            add_str(mes, freq_str, tx_uart_queue);
+                            add_str(mes, " Hz, ", tx_uart_queue);
+                            add_str(mes, pulse_str, tx_uart_queue);
+                            add_str(mes, "% (hardware)\n", tx_uart_queue);
+                            push_with_timeout(tx_uart_queue, mes, 100);
                             break;
                         }
                         else if (status_config_hardware_pwm == StatusConfigPWM::CONFIG_HW_PWM_ERROR_BIG_FREQ)
@@ -237,10 +237,10 @@ void cmd_config_gen_handler(string_rx_mess &str)
                             status_pwm_hard = 1;
                             etl::to_string(static_cast<uint32_t>(static_cast<double>(get_freq_clk_tim(tim)) / 2.0), max_sw_pwm_freq_pulse_str);
 
-                            add_str(mes, "Can not set Freq Hardware PWM more ");
-                            add_str(mes, max_sw_pwm_freq_pulse_str);
-                            add_str(mes, " for this pin\n");
-                            push_with_timeout(tx_queue, mes, 100);
+                            add_str(mes, "Can not set Freq Hardware PWM more ", tx_uart_queue);
+                            add_str(mes, max_sw_pwm_freq_pulse_str, tx_uart_queue);
+                            add_str(mes, " for this pin\n", tx_uart_queue);
+                            push_with_timeout(tx_uart_queue, mes, 100);
                             return;
                         }
                     }
@@ -252,37 +252,37 @@ void cmd_config_gen_handler(string_rx_mess &str)
                         if (status_config_software_pwm == StatusConfigPWM::CONFIG_SW_PWM_PIN_OK)
                         {
                             pin.conf = Pin_configured::PWM_SOFT;
-                            add_str(mes, "Only software PWM is available for this pin\n");
-                            add_str(mes, "GEN CONFIGURED on ");
-                            add_str(mes, pin.name.pin_name);
-                            add_str(mes, ": ");
-                            add_str(mes, freq_str);
-                            add_str(mes, " Hz, ");
-                            add_str(mes, pulse_str);
-                            add_str(mes, "% (software)\n");
-                            push_with_timeout(tx_queue, mes, 100);
+                            add_str(mes, "Only software PWM is available for this pin\n", tx_uart_queue);
+                            add_str(mes, "GEN CONFIGURED on ", tx_uart_queue);
+                            add_str(mes, pin.name.pin_name, tx_uart_queue);
+                            add_str(mes, ": ", tx_uart_queue);
+                            add_str(mes, freq_str, tx_uart_queue);
+                            add_str(mes, " Hz, ", tx_uart_queue);
+                            add_str(mes, pulse_str, tx_uart_queue);
+                            add_str(mes, "% (software)\n", tx_uart_queue);
+                            push_with_timeout(tx_uart_queue, mes, 100);
                             return;
                         }
                         else if (status_config_software_pwm == StatusConfigPWM::CONFIG_SW_PWM_PIN_ERROR_FREQ_MORE_MAX)
                         {
                             etl::to_string(MAX_SW_PWM_FREQ, max_sw_pwm_freq_pulse_str);
 
-                            add_str(mes, "Only software PWM is available for this pin\n");
-                            add_str(mes, "Can not set Freq Software PWM more ");
-                            add_str(mes, max_sw_pwm_freq_pulse_str);
-                            add_str(mes, "\n");
-                            push_with_timeout(tx_queue, mes, 100);
+                            add_str(mes, "Only software PWM is available for this pin\n", tx_uart_queue);
+                            add_str(mes, "Can not set Freq Software PWM more ", tx_uart_queue);
+                            add_str(mes, max_sw_pwm_freq_pulse_str, tx_uart_queue);
+                            add_str(mes, "\n", tx_uart_queue);
+                            push_with_timeout(tx_uart_queue, mes, 100);
                             return;
                         }
                         else if (status_config_software_pwm == StatusConfigPWM::CONFIG_SW_PWM_PIN_ERROR_PULSE_MORE_100)
                         {
                             etl::to_string(100, max_sw_pwm_freq_pulse_str);
 
-                            add_str(mes, "Only software PWM is available for this pin\n");
-                            add_str(mes, "Can not set Pulse Software PWM more ");
-                            add_str(mes, max_sw_pwm_freq_pulse_str);
-                            add_str(mes, "%\n");
-                            push_with_timeout(tx_queue, mes, 100);
+                            add_str(mes, "Only software PWM is available for this pin\n", tx_uart_queue);
+                            add_str(mes, "Can not set Pulse Software PWM more ", tx_uart_queue);
+                            add_str(mes, max_sw_pwm_freq_pulse_str, tx_uart_queue);
+                            add_str(mes, "%\n", tx_uart_queue);
+                            push_with_timeout(tx_uart_queue, mes, 100);
                             return;
                         }
                     }
@@ -295,7 +295,7 @@ void cmd_config_gen_handler(string_rx_mess &str)
                 mes += " is used by ";
                 mes += staus_table[pin.conf];
                 mes += "\n";
-                push_with_timeout(tx_queue, mes, 100);
+                push_with_timeout(tx_uart_queue, mes, 100);
             }
         }
     }
@@ -309,8 +309,8 @@ void cmd_gen_handler(string_rx_mess &str)
 
     if (space == string_rx_mess::npos)
     {
-        add_str(mes, "Incorrect command\n");
-        push_with_timeout(tx_queue, mes, 100);
+        add_str(mes, "Incorrect command\n", tx_uart_queue);
+        push_with_timeout(tx_uart_queue, mes, 100);
         return;
     }
 
@@ -320,10 +320,11 @@ void cmd_gen_handler(string_rx_mess &str)
                    [](unsigned char c)
                    { return std::toupper(c); });
 
-    if (mes == "GEN START")
+    if (mes == "GEN START\n")
     {
-        add_str(mes, "ED\n");
-        push_with_timeout(tx_queue, mes, 100);
+        mes.erase(mes.end() - 1);
+        add_str(mes, "ED\n", tx_uart_queue);
+        push_with_timeout(tx_uart_queue, mes, 100);
         HAL_NVIC_EnableIRQ(TIM6_DAC_IRQn);
 
         for (auto &tim : registered_pwm_tim)
@@ -339,10 +340,11 @@ void cmd_gen_handler(string_rx_mess &str)
             }
         }
     }
-    else if (mes == "GEN STOP")
+    else if (mes == "GEN STOP\n")
     {
-        add_str(mes, "PED\n");
-        push_with_timeout(tx_queue, mes, 100);
+        mes.erase(mes.end() - 1);
+        add_str(mes, "PED\n", tx_uart_queue);
+        push_with_timeout(tx_uart_queue, mes, 100);
         HAL_NVIC_DisableIRQ(TIM6_DAC_IRQn);
 
         for (auto &tim : registered_pwm_tim)
@@ -361,8 +363,8 @@ void cmd_gen_handler(string_rx_mess &str)
     else
     {
         mes.clear();
-        add_str(mes, "Incorrect command\n");
-        push_with_timeout(tx_queue, mes, 100);
+        add_str(mes, "Incorrect command\n", tx_uart_queue);
+        push_with_timeout(tx_uart_queue, mes, 100);
         return;
     }
 }
