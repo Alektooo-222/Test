@@ -28,11 +28,11 @@ uint32_t get_freq_clk_tim(const Peripheral_capabilities &tim)
 
   if (reinterpret_cast<unsigned long>(tim.timer) >= APB1PERIPH_BASE && reinterpret_cast<unsigned long>(tim.timer) < APB2PERIPH_BASE)
   {
-    tim_clk = 90000000;
+    tim_clk = 72000000;
   }
   else
   {
-    tim_clk = 180000000;
+    tim_clk = 72000000;
   }
 
   return tim_clk;
@@ -146,12 +146,6 @@ StatusConfigPWM config_tim_pwm(const Pin_name &pin, const Peripheral_capabilitie
       // Error_Handler();
       return StatusConfigPWM::CONFIG_HW_PWM_ERROR;
     }
-
-    if (HAL_TIM_PWM_Init(htim) != HAL_OK)
-    {
-      // Error_Handler();
-      return StatusConfigPWM::CONFIG_HW_PWM_ERROR;
-    }
   }
 
   /* sClockSourceConfig.ClockSource = TIM_CLOCKSOURCE_INTERNAL;
@@ -202,7 +196,7 @@ StatusConfigPWM config_tim_pwm(const Pin_name &pin, const Peripheral_capabilitie
   GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  GPIO_InitStruct.Alternate = tim_af_table[tim.timer];
+  /* GPIO_InitStruct.Alternate = tim_af_table[tim.timer]; */
   HAL_GPIO_Init(pin.port, &GPIO_InitStruct);
 
   /* if (tim.inv_ch == Inverse_Ch::P)
@@ -236,7 +230,7 @@ StatusConfigMeasure config_tim_measure(const Pin_name &pin, const Peripheral_cap
   GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  GPIO_InitStruct.Alternate = tim_af_table[tim.timer];
+  /* GPIO_InitStruct.Alternate = tim_af_table[tim.timer]; */
   HAL_GPIO_Init(pin.port, &GPIO_InitStruct);
 
   TIM_HandleTypeDef *htim = tim_handl_table[tim.timer];
@@ -318,7 +312,7 @@ void TIM_Base_MspInit(TIM_HandleTypeDef *tim_baseHandle)
   {
     __HAL_RCC_TIM8_CLK_ENABLE();
   }
-  else if (tim_baseHandle->Instance == TIM9)
+  /* else if (tim_baseHandle->Instance == TIM9)
   {
     __HAL_RCC_TIM9_CLK_ENABLE();
   }
@@ -341,5 +335,5 @@ void TIM_Base_MspInit(TIM_HandleTypeDef *tim_baseHandle)
   else if (tim_baseHandle->Instance == TIM14)
   {
     __HAL_RCC_TIM14_CLK_ENABLE();
-  }
+  } */
 }

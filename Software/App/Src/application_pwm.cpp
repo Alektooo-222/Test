@@ -27,7 +27,7 @@ uint8_t GPIO_Init_SW_PWM(const Pin_name &pin)
     GPIO_InitStruct.Pin = pin.pin_number;
     GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
     GPIO_InitStruct.Pull = GPIO_NOPULL;
-    GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
+    GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
     HAL_GPIO_Init(pin.port, &GPIO_InitStruct);
 
     return 0;
@@ -35,7 +35,7 @@ uint8_t GPIO_Init_SW_PWM(const Pin_name &pin)
 
 StatusConfigPWM registration_pin(const Pin_name &pin, uint32_t freq, uint32_t pulse)
 {
-    const double tim6_clk = 90000000.0;
+    const double tim6_clk = 72000000.0;
 
     const double time_sample = ((TIM6->PSC + 1) * (TIM6->ARR + 1)) / tim6_clk;
 
@@ -80,7 +80,8 @@ StatusConfigPWM config_hardware_pwm(const Pin_name &pin, const Peripheral_capabi
 
     uint32_t tim_clk;
 
-    uint8_t bits = (tim.timer == TIM2 || tim.timer == TIM5) ? 32 : 16;
+    //uint8_t bits = (tim.timer == TIM2 || tim.timer == TIM5) ? 32 : 16;
+    uint8_t bits = 16;
 
     tim_cfg_t tmr_cnf{};
 

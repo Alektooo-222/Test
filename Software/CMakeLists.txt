@@ -19,7 +19,7 @@ if(NOT CMAKE_BUILD_TYPE)
 endif()
 
 # Set the project name
-set(CMAKE_PROJECT_NAME VCP_F446)
+set(CMAKE_PROJECT_NAME VCP_F103RC)
 
 # Include toolchain file
 include("cmake/gcc-arm-none-eabi.cmake")
@@ -31,13 +31,13 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS TRUE)
 project(${CMAKE_PROJECT_NAME})
 message("Build type: " ${CMAKE_BUILD_TYPE})
 
-# Enable CMake support for ASM and C and CPP languages
+# Enable CMake support for ASM and C languages
 enable_language(C CXX ASM)
-
-add_subdirectory(etl)  # For etl library
 
 # Create an executable object type
 add_executable(${CMAKE_PROJECT_NAME})
+
+add_subdirectory(etl)  # For etl library
 
 # Add STM32CubeMX generated sources
 add_subdirectory(cmake/stm32cubemx)
@@ -64,7 +64,6 @@ target_sources(${CMAKE_PROJECT_NAME} PRIVATE
     ${CMAKE_SOURCE_DIR}/App/Src/pins.cpp
     ${CMAKE_SOURCE_DIR}/App/Src/tables.cpp
     ${CMAKE_SOURCE_DIR}/App/Src/tim.cpp
-
 )
 
 # Add include paths
@@ -76,14 +75,13 @@ target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE
 # Add project symbols (macros)
 target_compile_definitions(${CMAKE_PROJECT_NAME} PRIVATE
     # Add user defined symbols
-    USE_USB_FS=1
 )
 
 # Add linked libraries
 target_link_libraries(${CMAKE_PROJECT_NAME}
     stm32cubemx
+    # Add user defined libraries
     etl::etl
     swoTrace
     dwt
-    # Add user defined libraries
 )

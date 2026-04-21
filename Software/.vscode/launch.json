@@ -79,17 +79,17 @@
         {
             "name": "st-link local",
             "cwd": "${workspaceRoot}",
-            "executable": "./build/Debug/VCP_F446.elf",
+            "executable": "./build/Debug/VCP_F103RC.elf",
             "request": "launch",
             "type": "cortex-debug",
             "runToEntryPoint": "main",
             "servertype": "openocd",
             "serverpath": "openocd.exe",
-            "device": "STM32F446RETx",
+            "device": "STM32F103RCTx",
             "interface": "swd",
             "configFiles": [
                 "C:/OpenOCD-20250710-0.12.0/share/openocd/scripts/interface/stlink.cfg", //stlink.cfg", //"//cmsis-dap.cfg", //stlink.cfg
-                "C:/OpenOCD-20250710-0.12.0/share/openocd/scripts/target/stm32f4x.cfg"
+                "C:/OpenOCD-20250710-0.12.0/share/openocd/scripts/target/stm32f1x.cfg"
             ],
             "svdFile": "${config:STM32VSCodeExtension.cubeCLT.path}/STMicroelectronics_CMSIS_SVD/STM32F446.svd",
             "showDevDebugOutput": "none",
@@ -97,7 +97,7 @@
                 "enabled": true,
                 "source": "probe",
                 "swoFrequency": 2250000,
-                "cpuFrequency": 180000000,
+                "cpuFrequency": 72000000,
                 "decoders": [
                     {
                         "port": 0,

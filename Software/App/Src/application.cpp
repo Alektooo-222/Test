@@ -74,7 +74,7 @@ struct CommandEntry
 const CommandEntry commands[] = {
     {"ECHO", cmd_echo_handler},
     {"HELP", cmd_help_handler},
-    {"PINOUT", cmd_pinout_handler},
+    {"PINOUT\n", cmd_pinout_handler},
     {"CONFIG_GEN", cmd_config_gen_handler},
     {"GEN", cmd_gen_handler},
     {"CONFIG_MEASURE", cmd_config_measure_handler},
@@ -175,19 +175,19 @@ void cmd_pinout_handler(string_rx_mess &str)
     StringTxQueue string_periph;
     string_periph.clear();
 
-    add_str(string_periph, str, tx_usb_queue);
-    add_str(string_periph, ":\n", tx_usb_queue);
+    add_str(string_periph, str, tx_uart_queue);
+    add_str(string_periph, ":\n", tx_uart_queue);
 
     for (auto &pin : ListPins)
     {
-        add_str(string_periph, pin.name.pin_name, tx_usb_queue);
-        add_str(string_periph, "\n", tx_usb_queue);
-        add_str(string_periph, staus_table[pin.conf], tx_usb_queue);
-        add_str(string_periph, "\nPeriph: ", tx_usb_queue);
+        add_str(string_periph, pin.name.pin_name, tx_uart_queue);
+        add_str(string_periph, "\n", tx_uart_queue);
+        add_str(string_periph, staus_table[pin.conf], tx_uart_queue);
+        add_str(string_periph, "\nPeriph: ", tx_uart_queue);
 
         if (pin.hardware_features.empty())
         {
-            add_str(string_periph, "No TIM\n", tx_usb_queue);
+            add_str(string_periph, "No TIM\n", tx_uart_queue);
         }
         else
         {
@@ -195,17 +195,17 @@ void cmd_pinout_handler(string_rx_mess &str)
             for (auto &tim : pin.hardware_features)
             {
                 if (i != 0)
-                    add_str(string_periph, "        ", tx_usb_queue);
-                add_str(string_periph, tim_table[tim.timer], tx_usb_queue);
-                add_str(string_periph, "_", tx_usb_queue);
-                add_str(string_periph, ch_table[tim.channel], tx_usb_queue);
-                add_str(string_periph, "\n", tx_usb_queue);
+                    add_str(string_periph, "        ", tx_uart_queue);
+                add_str(string_periph, tim_table[tim.timer], tx_uart_queue);
+                add_str(string_periph, "_", tx_uart_queue);
+                add_str(string_periph, ch_table[tim.channel], tx_uart_queue);
+                add_str(string_periph, "\n", tx_uart_queue);
                 i++;
             }
         }
 
         // Отправляем одно сообщение для текущего пина
-        if (!push_with_timeout(tx_usb_queue, string_periph, 100))
+        if (!push_with_timeout(tx_uart_queue, string_periph, 100))
         {
         }
         string_periph.clear(); // готовим для следующего пина

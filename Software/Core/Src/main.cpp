@@ -1,12 +1,12 @@
-/* USER CODE BEGIN Header */
 /**
  ******************************************************************************
- * @file           : main.c
- * @brief          : Main program body
+ * @file    USB_Device/CDC_Standalone/Src/main.c
+ * @author  MCD Application Team
+ * @brief   USB device CDC application main file.
  ******************************************************************************
  * @attention
  *
- * Copyright (c) 2026 STMicroelectronics.
+ * Copyright (c) 2016 STMicroelectronics.
  * All rights reserved.
  *
  * This software is licensed under terms that can be found in the LICENSE file
@@ -15,93 +15,57 @@
  *
  ******************************************************************************
  */
-/* USER CODE END Header */
-/* Includes ------------------------------------------------------------------*/
-#include "main.h"
-// #include "usb_device.h"
 
-/* Private includes ----------------------------------------------------------*/
-/* USER CODE BEGIN Includes */
+/* Includes ------------------------------------------------------------------ */
+#include "main.h"
 #include "application.h"
 #include "tim.h"
 
-
-/* USER CODE END Includes */
-
-/* Private typedef -----------------------------------------------------------*/
-/* USER CODE BEGIN PTD */
-
-/* USER CODE END PTD */
-
-/* Private define ------------------------------------------------------------*/
-/* USER CODE BEGIN PD */
-#define APP_TX_DATA_SIZE 2048
-/* USER CODE END PD */
-
-/* Private macro -------------------------------------------------------------*/
-/* USER CODE BEGIN PM */
-
-/* USER CODE END PM */
-
-/* Private variables ---------------------------------------------------------*/
-
-/* USER CODE BEGIN PV */
-USBD_HandleTypeDef USBD_Device;
-extern uint8_t UserTxBuffer[APP_TX_DATA_SIZE];
 extern uint8_t UserRxBufferUSB[APP_TX_DATA_SIZE];
 extern uint8_t UserRxBufferUART[APP_TX_DATA_SIZE];
 extern uint32_t UserTxBufPtrIn;
 extern uint8_t RxMessFlag_USB;
 extern uint8_t RxMessFlag_UART;
-// extern PCD_HandleTypeDef hpcd;
-/* USER CODE END PV */
 
-/* Private function prototypes -----------------------------------------------*/
-void SystemClock_Config(void);
-static void MX_GPIO_Init(void);
-/* USER CODE BEGIN PFP */
+extern UART_HandleTypeDef UartHandle;
+extern TIM_HandleTypeDef TimHandle;
+
 void TIM6_Init();
 void TIM7_Init();
 
-volatile uint32_t sys_ms = 0;
-/* USER CODE END PFP */
+/** @addtogroup STM32F1xx_HAL_Validation
+ * @{
+ */
 
-/* Private user code ---------------------------------------------------------*/
-/* USER CODE BEGIN 0 */
+/** @addtogroup STANDARD_CHECK
+ * @{
+ */
 
-/* USER CODE END 0 */
+/* Private typedef ----------------------------------------------------------- */
+/* Private define ------------------------------------------------------------ */
+/* Private macro ------------------------------------------------------------- */
+/* Private variables --------------------------------------------------------- */
+USBD_HandleTypeDef USBD_Device;
+
+/* Private function prototypes ----------------------------------------------- */
+void SystemClock_Config(void);
+
+/* Private functions --------------------------------------------------------- */
 
 /**
- * @brief  The application entry point.
- * @retval int
+ * @brief  Main program.
+ * @param  None
+ * @retval None
  */
 int main(void)
 {
-
-  /* USER CODE BEGIN 1 */
-
-  /* USER CODE END 1 */
-
-  /* MCU Configuration--------------------------------------------------------*/
-
-  /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
+  /* Reset of all peripherals, Initializes the Flash interface and the Systick.
+   */
   HAL_Init();
 
-  /* USER CODE BEGIN Init */
-
-  /* USER CODE END Init */
-
-  /* Configure the system clock */
+  /* Configure the system clock to 72 MHz */
   SystemClock_Config();
 
-  /* USER CODE BEGIN SysInit */
-
-  /* USER CODE END SysInit */
-
-  /* Initialize all configured peripherals */
-  // MX_GPIO_Init();
-  // MX_USB_DEVICE_Init();
-  /* USER CODE BEGIN 2 */
   /* Init Device Library */
   USBD_Init(&USBD_Device, &VCP_Desc, 0);
 
@@ -114,34 +78,71 @@ int main(void)
   /* Start Device Process */
   USBD_Start(&USBD_Device);
 
-  // swoInit(0xFFFFFFFF, SystemCoreClock, SWO_STLINK_V2_MAX_SPEED); // All ITM ports, 72 MHz, 2.25 Mbps (max speed for ST-LINK V2, 8 us per byte)
+  UartHandle.Instance = USARTx;
+  UartHandle.Init.BaudRate = 115200;
+  UartHandle.Init.WordLength = UART_WORDLENGTH_8B;
+  UartHandle.Init.StopBits = UART_STOPBITS_1;
+  UartHandle.Init.Parity = UART_PARITY_NONE;
+  UartHandle.Init.HwFlowCtl = UART_HWCONTROL_NONE;
+  UartHandle.Init.Mode = UART_MODE_TX_RX;
+
+  if (HAL_UART_Init(&UartHandle) != HAL_OK)
+  {
+    //Initialization Error
+    Error_Handler();
+  }
+
+  //##-2- Put UART peripheral in IT reception process ########################
+  //Any data received will be stored in "UserTxBuffer" buffer
+  if (HAL_UART_Receive_IT(&UartHandle, (uint8_t *)UserRxBufferUART, 1) != HAL_OK)
+  {
+    //Transfer error in reception process
+    Error_Handler();
+  }
+
+  //##-3- Configure the TIM Base generation #################################
+  //TIM_Config();
+  TimHandle.Instance = TIMx;
+
+  //Initialize TIM3 peripheral as follows: + Period = 10000 - 1 + Prescaler =
+  // * ((SystemCoreClock/2)/10000) - 1 + ClockDivision = 0 + Counter direction =
+  // * Up
+  TimHandle.Init.Period = (CDC_POLLING_INTERVAL * 1000) - 1;
+  TimHandle.Init.Prescaler = 72 - 1;
+  TimHandle.Init.ClockDivision = 0;
+  TimHandle.Init.CounterMode = TIM_COUNTERMODE_UP;
+  TimHandle.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+  if (HAL_TIM_Base_Init(&TimHandle) != HAL_OK)
+  {
+    //Initialization Error
+    Error_Handler();
+  }
+
+  //##-4- Start the TIM Base generation in interrupt mode ####################
+  //Start Channel1
+  if (HAL_TIM_Base_Start_IT(&TimHandle) != HAL_OK)
+  {
+    //Starting Error
+    Error_Handler();
+  }
 
   TIM6_Init();
   TIM7_Init();
+
+  __HAL_RCC_AFIO_CLK_ENABLE();
+  __HAL_AFIO_REMAP_TIM1_PARTIAL();
 
   __HAL_RCC_GPIOA_CLK_ENABLE();
   __HAL_RCC_GPIOB_CLK_ENABLE();
   __HAL_RCC_GPIOC_CLK_ENABLE();
   __HAL_RCC_GPIOD_CLK_ENABLE();
-  __HAL_RCC_GPIOH_CLK_ENABLE();
 
   HAL_TIM_Base_Start_IT(&htim6);
-  /* HAL_TIM_Base_Start_IT(&htim7); */
 
   dwtInit();
-  /* USER CODE END 2 */
-
   /* Infinite loop */
-  /* USER CODE BEGIN WHILE */
-  uint8_t e = 0;
   while (1)
   {
-    /* if (e == 1 && UserTxBufPtrIn != 10)
-    {
-      UserTxBuffer[UserTxBufPtrIn] = 'A';
-      UserTxBufPtrIn++;
-    } */
-
     if (RxMessFlag_USB == 1)
     {
       CommandManager(UserRxBufferUSB);
@@ -153,48 +154,86 @@ int main(void)
       CommandManager(UserRxBufferUART);
       RxMessFlag_UART = 0;
     }
-
-    /* USER CODE END WHILE */
-
-    /* USER CODE BEGIN 3 */
   }
-  /* USER CODE END 3 */
 }
 
 /**
- * @brief System Clock Configuration
+ * @brief  System Clock Configuration
+ *         The system Clock is configured as follow :
+ *            System Clock source            = PLL (HSE)
+ *            SYSCLK(Hz)                     = 72000000
+ *            HCLK(Hz)                       = 72000000
+ *            AHB Prescaler                  = 1
+ *            APB1 Prescaler                 = 2
+ *            APB2 Prescaler                 = 1
+ *            HSE Frequency(Hz)              = 8000000
+ *            HSE PREDIV1                    = 1
+ *            PLLMUL                         = 9
+ *            Flash Latency(WS)              = 2
+ * @param  None
  * @retval None
  */
-void SystemClock_Config(void)
+/* void SystemClock_Config(void)
 {
-  RCC_OscInitTypeDef RCC_OscInitStruct = {};
-  RCC_ClkInitTypeDef RCC_ClkInitStruct = {};
+  RCC_ClkInitTypeDef clkinitstruct = {0};
+  RCC_OscInitTypeDef oscinitstruct = {0};
+  RCC_PeriphCLKInitTypeDef rccperiphclkinit = {0};
 
-  /** Configure the main internal regulator output voltage
-   */
-  __HAL_RCC_PWR_CLK_ENABLE();
-  __HAL_PWR_VOLTAGESCALING_CONFIG(PWR_REGULATOR_VOLTAGE_SCALE1);
+  //Enable HSE Oscillator and activate PLL with HSE as source
+  oscinitstruct.OscillatorType = RCC_OSCILLATORTYPE_HSE;
+  oscinitstruct.HSEState = RCC_HSE_ON;
+  oscinitstruct.HSEPredivValue = RCC_HSE_PREDIV_DIV2;
+  oscinitstruct.PLL.PLLMUL = RCC_PLL_MUL9;
 
-  /** Initializes the RCC Oscillators according to the specified parameters
-   * in the RCC_OscInitTypeDef structure.
-   */
-  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSE;
-  RCC_OscInitStruct.HSEState = RCC_HSE_ON;
-  RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
-  RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;
-  RCC_OscInitStruct.PLL.PLLM = 4;
-  RCC_OscInitStruct.PLL.PLLN = 180;
-  RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV2;
-  RCC_OscInitStruct.PLL.PLLQ = 7;
-  RCC_OscInitStruct.PLL.PLLR = 2;
-  if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
+  oscinitstruct.PLL.PLLState = RCC_PLL_ON;
+  oscinitstruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;
+
+  if (HAL_RCC_OscConfig(&oscinitstruct) != HAL_OK)
   {
+    //Start Conversation Error
     Error_Handler();
   }
 
-  /** Activate the Over-Drive mode
-   */
-  if (HAL_PWREx_EnableOverDrive() != HAL_OK)
+  //USB clock selection
+  rccperiphclkinit.PeriphClockSelection = RCC_PERIPHCLK_USB;
+  rccperiphclkinit.UsbClockSelection = RCC_USBCLKSOURCE_PLL_DIV1_5;
+  HAL_RCCEx_PeriphCLKConfig(&rccperiphclkinit);
+
+  //Select PLL as system clock source and configure the HCLK, PCLK1 and PCLK2
+  // * clocks dividers
+  clkinitstruct.ClockType = RCC_CLOCKTYPE_SYSCLK | RCC_CLOCKTYPE_HCLK |
+                            RCC_CLOCKTYPE_PCLK1 | RCC_CLOCKTYPE_PCLK2;
+
+  clkinitstruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
+  clkinitstruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
+  clkinitstruct.APB1CLKDivider = RCC_HCLK_DIV2;
+  clkinitstruct.APB2CLKDivider = RCC_HCLK_DIV1;
+  if (HAL_RCC_ClockConfig(&clkinitstruct, FLASH_LATENCY_2) != HAL_OK)
+  {
+    //Start Conversation Error
+    Error_Handler();
+  }
+} */
+
+void SystemClock_Config(void)
+{
+  RCC_OscInitTypeDef RCC_OscInitStruct = {0};
+  RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
+  RCC_PeriphCLKInitTypeDef PeriphClkInit = {0};
+
+  GPIO_InitTypeDef GPIO_InitStruct = {0};
+
+  //* Initializes the RCC Oscillators according to the specified parameters
+  //* in the RCC_OscInitTypeDef structure.
+
+  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSE;
+  RCC_OscInitStruct.HSEState = RCC_HSE_ON;
+  RCC_OscInitStruct.HSEPredivValue = RCC_HSE_PREDIV_DIV1;
+  RCC_OscInitStruct.HSIState = RCC_HSI_ON;
+  RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
+  RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;
+  RCC_OscInitStruct.PLL.PLLMUL = RCC_PLL_MUL9;
+  if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
   {
     Error_Handler();
   }
@@ -204,36 +243,30 @@ void SystemClock_Config(void)
   RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK | RCC_CLOCKTYPE_SYSCLK | RCC_CLOCKTYPE_PCLK1 | RCC_CLOCKTYPE_PCLK2;
   RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
-  RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV4;
-  RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV2;
+  RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV2;
+  RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
 
-  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_5) != HAL_OK)
+  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_2) != HAL_OK)
   {
     Error_Handler();
   }
-}
+  PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_USB;
+  PeriphClkInit.UsbClockSelection = RCC_USBCLKSOURCE_PLL_DIV1_5;
+  if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInit) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  HAL_RCC_MCOConfig(RCC_MCO, RCC_MCO1SOURCE_PLLCLK, RCC_MCODIV_1);
 
-/**
- * @brief GPIO Initialization Function
- * @param None
- * @retval None
- */
-static void MX_GPIO_Init(void)
-{
-  /* USER CODE BEGIN MX_GPIO_Init_1 */
-
-  /* USER CODE END MX_GPIO_Init_1 */
-
-  /* GPIO Ports Clock Enable */
-  __HAL_RCC_GPIOH_CLK_ENABLE();
+  // Configure GPIO pin : PA8
   __HAL_RCC_GPIOA_CLK_ENABLE();
-
-  /* USER CODE BEGIN MX_GPIO_Init_2 */
-
-  /* USER CODE END MX_GPIO_Init_2 */
+  GPIO_InitStruct.Pin = GPIO_PIN_8;
+  GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 }
 
-/* USER CODE BEGIN 4 */
 void TIM6_Init()
 {
   __HAL_RCC_TIM6_CLK_ENABLE();
@@ -243,7 +276,7 @@ void TIM6_Init()
   htim6.Instance = TIM6;
   htim6.Init.Prescaler = 0;
   htim6.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim6.Init.Period = 899;
+  htim6.Init.Period = 720 - 1;
   htim6.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
   if (HAL_TIM_Base_Init(&htim6) != HAL_OK)
   {
@@ -257,7 +290,7 @@ void TIM6_Init()
   }
 
   /* TIM6 interrupt Init */
-  HAL_NVIC_SetPriority(TIM6_DAC_IRQn, 5, 0);
+  HAL_NVIC_SetPriority(TIM6_IRQn, 5, 0);
 }
 
 void TIM7_Init()
@@ -290,24 +323,20 @@ void TIM7_Init()
   HAL_NVIC_EnableIRQ(TIM7_IRQn);
 }
 
-/* USER CODE END 4 */
-
 /**
  * @brief  This function is executed in case of error occurrence.
+ * @param  None
  * @retval None
  */
 void Error_Handler(void)
 {
-  /* USER CODE BEGIN Error_Handler_Debug */
-  /* User can add his own implementation to report the HAL error return state */
-  __disable_irq();
   while (1)
   {
   }
-  /* USER CODE END Error_Handler_Debug */
 }
 
 #ifdef USE_FULL_ASSERT
+
 /**
  * @brief  Reports the name of the source file and the source line number
  *         where the assert_param error has occurred.
@@ -317,9 +346,22 @@ void Error_Handler(void)
  */
 void assert_failed(uint8_t *file, uint32_t line)
 {
-  /* USER CODE BEGIN 6 */
-  /* User can add his own implementation to report the file name and line number,
-     ex: printf("Wrong parameters value: file %s on line %d\r\n", file, line) */
-  /* USER CODE END 6 */
+  /* User can add his own implementation to report the file name and line
+   * number, ex: printf("Wrong parameters value: file %s on line %d\r\n", file,
+   * line) */
+
+  /* Infinite loop */
+  while (1)
+  {
+  }
 }
-#endif /* USE_FULL_ASSERT */
+
+#endif
+
+/**
+ * @}
+ */
+
+/**
+ * @}
+ */

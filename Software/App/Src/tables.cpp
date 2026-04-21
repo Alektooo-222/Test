@@ -11,12 +11,12 @@ etl::map<TIM_TypeDef *, IRQn_Type, 16> tim_cc_irq_table = {
     {TIM4, TIM4_IRQn},
     {TIM5, TIM5_IRQn},
     {TIM8, TIM8_CC_IRQn},
-    {TIM9, TIM1_BRK_TIM9_IRQn},
+    /* {TIM9, TIM1_BRK_TIM9_IRQn},
     {TIM10, TIM1_UP_TIM10_IRQn},
     {TIM11, TIM1_TRG_COM_TIM11_IRQn},
     {TIM12, TIM8_BRK_TIM12_IRQn},
     {TIM13, TIM8_UP_TIM13_IRQn},
-    {TIM14, TIM8_TRG_COM_TIM14_IRQn},
+    {TIM14, TIM8_TRG_COM_TIM14_IRQn}, */
 };
 
 // Таблица соответствия GPIO-пина и линии внешнего прерывания EXTI
@@ -47,12 +47,12 @@ etl::map<TIM_TypeDef *, const char *, 12> tim_table = {
     {TIM4, "TIM4"},
     {TIM5, "TIM5"},
     {TIM8, "TIM8"},
-    {TIM9, "TIM9"},
+    /* {TIM9, "TIM9"},
     {TIM10, "TIM10"},
     {TIM11, "TIM11"},
     {TIM12, "TIM12"},
     {TIM13, "TIM13"},
-    {TIM14, "TIM14"},
+    {TIM14, "TIM14"}, */
 };
 
 // Таблица соответствия таймера и его HAL-дескриптора
@@ -63,16 +63,16 @@ etl::map<TIM_TypeDef *, TIM_HandleTypeDef *, 12> tim_handl_table = {
     {TIM4, &htim4},
     {TIM5, &htim5},
     {TIM8, &htim8},
-    {TIM9, &htim9},
+    /* {TIM9, &htim9},
     {TIM10, &htim10},
     {TIM11, &htim11},
     {TIM12, &htim12},
     {TIM13, &htim13},
-    {TIM14, &htim14},
+    {TIM14, &htim14}, */
 };
 
 // Таблица альтернативных функций GPIO (Alternate Function) для таймеров
-etl::map<TIM_TypeDef *, uint8_t, 12> tim_af_table = {
+/* etl::map<TIM_TypeDef *, uint8_t, 12> tim_af_table = {
     {TIM1, GPIO_AF1_TIM1},
     {TIM2, GPIO_AF1_TIM2},
     {TIM3, GPIO_AF2_TIM3},
@@ -86,7 +86,7 @@ etl::map<TIM_TypeDef *, uint8_t, 12> tim_af_table = {
     {TIM13, GPIO_AF9_TIM13},
     {TIM14, GPIO_AF9_TIM14},
 };
-
+ */
 // Таблица каналов таймера (Channel 1–4) в строковом виде
 etl::map<uint32_t, const char *, 4> ch_table = {
     {TIM_CHANNEL_1, "CHANNEL_1"},
