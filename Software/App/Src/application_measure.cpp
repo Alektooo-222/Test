@@ -7,15 +7,16 @@
 #include <etl/string.h>
 #include <etl/format_spec.h>
 
-Registered_measure_pin measure_pin;
-uint32_t software_counter_pwm = 0;
-uint32_t software_counter_ic = 0;
+/* Registered_measure_pin measure_pin; */
+/* uint32_t software_counter_pwm = 0; */
+/* uint32_t software_counter_ic = 0; */
 
 extern etl::map<uint16_t, IRQn_Type, 16> exti_irq_table;
 extern etl::map<TIM_TypeDef *, IRQn_Type, 16> tim_cc_irq_table;
-extern etl::map<TIM_TypeDef *, TIM_HandleTypeDef *, 12> tim_handl_table;
+extern etl::map<TIM_TypeDef *, TIM_HandleTypeDef *, 4> tim_handl_table;
 extern etl::map<Pin_configured, const char *, 16> staus_table;
-extern Pin ListPins[50];
+extern Pin ListPins[37];
+extern uint32_t software_counter_ic;
 
 StatusConfigMeasure registration_measure_pin(const Pin_name &pin)
 {
@@ -54,7 +55,8 @@ StatusConfigMeasure config_hardware_measure(const Pin_name &pin, const Periphera
 {
     uint32_t tim_clk;
 
-    uint8_t bits = (tim.timer == TIM2 || tim.timer == TIM5) ? 32 : 16;
+    /* uint8_t bits = (tim.timer == TIM2 || tim.timer == TIM5) ? 32 : 16; */
+    uint8_t bits = 16;
 
     tim_clk = get_freq_clk_tim(tim);
 
@@ -314,7 +316,7 @@ void cmd_freq_handler(string_rx_mess &str)
     {
         HAL_NVIC_EnableIRQ(exti_irq_table[measure_pin.pin.pin_number]);
         software_counter_ic = 0;
-        HAL_TIM_Base_Start_IT(&htim7);
+        HAL_TIM_Base_Start_IT(tim_handl_table[TIM_SOFTWARE_MEASURE]);
 
         measure_pin.measurement_state = StateMeasurement::MEASURMENT_IN_PROGRESS;
 

@@ -28,7 +28,7 @@ struct Peripheral_capabilities
 struct Pin
 {
     const Pin_name name;
-    etl::vector<Peripheral_capabilities, 4> hardware_features;
+    etl::vector<Peripheral_capabilities, 2> hardware_features;
     Pin_configured conf;
 };
 

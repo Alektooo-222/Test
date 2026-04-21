@@ -61,7 +61,7 @@ target_sources(${CMAKE_PROJECT_NAME} PRIVATE
     ${CMAKE_SOURCE_DIR}/App/Src/application_pwm.cpp
     ${CMAKE_SOURCE_DIR}/App/Src/application_measure.cpp
     ${CMAKE_SOURCE_DIR}/App/Src/application_transmit.cpp
-    ${CMAKE_SOURCE_DIR}/App/Src/pins.cpp
+    ${CMAKE_SOURCE_DIR}/App/Src/pins_f103c8t6.cpp
     ${CMAKE_SOURCE_DIR}/App/Src/tables.cpp
     ${CMAKE_SOURCE_DIR}/App/Src/tim.cpp
 

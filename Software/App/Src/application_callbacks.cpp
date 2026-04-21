@@ -1,7 +1,9 @@
 #include "main.h"
 #include "application_measure.h"
 #include "application_pwm.h"
+#include "application_transmit.h"
 #include "tim.h"
+#include "etl/map.h"
 
 extern uint32_t software_counter_pwm;
 extern uint32_t software_counter_ic;
@@ -10,6 +12,9 @@ extern USBD_HandleTypeDef USBD_Device;
 
 extern UART_HandleTypeDef UartHandle;
 extern uint8_t UserTxBuffer[APP_TX_DATA_SIZE];
+
+extern etl::map<TIM_TypeDef *, TIM_HandleTypeDef *, 12> tim_handl_table;
+extern TypeTxQueue tx_uart_queue;
 
 bool USBTxReady = 1;
 uint32_t tic = 0;
@@ -22,7 +27,7 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
     uint32_t count_err_1 = 0;
     uint32_t count_err_2 = 0;
 
-    if (htim->Instance == TIM7)
+    if (htim->Instance == TIM_SOFTWARE_MEASURE)
     {
         htim->State = HAL_TIM_STATE_READY;
 
@@ -47,7 +52,7 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
         }
     }
 
-    if (htim->Instance == TIM6)
+    if (htim->Instance == TIM_SOFTWARE_PWM)
     {
         software_counter_pwm++;
 
@@ -56,6 +61,12 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
             DWT_CYCCNT = 0;
             uint32_t phase = software_counter_pwm % sw_pwm_pin.period;
             tic = DWT_CYCCNT;
+
+            if (software_counter_pwm % 1000000 == 0)
+            {
+                etl::string<10> mes("SOFT_PWM");
+                push_with_timeout(tx_uart_queue, mes, 1);
+            }
 
             if (phase < sw_pwm_pin.pulse_t)
             {
@@ -72,6 +83,10 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
     {
         if (!tx_uart_queue.empty())
         {
+
+            /* etl::string<10> mes("SOFT_PWM");
+            push_with_timeout(tx_uart_queue, mes, 1); */
+
             auto &str = tx_uart_queue.front();
 
             HAL_UART_Transmit_DMA(&UartHandle, reinterpret_cast<const uint8_t *>(str.c_str()), str.size());
@@ -121,7 +136,7 @@ void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim)
 
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 {
-    if (htim7.State == HAL_TIM_STATE_BUSY)
+    if (tim_handl_table[TIM_SOFTWARE_MEASURE]->State == HAL_TIM_STATE_BUSY)
     {
         software_counter_ic++;
     }

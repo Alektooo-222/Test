@@ -10,11 +10,11 @@
 
 const uint32_t MAX_SW_PWM_FREQ = 1000;
 
-extern Pin ListPins[50];
-extern etl::map<TIM_TypeDef *, TIM_HandleTypeDef *, 12> tim_handl_table;
+extern Pin ListPins[37];
+extern etl::map<TIM_TypeDef *, TIM_HandleTypeDef *, 4> tim_handl_table;
 extern etl::map<Pin_configured, const char *, 16> staus_table;
 
-etl::vector<pin_software_pwm, 50> registered_sw_pins;
+etl::vector<pin_software_pwm, 20> registered_sw_pins;
 
 etl::vector<Peripheral_capabilities, 20> registered_pwm_tim;
 
@@ -27,7 +27,7 @@ uint8_t GPIO_Init_SW_PWM(const Pin_name &pin)
     GPIO_InitStruct.Pin = pin.pin_number;
     GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
     GPIO_InitStruct.Pull = GPIO_NOPULL;
-    GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
+    GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
     HAL_GPIO_Init(pin.port, &GPIO_InitStruct);
 
     return 0;
@@ -35,9 +35,9 @@ uint8_t GPIO_Init_SW_PWM(const Pin_name &pin)
 
 StatusConfigPWM registration_pin(const Pin_name &pin, uint32_t freq, uint32_t pulse)
 {
-    const double tim6_clk = 90000000.0;
+    const double TIM_SOFTWARE_PWM_clk = 72000000.0;
 
-    const double time_sample = ((TIM6->PSC + 1) * (TIM6->ARR + 1)) / tim6_clk;
+    const double time_sample = ((TIM_SOFTWARE_PWM->PSC + 1) * (TIM_SOFTWARE_PWM->ARR + 1)) / TIM_SOFTWARE_PWM_clk;
 
     uint32_t period = ((1 / static_cast<double>(freq)) / time_sample);
     uint32_t pulse_t = pulse * period / 100;
@@ -80,7 +80,8 @@ StatusConfigPWM config_hardware_pwm(const Pin_name &pin, const Peripheral_capabi
 
     uint32_t tim_clk;
 
-    uint8_t bits = (tim.timer == TIM2 || tim.timer == TIM5) ? 32 : 16;
+    /* uint8_t bits = (tim.timer == TIM2 || tim.timer == TIM5) ? 32 : 16; */
+    uint8_t bits = 16;
 
     tim_cfg_t tmr_cnf{};
 
@@ -325,7 +326,7 @@ void cmd_gen_handler(string_rx_mess &str)
         mes.erase(mes.end() - 1);
         add_str(mes, "ED\n", tx_uart_queue);
         push_with_timeout(tx_uart_queue, mes, 100);
-        HAL_NVIC_EnableIRQ(TIM6_DAC_IRQn);
+        HAL_NVIC_EnableIRQ(TIM1_UP_IRQn);
 
         for (auto &tim : registered_pwm_tim)
         {
@@ -345,7 +346,7 @@ void cmd_gen_handler(string_rx_mess &str)
         mes.erase(mes.end() - 1);
         add_str(mes, "PED\n", tx_uart_queue);
         push_with_timeout(tx_uart_queue, mes, 100);
-        HAL_NVIC_DisableIRQ(TIM6_DAC_IRQn);
+        HAL_NVIC_DisableIRQ(TIM1_UP_IRQn);
 
         for (auto &tim : registered_pwm_tim)
         {

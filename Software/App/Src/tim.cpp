@@ -7,18 +7,18 @@ TIM_HandleTypeDef htim1;
 TIM_HandleTypeDef htim2;
 TIM_HandleTypeDef htim3;
 TIM_HandleTypeDef htim4;
-TIM_HandleTypeDef htim5;
-TIM_HandleTypeDef htim6;
-TIM_HandleTypeDef htim7;
-TIM_HandleTypeDef htim8;
-TIM_HandleTypeDef htim9;
-TIM_HandleTypeDef htim10;
-TIM_HandleTypeDef htim11;
-TIM_HandleTypeDef htim12;
-TIM_HandleTypeDef htim13;
-TIM_HandleTypeDef htim14;
+/* TIM_HandleTypeDef htim5; */
+/* TIM_HandleTypeDef htim6; */
+/* TIM_HandleTypeDef htim7; */
+/* TIM_HandleTypeDef htim8; */
+/* TIM_HandleTypeDef htim9; */
+/* TIM_HandleTypeDef htim10; */
+/* TIM_HandleTypeDef htim11; */
+/* TIM_HandleTypeDef htim12; */
+/* TIM_HandleTypeDef htim13; */
+/* TIM_HandleTypeDef htim14; */
 
-extern etl::map<TIM_TypeDef *, TIM_HandleTypeDef *, 12> tim_handl_table;
+extern etl::map<TIM_TypeDef *, TIM_HandleTypeDef *, 4> tim_handl_table;
 extern etl::map<TIM_TypeDef *, uint8_t, 12> tim_af_table;
 extern etl::map<TIM_TypeDef *, IRQn_Type, 16> tim_cc_irq_table;
 
@@ -28,11 +28,11 @@ uint32_t get_freq_clk_tim(const Peripheral_capabilities &tim)
 
   if (reinterpret_cast<unsigned long>(tim.timer) >= APB1PERIPH_BASE && reinterpret_cast<unsigned long>(tim.timer) < APB2PERIPH_BASE)
   {
-    tim_clk = 90000000;
+    tim_clk = 72000000;
   }
   else
   {
-    tim_clk = 180000000;
+    tim_clk = 72000000;
   }
 
   return tim_clk;
@@ -202,7 +202,7 @@ StatusConfigPWM config_tim_pwm(const Pin_name &pin, const Peripheral_capabilitie
   GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  GPIO_InitStruct.Alternate = tim_af_table[tim.timer];
+  /* GPIO_InitStruct.Alternate = tim_af_table[tim.timer]; */
   HAL_GPIO_Init(pin.port, &GPIO_InitStruct);
 
   /* if (tim.inv_ch == Inverse_Ch::P)
@@ -236,7 +236,7 @@ StatusConfigMeasure config_tim_measure(const Pin_name &pin, const Peripheral_cap
   GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  GPIO_InitStruct.Alternate = tim_af_table[tim.timer];
+  /* GPIO_InitStruct.Alternate = tim_af_table[tim.timer]; */
   HAL_GPIO_Init(pin.port, &GPIO_InitStruct);
 
   TIM_HandleTypeDef *htim = tim_handl_table[tim.timer];
@@ -301,45 +301,5 @@ void TIM_Base_MspInit(TIM_HandleTypeDef *tim_baseHandle)
   else if (tim_baseHandle->Instance == TIM4)
   {
     __HAL_RCC_TIM4_CLK_ENABLE();
-  }
-  else if (tim_baseHandle->Instance == TIM5)
-  {
-    __HAL_RCC_TIM5_CLK_ENABLE();
-  }
-  else if (tim_baseHandle->Instance == TIM6)
-  {
-    __HAL_RCC_TIM6_CLK_ENABLE();
-  }
-  else if (tim_baseHandle->Instance == TIM7)
-  {
-    __HAL_RCC_TIM7_CLK_ENABLE();
-  }
-  else if (tim_baseHandle->Instance == TIM8)
-  {
-    __HAL_RCC_TIM8_CLK_ENABLE();
-  }
-  else if (tim_baseHandle->Instance == TIM9)
-  {
-    __HAL_RCC_TIM9_CLK_ENABLE();
-  }
-  else if (tim_baseHandle->Instance == TIM10)
-  {
-    __HAL_RCC_TIM10_CLK_ENABLE();
-  }
-  else if (tim_baseHandle->Instance == TIM11)
-  {
-    __HAL_RCC_TIM11_CLK_ENABLE();
-  }
-  else if (tim_baseHandle->Instance == TIM12)
-  {
-    __HAL_RCC_TIM12_CLK_ENABLE();
-  }
-  else if (tim_baseHandle->Instance == TIM13)
-  {
-    __HAL_RCC_TIM13_CLK_ENABLE();
-  }
-  else if (tim_baseHandle->Instance == TIM14)
-  {
-    __HAL_RCC_TIM14_CLK_ENABLE();
   }
 }

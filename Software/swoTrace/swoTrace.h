@@ -1,6 +1,6 @@
 #pragma once
 
-#include <stm32f446xx.h>
+#include <stm32f1xx.h>
 #include <stdarg.h>
 #include <stdio.h>
 #include <stdint.h>

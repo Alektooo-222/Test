@@ -49,7 +49,7 @@ extern uint8_t TxCmtFlag;
 
 extern USBD_HandleTypeDef USBD_Device;
 
-extern etl::map<TIM_TypeDef *, TIM_HandleTypeDef *, 12> tim_handl_table;
+extern etl::map<TIM_TypeDef *, TIM_HandleTypeDef *, 4> tim_handl_table;
 extern etl::map<uint16_t, IRQn_Type, 16> exti_irq_table;
 extern etl::map<TIM_TypeDef *, IRQn_Type, 16> tim_cc_irq_table;
 
@@ -60,10 +60,14 @@ void cmd_echo_handler(string_rx_mess &str);
 void cmd_help_handler(string_rx_mess &str);
 void cmd_pinout_handler(string_rx_mess &str);
 
-extern Pin ListPins[50];
+extern Pin ListPins[37];
 extern etl::map<TIM_TypeDef *, const char *, 12> tim_table;
 extern etl::map<uint32_t, const char *, 4> ch_table;
 extern etl::map<Pin_configured, const char *, 14> staus_table;
+
+Registered_measure_pin measure_pin;
+uint32_t software_counter_ic = 0;
+uint32_t software_counter_pwm = 0;
 
 struct CommandEntry
 {
@@ -175,19 +179,19 @@ void cmd_pinout_handler(string_rx_mess &str)
     StringTxQueue string_periph;
     string_periph.clear();
 
-    add_str(string_periph, str, tx_usb_queue);
-    add_str(string_periph, ":\n", tx_usb_queue);
+    add_str(string_periph, str, tx_uart_queue);
+    add_str(string_periph, ":\n", tx_uart_queue);
 
     for (auto &pin : ListPins)
     {
-        add_str(string_periph, pin.name.pin_name, tx_usb_queue);
-        add_str(string_periph, "\n", tx_usb_queue);
-        add_str(string_periph, staus_table[pin.conf], tx_usb_queue);
-        add_str(string_periph, "\nPeriph: ", tx_usb_queue);
+        add_str(string_periph, pin.name.pin_name, tx_uart_queue);
+        add_str(string_periph, "\n", tx_uart_queue);
+        add_str(string_periph, staus_table[pin.conf], tx_uart_queue);
+        add_str(string_periph, "\nPeriph: ", tx_uart_queue);
 
         if (pin.hardware_features.empty())
         {
-            add_str(string_periph, "No TIM\n", tx_usb_queue);
+            add_str(string_periph, "No TIM\n", tx_uart_queue);
         }
         else
         {
@@ -195,17 +199,17 @@ void cmd_pinout_handler(string_rx_mess &str)
             for (auto &tim : pin.hardware_features)
             {
                 if (i != 0)
-                    add_str(string_periph, "        ", tx_usb_queue);
-                add_str(string_periph, tim_table[tim.timer], tx_usb_queue);
-                add_str(string_periph, "_", tx_usb_queue);
-                add_str(string_periph, ch_table[tim.channel], tx_usb_queue);
-                add_str(string_periph, "\n", tx_usb_queue);
+                    add_str(string_periph, "        ", tx_uart_queue);
+                add_str(string_periph, tim_table[tim.timer], tx_uart_queue);
+                add_str(string_periph, "_", tx_uart_queue);
+                add_str(string_periph, ch_table[tim.channel], tx_uart_queue);
+                add_str(string_periph, "\n", tx_uart_queue);
                 i++;
             }
         }
 
         // Отправляем одно сообщение для текущего пина
-        if (!push_with_timeout(tx_usb_queue, string_periph, 100))
+        if (!push_with_timeout(tx_uart_queue, string_periph, 100))
         {
         }
         string_periph.clear(); // готовим для следующего пина

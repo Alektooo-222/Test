@@ -17,7 +17,6 @@
  */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
-/* #include  "etl/queue_spsc_atomic.h" */
 #include "application_callbacks.h"
 
 /* Private typedef -----------------------------------------------------------*/
@@ -72,7 +71,7 @@ static int8_t CDC_Itf_Init(void);
 static int8_t CDC_Itf_DeInit(void);
 static int8_t CDC_Itf_Control(uint8_t cmd, uint8_t *pbuf, uint16_t length);
 static int8_t CDC_Itf_Receive(uint8_t *pbuf, uint32_t *Len);
-static int8_t CDC_Itf_TransmitCplt(uint8_t *pbuf, uint32_t *Len, uint8_t epnum);
+/* static int8_t CDC_Itf_TransmitCplt(uint8_t *pbuf, uint32_t *Len, uint8_t epnum); */
 
 /* static void Error_Handler(void); */
 void Error_Handler(void);
@@ -85,7 +84,7 @@ USBD_CDC_ItfTypeDef USBD_CDC_fops =
         CDC_Itf_DeInit,
         CDC_Itf_Control,
         CDC_Itf_Receive,
-        CDC_Itf_TransmitCplt};
+        /* CDC_Itf_TransmitCplt */};
 
 /* Private functions ---------------------------------------------------------*/
 
@@ -349,15 +348,15 @@ static int8_t CDC_Itf_Receive(uint8_t *Buf, uint32_t *Len)
   return (0);
 } */
 
-static int8_t CDC_Itf_TransmitCplt(uint8_t *Buf, uint32_t *Len, uint8_t epnum)
+/* static int8_t CDC_Itf_TransmitCplt(uint8_t *Buf, uint32_t *Len, uint8_t epnum)
 {
-  /* if (!tx_usb_queue.empty())
-  {
-      tx_usb_queue.pop();
-  } */
+  //if (!tx_usb_queue.empty())
+  //{
+  //    tx_usb_queue.pop();
+  //}
   cdc_transmit_cplt();
   return (0);
-}
+} */
 
 /* static int8_t CDC_Itf_TransmitCplt(uint8_t *Buf, uint32_t *Len, uint8_t epnum)
 {
@@ -478,7 +477,7 @@ static void TIM_Config(void)
        + Counter direction = Up
   */
   TimHandle.Init.Period = (CDC_POLLING_INTERVAL * 1000) - 1;
-  TimHandle.Init.Prescaler = 84 - 1;
+  TimHandle.Init.Prescaler = 72 - 1;
   TimHandle.Init.ClockDivision = 0;
   TimHandle.Init.CounterMode = TIM_COUNTERMODE_UP;
   TimHandle.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;

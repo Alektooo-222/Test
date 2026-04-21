@@ -8,7 +8,7 @@
 
 
 
-using array_measurement = etl::vector<uint32_t, 200>;
+using array_measurement = etl::vector<uint32_t, 101>;
 using FilterFunc = uint32_t (*)(array_measurement &vect);
 
 typedef struct

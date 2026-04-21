@@ -24,7 +24,7 @@
 /* USER CODE BEGIN Includes */
 #include "application.h"
 #include "tim.h"
-
+#include "etl/map.h"
 
 /* USER CODE END Includes */
 
@@ -35,7 +35,7 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-#define APP_TX_DATA_SIZE 2048
+/* #define APP_TX_DATA_SIZE 2048 */
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -53,6 +53,8 @@ extern uint8_t UserRxBufferUART[APP_TX_DATA_SIZE];
 extern uint32_t UserTxBufPtrIn;
 extern uint8_t RxMessFlag_USB;
 extern uint8_t RxMessFlag_UART;
+
+extern etl::map<TIM_TypeDef *, TIM_HandleTypeDef *, 12> tim_handl_table;
 // extern PCD_HandleTypeDef hpcd;
 /* USER CODE END PV */
 
@@ -60,8 +62,10 @@ extern uint8_t RxMessFlag_UART;
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
 /* USER CODE BEGIN PFP */
-void TIM6_Init();
-void TIM7_Init();
+
+
+void TIM_SOFTWARE_PWM_Init();
+void TIM_SOFTWARE_MEASURE_Init();
 
 volatile uint32_t sys_ms = 0;
 /* USER CODE END PFP */
@@ -116,19 +120,20 @@ int main(void)
 
   // swoInit(0xFFFFFFFF, SystemCoreClock, SWO_STLINK_V2_MAX_SPEED); // All ITM ports, 72 MHz, 2.25 Mbps (max speed for ST-LINK V2, 8 us per byte)
 
-  TIM6_Init();
-  TIM7_Init();
+  TIM_SOFTWARE_PWM_Init();
+  TIM_SOFTWARE_MEASURE_Init();
 
   __HAL_RCC_GPIOA_CLK_ENABLE();
   __HAL_RCC_GPIOB_CLK_ENABLE();
   __HAL_RCC_GPIOC_CLK_ENABLE();
   __HAL_RCC_GPIOD_CLK_ENABLE();
-  __HAL_RCC_GPIOH_CLK_ENABLE();
 
-  HAL_TIM_Base_Start_IT(&htim6);
-  /* HAL_TIM_Base_Start_IT(&htim7); */
+  /* HAL_TIM_Base_Start_IT(tim_handl_table[TIM_SOFTWARE_PWM]); */
+  HAL_TIM_Base_Start_IT(&htim1);
 
   dwtInit();
+  /* USB_LP_CAN1_RX0_IRQn;
+  USB_LP_CAN_RX0_IRQn */
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -167,50 +172,53 @@ int main(void)
  */
 void SystemClock_Config(void)
 {
-  RCC_OscInitTypeDef RCC_OscInitStruct = {};
-  RCC_ClkInitTypeDef RCC_ClkInitStruct = {};
+  RCC_OscInitTypeDef RCC_OscInitStruct = {0};
+  RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
+  RCC_PeriphCLKInitTypeDef PeriphClkInit = {0};
 
-  /** Configure the main internal regulator output voltage
-   */
-  __HAL_RCC_PWR_CLK_ENABLE();
-  __HAL_PWR_VOLTAGESCALING_CONFIG(PWR_REGULATOR_VOLTAGE_SCALE1);
+  GPIO_InitTypeDef GPIO_InitStruct = {0};
 
   /** Initializes the RCC Oscillators according to the specified parameters
-   * in the RCC_OscInitTypeDef structure.
-   */
+  * in the RCC_OscInitTypeDef structure.
+  */
   RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSE;
   RCC_OscInitStruct.HSEState = RCC_HSE_ON;
+  RCC_OscInitStruct.HSEPredivValue = RCC_HSE_PREDIV_DIV2;
+  RCC_OscInitStruct.HSIState = RCC_HSI_ON;
   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
   RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;
-  RCC_OscInitStruct.PLL.PLLM = 4;
-  RCC_OscInitStruct.PLL.PLLN = 180;
-  RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV2;
-  RCC_OscInitStruct.PLL.PLLQ = 7;
-  RCC_OscInitStruct.PLL.PLLR = 2;
+  RCC_OscInitStruct.PLL.PLLMUL = RCC_PLL_MUL9;
   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
   {
     Error_Handler();
   }
 
-  /** Activate the Over-Drive mode
-   */
-  if (HAL_PWREx_EnableOverDrive() != HAL_OK)
-  {
-    Error_Handler();
-  }
-
   /** Initializes the CPU, AHB and APB buses clocks
-   */
-  RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK | RCC_CLOCKTYPE_SYSCLK | RCC_CLOCKTYPE_PCLK1 | RCC_CLOCKTYPE_PCLK2;
+  */
+  RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
+                              |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
   RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
-  RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV4;
-  RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV2;
+  RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV2;
+  RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
 
-  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_5) != HAL_OK)
+  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_2) != HAL_OK)
   {
     Error_Handler();
   }
+  PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_USB;
+  PeriphClkInit.UsbClockSelection = RCC_USBCLKSOURCE_PLL_DIV1_5;
+  if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInit) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  HAL_RCC_MCOConfig(RCC_MCO, RCC_MCO1SOURCE_PLLCLK, RCC_MCODIV_1);
+
+  /*Configure GPIO pin : PA8 */
+  GPIO_InitStruct.Pin = GPIO_PIN_8;
+  GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 }
 
 /**
@@ -225,7 +233,7 @@ static void MX_GPIO_Init(void)
   /* USER CODE END MX_GPIO_Init_1 */
 
   /* GPIO Ports Clock Enable */
-  __HAL_RCC_GPIOH_CLK_ENABLE();
+  /* __HAL_RCC_GPIOH_CLK_ENABLE(); */
   __HAL_RCC_GPIOA_CLK_ENABLE();
 
   /* USER CODE BEGIN MX_GPIO_Init_2 */
@@ -234,60 +242,60 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
-void TIM6_Init()
+void TIM_SOFTWARE_PWM_Init()
 {
-  __HAL_RCC_TIM6_CLK_ENABLE();
+  __HAL_RCC_TIM1_CLK_ENABLE();
 
   TIM_MasterConfigTypeDef sMasterConfig = {};
 
-  htim6.Instance = TIM6;
-  htim6.Init.Prescaler = 0;
-  htim6.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim6.Init.Period = 899;
-  htim6.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
-  if (HAL_TIM_Base_Init(&htim6) != HAL_OK)
+  htim1.Instance = TIM1;
+  htim1.Init.Prescaler = 0;
+  htim1.Init.CounterMode = TIM_COUNTERMODE_UP;
+  htim1.Init.Period = 719;
+  htim1.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+  if (HAL_TIM_Base_Init(&htim1) != HAL_OK)
   {
     Error_Handler();
   }
   sMasterConfig.MasterOutputTrigger = TIM_TRGO_RESET;
   sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
-  if (HAL_TIMEx_MasterConfigSynchronization(&htim6, &sMasterConfig) != HAL_OK)
+  if (HAL_TIMEx_MasterConfigSynchronization(&htim1, &sMasterConfig) != HAL_OK)
   {
     Error_Handler();
   }
 
-  /* TIM6 interrupt Init */
-  HAL_NVIC_SetPriority(TIM6_DAC_IRQn, 5, 0);
+  //TIM6 interrupt Init
+  HAL_NVIC_SetPriority(TIM1_UP_IRQn, 5, 0);
 }
 
-void TIM7_Init()
+void TIM_SOFTWARE_MEASURE_Init()
 {
-  __HAL_RCC_TIM7_CLK_ENABLE();
+  __HAL_RCC_TIM2_CLK_ENABLE();
 
-  TIM_MasterConfigTypeDef sMasterConfig = {0};
+  TIM_MasterConfigTypeDef sMasterConfig = {};
 
-  htim7.Instance = TIM7;
-  htim7.Init.Prescaler = 1439;
-  htim7.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim7.Init.Period = 62499;
-  htim7.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
-  if (HAL_TIM_Base_Init(&htim7) != HAL_OK)
+  tim_handl_table[TIM_SOFTWARE_MEASURE]->Instance = TIM_SOFTWARE_MEASURE;
+  tim_handl_table[TIM_SOFTWARE_MEASURE]->Init.Prescaler = 1151;
+  tim_handl_table[TIM_SOFTWARE_MEASURE]->Init.CounterMode = TIM_COUNTERMODE_UP;
+  tim_handl_table[TIM_SOFTWARE_MEASURE]->Init.Period = 62499;
+  tim_handl_table[TIM_SOFTWARE_MEASURE]->Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+  if (HAL_TIM_Base_Init(tim_handl_table[TIM_SOFTWARE_MEASURE]) != HAL_OK)
   {
     Error_Handler();
   }
-  if (HAL_TIM_OnePulse_Init(&htim7, TIM_OPMODE_SINGLE) != HAL_OK)
+  if (HAL_TIM_OnePulse_Init(tim_handl_table[TIM_SOFTWARE_MEASURE], TIM_OPMODE_SINGLE) != HAL_OK)
   {
     Error_Handler();
   }
   sMasterConfig.MasterOutputTrigger = TIM_TRGO_RESET;
   sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
-  if (HAL_TIMEx_MasterConfigSynchronization(&htim7, &sMasterConfig) != HAL_OK)
+  if (HAL_TIMEx_MasterConfigSynchronization(tim_handl_table[TIM_SOFTWARE_MEASURE], &sMasterConfig) != HAL_OK)
   {
     Error_Handler();
   }
 
-  HAL_NVIC_SetPriority(TIM7_IRQn, 0, 0);
-  HAL_NVIC_EnableIRQ(TIM7_IRQn);
+  HAL_NVIC_SetPriority(IRQn_Type_TIM_SOFTWARE_MEASURE, 2, 0);
+  HAL_NVIC_EnableIRQ(IRQn_Type_TIM_SOFTWARE_MEASURE);
 }
 
 /* USER CODE END 4 */
