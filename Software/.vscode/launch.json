@@ -8,7 +8,7 @@
             "name": "Build & Debug Microcontroller - ST-Link",
             "cwd": "${workspaceFolder}",
             "type": "cortex-debug",
-            "executable": "C:/ST_Examples/VCP_F446/build/Debug/VCP_F446.elf",
+            "executable": "./build/Debug/TEST_F103RC.elf",
             // Let CMake extension decide executable: "${command:cmake.launchTargetPath}"
             // Or fixed file path: "${workspaceFolder}/path/to/filename.elf"
             "request": "launch",
@@ -65,7 +65,7 @@
             "request": "launch",
             "cwd": "${workspaceRoot}",
             "servertype": "openocd",
-            "executable": "C:/ST_Examples/VCP_F446/build/Debug/VCP_F446.elf",
+            "executable": "./build/Debug/TEST_F103RC.elf",
             "svdFile": "${config:STM32VSCodeExtension.cubeCLT.path}/STMicroelectronics_CMSIS_SVD/STM32F446.svd",
             "configFiles": [
                 "C:/OpenOCD-20250710-0.12.0/share/openocd/scripts/interface/stlink.cfg", //stlink.cfg", //"//cmsis-dap.cfg", //stlink.cfg
@@ -79,7 +79,7 @@
         {
             "name": "st-link local",
             "cwd": "${workspaceRoot}",
-            "executable": "./build/Debug/VCP_F103RC.elf",
+            "executable": "./build/Debug/TEST_F103RC.elf",
             "request": "launch",
             "type": "cortex-debug",
             "runToEntryPoint": "main",

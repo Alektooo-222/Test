@@ -62,6 +62,8 @@ etl::map<TIM_TypeDef *, TIM_HandleTypeDef *, 12> tim_handl_table = {
     {TIM3, &htim3},
     {TIM4, &htim4},
     {TIM5, &htim5},
+    {TIM6, &htim6},
+    {TIM7, &htim7},
     {TIM8, &htim8},
     /* {TIM9, &htim9},
     {TIM10, &htim10},

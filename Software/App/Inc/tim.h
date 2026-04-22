@@ -5,6 +5,7 @@
 #include "pins.h"
 #include "status_conf.h"
 
+
 typedef struct
 {
     uint32_t psc;
@@ -17,6 +18,7 @@ tim_cfg_t tim_pick(uint32_t f_tim, uint32_t f_hz, uint8_t arr_bits, double duty)
 StatusConfigPWM config_tim_pwm(const Pin_name &pin, const Peripheral_capabilities &tim, tim_cfg_t &tim_cfg);
 StatusConfigMeasure config_tim_measure(const Pin_name &pin, const Peripheral_capabilities &tim, uint32_t bits, uint32_t tim_clk);
 uint32_t get_freq_clk_tim(const Peripheral_capabilities &tim);
+void TIM_Base_MspInit(TIM_HandleTypeDef *tim_baseHandle);
 
 /* extern TIM_HandleTypeDef htim1; */
 /* extern TIM_HandleTypeDef htim6; */

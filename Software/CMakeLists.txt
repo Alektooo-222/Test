@@ -19,7 +19,7 @@ if(NOT CMAKE_BUILD_TYPE)
 endif()
 
 # Set the project name
-set(CMAKE_PROJECT_NAME VCP_F103RC)
+set(CMAKE_PROJECT_NAME TEST_F103RC)
 
 # Include toolchain file
 include("cmake/gcc-arm-none-eabi.cmake")

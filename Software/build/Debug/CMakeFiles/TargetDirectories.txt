@@ -1,4 +1,4 @@
-C:/GitHub/TEST/Software/build/Debug/CMakeFiles/VCP_F103RC.dir
+C:/GitHub/TEST/Software/build/Debug/CMakeFiles/TEST_F103RC.dir
 C:/GitHub/TEST/Software/build/Debug/CMakeFiles/edit_cache.dir
 C:/GitHub/TEST/Software/build/Debug/CMakeFiles/rebuild_cache.dir
 C:/GitHub/TEST/Software/build/Debug/etl/CMakeFiles/edit_cache.dir

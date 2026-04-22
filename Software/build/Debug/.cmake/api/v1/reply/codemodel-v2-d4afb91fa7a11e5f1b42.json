@@ -22,7 +22,7 @@
 					"source" : ".",
 					"targetIndexes" : 
 					[
-						2
+						1
 					]
 				},
 				{
@@ -49,7 +49,7 @@
 					"targetIndexes" : 
 					[
 						0,
-						1
+						2
 					]
 				},
 				{
@@ -90,7 +90,7 @@
 						0,
 						2
 					],
-					"name" : "VCP_F103RC",
+					"name" : "TEST_F103RC",
 					"targetIndexes" : 
 					[
 						0,
@@ -133,17 +133,17 @@
 					"projectIndex" : 0
 				},
 				{
+					"directoryIndex" : 0,
+					"id" : "TEST_F103RC::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-TEST_F103RC-Debug-5acc1c057488e65a8044.json",
+					"name" : "TEST_F103RC",
+					"projectIndex" : 0
+				},
+				{
 					"directoryIndex" : 2,
 					"id" : "USB_Device_Library::@768a070a0fe75716b479",
 					"jsonFile" : "target-USB_Device_Library-Debug-5ac3b202aad18cd0cfc4.json",
 					"name" : "USB_Device_Library",
-					"projectIndex" : 0
-				},
-				{
-					"directoryIndex" : 0,
-					"id" : "VCP_F103RC::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-VCP_F103RC-Debug-c5082d7d09a4aceead15.json",
-					"name" : "VCP_F103RC",
 					"projectIndex" : 0
 				}
 			]

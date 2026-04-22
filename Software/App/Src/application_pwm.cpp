@@ -3,6 +3,7 @@
 #include "application_pwm.h"
 #include "application_transmit.h"
 #include "tim.h"
+#include "pins.h"
 #include "etl/to_string.h"
 #include "etl/string.h"
 #include "etl/format_spec.h"
@@ -10,7 +11,6 @@
 
 const uint32_t MAX_SW_PWM_FREQ = 1000;
 
-extern Pin ListPins[50];
 extern etl::map<TIM_TypeDef *, TIM_HandleTypeDef *, 12> tim_handl_table;
 extern etl::map<Pin_configured, const char *, 16> staus_table;
 
@@ -80,7 +80,7 @@ StatusConfigPWM config_hardware_pwm(const Pin_name &pin, const Peripheral_capabi
 
     uint32_t tim_clk;
 
-    //uint8_t bits = (tim.timer == TIM2 || tim.timer == TIM5) ? 32 : 16;
+    // uint8_t bits = (tim.timer == TIM2 || tim.timer == TIM5) ? 32 : 16;
     uint8_t bits = 16;
 
     tim_cfg_t tmr_cnf{};
@@ -198,8 +198,11 @@ void cmd_config_gen_handler(string_rx_mess &str)
                         bool TIMx_Busy = (tim_handl_table[tim.timer]->Instance == tim.timer);
                         bool Chx_Busy = tim_handl_table[tim.timer]->ChannelState[static_cast<uint32_t>(static_cast<double>(tim.channel) / static_cast<double>(4))] == HAL_TIM_CHANNEL_STATE_BUSY;
                         bool ChxN_Busy = tim_handl_table[tim.timer]->ChannelNState[static_cast<uint32_t>(static_cast<double>(tim.channel) / static_cast<double>(4))] == HAL_TIM_CHANNEL_STATE_BUSY;
-
-                        if (TIMx_Busy && !(Chx_Busy || ChxN_Busy)) // Если таймер занят, но требуемые каналы свободны, то настроить аппаратный pwm при условии, что частота работы таймера равна требуемой
+                        if (!TIMx_Busy)
+                        {
+                            status_config_hardware_pwm = config_hardware_pwm(pin.name, tim, freq, pulse);
+                        }
+                        else if (TIMx_Busy && !(Chx_Busy || ChxN_Busy)) // Если таймер занят, но требуемые каналы свободны, то настроить аппаратный pwm при условии, что частота работы таймера равна требуемой
                         {
                             freq_clk_tim = get_freq_clk_tim(tim);
                             freq_busy_tim = freq_clk_tim / ((tim.timer->PSC + 1) * (tim.timer->ARR + 1));
@@ -216,8 +219,8 @@ void cmd_config_gen_handler(string_rx_mess &str)
                             continue;
                         }
 
-                        if (status_pwm_hard == 0)
-                            status_config_hardware_pwm = config_hardware_pwm(pin.name, tim, freq, pulse);
+                        /* if (status_pwm_hard == 0)
+                            status_config_hardware_pwm = config_hardware_pwm(pin.name, tim, freq, pulse); */
 
                         if (status_config_hardware_pwm == StatusConfigPWM::CONFIG_HW_PWM_OK)
                         {
@@ -321,7 +324,7 @@ void cmd_gen_handler(string_rx_mess &str)
                    [](unsigned char c)
                    { return std::toupper(c); });
 
-    if (mes == "GEN START\n")
+    if (mes == "GEN START")
     {
         mes.erase(mes.end() - 1);
         add_str(mes, "ED\n", tx_uart_queue);
@@ -341,7 +344,7 @@ void cmd_gen_handler(string_rx_mess &str)
             }
         }
     }
-    else if (mes == "GEN STOP\n")
+    else if (mes == "GEN STOP")
     {
         mes.erase(mes.end() - 1);
         add_str(mes, "PED\n", tx_uart_queue);

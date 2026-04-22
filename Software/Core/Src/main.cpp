@@ -20,6 +20,7 @@
 #include "main.h"
 #include "application.h"
 #include "tim.h"
+#include "etl/map.h"
 
 extern uint8_t UserRxBufferUSB[APP_TX_DATA_SIZE];
 extern uint8_t UserRxBufferUART[APP_TX_DATA_SIZE];
@@ -30,8 +31,12 @@ extern uint8_t RxMessFlag_UART;
 extern UART_HandleTypeDef UartHandle;
 extern TIM_HandleTypeDef TimHandle;
 
-void TIM6_Init();
-void TIM7_Init();
+extern etl::map<TIM_TypeDef *, TIM_HandleTypeDef *, 12> tim_handl_table;
+
+void TIM_SW_PWM_Init();
+void TIM_SW_MEASURE_Init();
+void UARTx_Init();
+void TIMx_Init();
 
 /** @addtogroup STM32F1xx_HAL_Validation
  * @{
@@ -78,7 +83,7 @@ int main(void)
   /* Start Device Process */
   USBD_Start(&USBD_Device);
 
-  UartHandle.Instance = USARTx;
+  /* UartHandle.Instance = USARTx;
   UartHandle.Init.BaudRate = 115200;
   UartHandle.Init.WordLength = UART_WORDLENGTH_8B;
   UartHandle.Init.StopBits = UART_STOPBITS_1;
@@ -88,25 +93,16 @@ int main(void)
 
   if (HAL_UART_Init(&UartHandle) != HAL_OK)
   {
-    //Initialization Error
     Error_Handler();
   }
 
-  //##-2- Put UART peripheral in IT reception process ########################
-  //Any data received will be stored in "UserTxBuffer" buffer
   if (HAL_UART_Receive_IT(&UartHandle, (uint8_t *)UserRxBufferUART, 1) != HAL_OK)
   {
-    //Transfer error in reception process
     Error_Handler();
-  }
+  } */
 
-  //##-3- Configure the TIM Base generation #################################
-  //TIM_Config();
-  TimHandle.Instance = TIMx;
+  /* TimHandle.Instance = TIMx;
 
-  //Initialize TIM3 peripheral as follows: + Period = 10000 - 1 + Prescaler =
-  // * ((SystemCoreClock/2)/10000) - 1 + ClockDivision = 0 + Counter direction =
-  // * Up
   TimHandle.Init.Period = (CDC_POLLING_INTERVAL * 1000) - 1;
   TimHandle.Init.Prescaler = 72 - 1;
   TimHandle.Init.ClockDivision = 0;
@@ -114,30 +110,26 @@ int main(void)
   TimHandle.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
   if (HAL_TIM_Base_Init(&TimHandle) != HAL_OK)
   {
-    //Initialization Error
     Error_Handler();
   }
 
-  //##-4- Start the TIM Base generation in interrupt mode ####################
-  //Start Channel1
   if (HAL_TIM_Base_Start_IT(&TimHandle) != HAL_OK)
   {
-    //Starting Error
     Error_Handler();
-  }
+  } */
 
-  TIM6_Init();
-  TIM7_Init();
+  UARTx_Init();
+  TIMx_Init();
 
-  __HAL_RCC_AFIO_CLK_ENABLE();
-  __HAL_AFIO_REMAP_TIM1_PARTIAL();
+  TIM_SW_PWM_Init();
+  TIM_SW_MEASURE_Init();
 
   __HAL_RCC_GPIOA_CLK_ENABLE();
   __HAL_RCC_GPIOB_CLK_ENABLE();
   __HAL_RCC_GPIOC_CLK_ENABLE();
   __HAL_RCC_GPIOD_CLK_ENABLE();
 
-  HAL_TIM_Base_Start_IT(&htim6);
+  /* HAL_TIM_Base_Start_IT(&htim6); */
 
   dwtInit();
   /* Infinite loop */
@@ -173,55 +165,13 @@ int main(void)
  * @param  None
  * @retval None
  */
-/* void SystemClock_Config(void)
-{
-  RCC_ClkInitTypeDef clkinitstruct = {0};
-  RCC_OscInitTypeDef oscinitstruct = {0};
-  RCC_PeriphCLKInitTypeDef rccperiphclkinit = {0};
-
-  //Enable HSE Oscillator and activate PLL with HSE as source
-  oscinitstruct.OscillatorType = RCC_OSCILLATORTYPE_HSE;
-  oscinitstruct.HSEState = RCC_HSE_ON;
-  oscinitstruct.HSEPredivValue = RCC_HSE_PREDIV_DIV2;
-  oscinitstruct.PLL.PLLMUL = RCC_PLL_MUL9;
-
-  oscinitstruct.PLL.PLLState = RCC_PLL_ON;
-  oscinitstruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;
-
-  if (HAL_RCC_OscConfig(&oscinitstruct) != HAL_OK)
-  {
-    //Start Conversation Error
-    Error_Handler();
-  }
-
-  //USB clock selection
-  rccperiphclkinit.PeriphClockSelection = RCC_PERIPHCLK_USB;
-  rccperiphclkinit.UsbClockSelection = RCC_USBCLKSOURCE_PLL_DIV1_5;
-  HAL_RCCEx_PeriphCLKConfig(&rccperiphclkinit);
-
-  //Select PLL as system clock source and configure the HCLK, PCLK1 and PCLK2
-  // * clocks dividers
-  clkinitstruct.ClockType = RCC_CLOCKTYPE_SYSCLK | RCC_CLOCKTYPE_HCLK |
-                            RCC_CLOCKTYPE_PCLK1 | RCC_CLOCKTYPE_PCLK2;
-
-  clkinitstruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
-  clkinitstruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
-  clkinitstruct.APB1CLKDivider = RCC_HCLK_DIV2;
-  clkinitstruct.APB2CLKDivider = RCC_HCLK_DIV1;
-  if (HAL_RCC_ClockConfig(&clkinitstruct, FLASH_LATENCY_2) != HAL_OK)
-  {
-    //Start Conversation Error
-    Error_Handler();
-  }
-} */
-
 void SystemClock_Config(void)
 {
-  RCC_OscInitTypeDef RCC_OscInitStruct = {0};
-  RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
-  RCC_PeriphCLKInitTypeDef PeriphClkInit = {0};
+  RCC_OscInitTypeDef RCC_OscInitStruct = {};
+  RCC_ClkInitTypeDef RCC_ClkInitStruct = {};
+  RCC_PeriphCLKInitTypeDef PeriphClkInit = {};
 
-  GPIO_InitTypeDef GPIO_InitStruct = {0};
+  GPIO_InitTypeDef GPIO_InitStruct = {};
 
   //* Initializes the RCC Oscillators according to the specified parameters
   //* in the RCC_OscInitTypeDef structure.
@@ -267,60 +217,109 @@ void SystemClock_Config(void)
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 }
 
-void TIM6_Init()
+void TIM_SW_PWM_Init()
 {
-  __HAL_RCC_TIM6_CLK_ENABLE();
+  TIM_HandleTypeDef *htim = tim_handl_table[TIM_SW_PWM];
 
   TIM_MasterConfigTypeDef sMasterConfig = {};
 
-  htim6.Instance = TIM6;
-  htim6.Init.Prescaler = 0;
-  htim6.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim6.Init.Period = 720 - 1;
-  htim6.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
-  if (HAL_TIM_Base_Init(&htim6) != HAL_OK)
+  htim->Instance = TIM_SW_PWM;
+
+  TIM_Base_MspInit(htim);
+
+  htim->Init.Prescaler = 0;
+  htim->Init.CounterMode = TIM_COUNTERMODE_UP;
+  htim->Init.Period = 720 - 1;
+  htim->Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+  if (HAL_TIM_Base_Init(htim) != HAL_OK)
   {
     Error_Handler();
   }
   sMasterConfig.MasterOutputTrigger = TIM_TRGO_RESET;
   sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
-  if (HAL_TIMEx_MasterConfigSynchronization(&htim6, &sMasterConfig) != HAL_OK)
+  if (HAL_TIMEx_MasterConfigSynchronization(htim, &sMasterConfig) != HAL_OK)
   {
     Error_Handler();
   }
 
   /* TIM6 interrupt Init */
   HAL_NVIC_SetPriority(TIM6_IRQn, 5, 0);
+
+  HAL_TIM_Base_Start_IT(htim);
 }
 
-void TIM7_Init()
+void TIM_SW_MEASURE_Init()
 {
-  __HAL_RCC_TIM7_CLK_ENABLE();
+  TIM_HandleTypeDef *htim = tim_handl_table[TIM_SW_MEASURE];
 
-  TIM_MasterConfigTypeDef sMasterConfig = {0};
+  TIM_MasterConfigTypeDef sMasterConfig = {};
 
-  htim7.Instance = TIM7;
-  htim7.Init.Prescaler = 1439;
-  htim7.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim7.Init.Period = 62499;
-  htim7.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
-  if (HAL_TIM_Base_Init(&htim7) != HAL_OK)
+  htim->Instance = TIM_SW_MEASURE;
+  
+  TIM_Base_MspInit(htim);
+
+  htim->Init.Prescaler = 1151;
+  htim->Init.CounterMode = TIM_COUNTERMODE_UP;
+  htim->Init.Period = 62499;
+  htim->Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+  if (HAL_TIM_Base_Init(htim) != HAL_OK)
   {
     Error_Handler();
   }
-  if (HAL_TIM_OnePulse_Init(&htim7, TIM_OPMODE_SINGLE) != HAL_OK)
+  if (HAL_TIM_OnePulse_Init(htim, TIM_OPMODE_SINGLE) != HAL_OK)
   {
     Error_Handler();
   }
   sMasterConfig.MasterOutputTrigger = TIM_TRGO_RESET;
   sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
-  if (HAL_TIMEx_MasterConfigSynchronization(&htim7, &sMasterConfig) != HAL_OK)
+  if (HAL_TIMEx_MasterConfigSynchronization(htim, &sMasterConfig) != HAL_OK)
   {
     Error_Handler();
   }
 
   HAL_NVIC_SetPriority(TIM7_IRQn, 0, 0);
   HAL_NVIC_EnableIRQ(TIM7_IRQn);
+}
+
+void UARTx_Init()
+{
+  UartHandle.Instance = USARTx;
+  UartHandle.Init.BaudRate = 115200;
+  UartHandle.Init.WordLength = UART_WORDLENGTH_8B;
+  UartHandle.Init.StopBits = UART_STOPBITS_1;
+  UartHandle.Init.Parity = UART_PARITY_NONE;
+  UartHandle.Init.HwFlowCtl = UART_HWCONTROL_NONE;
+  UartHandle.Init.Mode = UART_MODE_TX_RX;
+
+  if (HAL_UART_Init(&UartHandle) != HAL_OK)
+  {
+    Error_Handler();
+  }
+
+  if (HAL_UART_Receive_IT(&UartHandle, (uint8_t *)UserRxBufferUART, 1) != HAL_OK)
+  {
+    Error_Handler();
+  }
+}
+
+void TIMx_Init()
+{
+  TimHandle.Instance = TIMx;
+
+  TimHandle.Init.Period = (CDC_POLLING_INTERVAL * 1000) - 1;
+  TimHandle.Init.Prescaler = 72 - 1;
+  TimHandle.Init.ClockDivision = 0;
+  TimHandle.Init.CounterMode = TIM_COUNTERMODE_UP;
+  TimHandle.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+  if (HAL_TIM_Base_Init(&TimHandle) != HAL_OK)
+  {
+    Error_Handler();
+  }
+
+  if (HAL_TIM_Base_Start_IT(&TimHandle) != HAL_OK)
+  {
+    Error_Handler();
+  }
 }
 
 /**

@@ -11,7 +11,7 @@
 # =============================================================================
 
 # =============================================================================
-# Project: VCP_F103RC
+# Project: TEST_F103RC
 # Configurations: Debug
 # =============================================================================
 
@@ -41,240 +41,240 @@ include CMakeFiles/rules.ninja
 
 cmake_ninja_workdir = C$:/GitHub/TEST/Software/build/Debug/
 # =============================================================================
-# Object build statements for EXECUTABLE target VCP_F103RC
+# Object build statements for EXECUTABLE target TEST_F103RC
 
 
 #############################################
-# Order-only phony target for VCP_F103RC
+# Order-only phony target for TEST_F103RC
 
-build cmake_object_order_depends_target_VCP_F103RC: phony || cmake_object_order_depends_target_STM32_Drivers cmake_object_order_depends_target_USB_Device_Library
+build cmake_object_order_depends_target_TEST_F103RC: phony || cmake_object_order_depends_target_STM32_Drivers cmake_object_order_depends_target_USB_Device_Library
 
-build CMakeFiles/VCP_F103RC.dir/Core/Src/main.cpp.obj: CXX_COMPILER__VCP_F103RC_unscanned_Debug C$:/GitHub/TEST/Software/Core/Src/main.cpp || cmake_object_order_depends_target_VCP_F103RC
+build CMakeFiles/TEST_F103RC.dir/Core/Src/main.cpp.obj: CXX_COMPILER__TEST_F103RC_unscanned_Debug C$:/GitHub/TEST/Software/Core/Src/main.cpp || cmake_object_order_depends_target_TEST_F103RC
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F103xE -DUSE_HAL_DRIVER
-  DEP_FILE = CMakeFiles\VCP_F103RC.dir\Core\Src\main.cpp.obj.d
+  DEP_FILE = CMakeFiles\TEST_F103RC.dir\Core\Src\main.cpp.obj.d
   FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -fno-rtti -fno-exceptions -fno-threadsafe-statics -O0 -g3
   INCLUDES = -IC:/GitHub/TEST/Software/App/Inc -IC:/GitHub/TEST/Software/Core/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F1xx_HAL_Driver/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IC:/GitHub/TEST/Software/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IC:/GitHub/TEST/Software/Drivers/CMSIS/Include -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Core/Inc -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -IC:/GitHub/TEST/Software/swoTrace -IC:/GitHub/TEST/Software/dwt -isystem C:/GitHub/TEST/Software/etl/include
-  OBJECT_DIR = CMakeFiles\VCP_F103RC.dir
-  OBJECT_FILE_DIR = CMakeFiles\VCP_F103RC.dir\Core\Src
-  TARGET_COMPILE_PDB = CMakeFiles\VCP_F103RC.dir\
-  TARGET_PDB = VCP_F103RC.pdb
+  OBJECT_DIR = CMakeFiles\TEST_F103RC.dir
+  OBJECT_FILE_DIR = CMakeFiles\TEST_F103RC.dir\Core\Src
+  TARGET_COMPILE_PDB = CMakeFiles\TEST_F103RC.dir\
+  TARGET_PDB = TEST_F103RC.pdb
 
-build CMakeFiles/VCP_F103RC.dir/Core/Src/stm32f1xx_it.c.obj: C_COMPILER__VCP_F103RC_unscanned_Debug C$:/GitHub/TEST/Software/Core/Src/stm32f1xx_it.c || cmake_object_order_depends_target_VCP_F103RC
+build CMakeFiles/TEST_F103RC.dir/Core/Src/stm32f1xx_it.c.obj: C_COMPILER__TEST_F103RC_unscanned_Debug C$:/GitHub/TEST/Software/Core/Src/stm32f1xx_it.c || cmake_object_order_depends_target_TEST_F103RC
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F103xE -DUSE_HAL_DRIVER
-  DEP_FILE = CMakeFiles\VCP_F103RC.dir\Core\Src\stm32f1xx_it.c.obj.d
+  DEP_FILE = CMakeFiles\TEST_F103RC.dir\Core\Src\stm32f1xx_it.c.obj.d
   FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
   INCLUDES = -IC:/GitHub/TEST/Software/App/Inc -IC:/GitHub/TEST/Software/Core/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F1xx_HAL_Driver/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IC:/GitHub/TEST/Software/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IC:/GitHub/TEST/Software/Drivers/CMSIS/Include -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Core/Inc -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -IC:/GitHub/TEST/Software/swoTrace -IC:/GitHub/TEST/Software/dwt -isystem C:/GitHub/TEST/Software/etl/include
-  OBJECT_DIR = CMakeFiles\VCP_F103RC.dir
-  OBJECT_FILE_DIR = CMakeFiles\VCP_F103RC.dir\Core\Src
-  TARGET_COMPILE_PDB = CMakeFiles\VCP_F103RC.dir\
-  TARGET_PDB = VCP_F103RC.pdb
+  OBJECT_DIR = CMakeFiles\TEST_F103RC.dir
+  OBJECT_FILE_DIR = CMakeFiles\TEST_F103RC.dir\Core\Src
+  TARGET_COMPILE_PDB = CMakeFiles\TEST_F103RC.dir\
+  TARGET_PDB = TEST_F103RC.pdb
 
-build CMakeFiles/VCP_F103RC.dir/Core/Src/stm32f1xx_hal_msp.c.obj: C_COMPILER__VCP_F103RC_unscanned_Debug C$:/GitHub/TEST/Software/Core/Src/stm32f1xx_hal_msp.c || cmake_object_order_depends_target_VCP_F103RC
+build CMakeFiles/TEST_F103RC.dir/Core/Src/stm32f1xx_hal_msp.c.obj: C_COMPILER__TEST_F103RC_unscanned_Debug C$:/GitHub/TEST/Software/Core/Src/stm32f1xx_hal_msp.c || cmake_object_order_depends_target_TEST_F103RC
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F103xE -DUSE_HAL_DRIVER
-  DEP_FILE = CMakeFiles\VCP_F103RC.dir\Core\Src\stm32f1xx_hal_msp.c.obj.d
+  DEP_FILE = CMakeFiles\TEST_F103RC.dir\Core\Src\stm32f1xx_hal_msp.c.obj.d
   FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
   INCLUDES = -IC:/GitHub/TEST/Software/App/Inc -IC:/GitHub/TEST/Software/Core/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F1xx_HAL_Driver/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IC:/GitHub/TEST/Software/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IC:/GitHub/TEST/Software/Drivers/CMSIS/Include -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Core/Inc -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -IC:/GitHub/TEST/Software/swoTrace -IC:/GitHub/TEST/Software/dwt -isystem C:/GitHub/TEST/Software/etl/include
-  OBJECT_DIR = CMakeFiles\VCP_F103RC.dir
-  OBJECT_FILE_DIR = CMakeFiles\VCP_F103RC.dir\Core\Src
-  TARGET_COMPILE_PDB = CMakeFiles\VCP_F103RC.dir\
-  TARGET_PDB = VCP_F103RC.pdb
+  OBJECT_DIR = CMakeFiles\TEST_F103RC.dir
+  OBJECT_FILE_DIR = CMakeFiles\TEST_F103RC.dir\Core\Src
+  TARGET_COMPILE_PDB = CMakeFiles\TEST_F103RC.dir\
+  TARGET_PDB = TEST_F103RC.pdb
 
-build CMakeFiles/VCP_F103RC.dir/Core/Src/sysmem.c.obj: C_COMPILER__VCP_F103RC_unscanned_Debug C$:/GitHub/TEST/Software/Core/Src/sysmem.c || cmake_object_order_depends_target_VCP_F103RC
+build CMakeFiles/TEST_F103RC.dir/Core/Src/sysmem.c.obj: C_COMPILER__TEST_F103RC_unscanned_Debug C$:/GitHub/TEST/Software/Core/Src/sysmem.c || cmake_object_order_depends_target_TEST_F103RC
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F103xE -DUSE_HAL_DRIVER
-  DEP_FILE = CMakeFiles\VCP_F103RC.dir\Core\Src\sysmem.c.obj.d
+  DEP_FILE = CMakeFiles\TEST_F103RC.dir\Core\Src\sysmem.c.obj.d
   FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
   INCLUDES = -IC:/GitHub/TEST/Software/App/Inc -IC:/GitHub/TEST/Software/Core/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F1xx_HAL_Driver/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IC:/GitHub/TEST/Software/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IC:/GitHub/TEST/Software/Drivers/CMSIS/Include -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Core/Inc -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -IC:/GitHub/TEST/Software/swoTrace -IC:/GitHub/TEST/Software/dwt -isystem C:/GitHub/TEST/Software/etl/include
-  OBJECT_DIR = CMakeFiles\VCP_F103RC.dir
-  OBJECT_FILE_DIR = CMakeFiles\VCP_F103RC.dir\Core\Src
-  TARGET_COMPILE_PDB = CMakeFiles\VCP_F103RC.dir\
-  TARGET_PDB = VCP_F103RC.pdb
+  OBJECT_DIR = CMakeFiles\TEST_F103RC.dir
+  OBJECT_FILE_DIR = CMakeFiles\TEST_F103RC.dir\Core\Src
+  TARGET_COMPILE_PDB = CMakeFiles\TEST_F103RC.dir\
+  TARGET_PDB = TEST_F103RC.pdb
 
-build CMakeFiles/VCP_F103RC.dir/Core/Src/syscalls.c.obj: C_COMPILER__VCP_F103RC_unscanned_Debug C$:/GitHub/TEST/Software/Core/Src/syscalls.c || cmake_object_order_depends_target_VCP_F103RC
+build CMakeFiles/TEST_F103RC.dir/Core/Src/syscalls.c.obj: C_COMPILER__TEST_F103RC_unscanned_Debug C$:/GitHub/TEST/Software/Core/Src/syscalls.c || cmake_object_order_depends_target_TEST_F103RC
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F103xE -DUSE_HAL_DRIVER
-  DEP_FILE = CMakeFiles\VCP_F103RC.dir\Core\Src\syscalls.c.obj.d
+  DEP_FILE = CMakeFiles\TEST_F103RC.dir\Core\Src\syscalls.c.obj.d
   FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
   INCLUDES = -IC:/GitHub/TEST/Software/App/Inc -IC:/GitHub/TEST/Software/Core/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F1xx_HAL_Driver/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IC:/GitHub/TEST/Software/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IC:/GitHub/TEST/Software/Drivers/CMSIS/Include -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Core/Inc -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -IC:/GitHub/TEST/Software/swoTrace -IC:/GitHub/TEST/Software/dwt -isystem C:/GitHub/TEST/Software/etl/include
-  OBJECT_DIR = CMakeFiles\VCP_F103RC.dir
-  OBJECT_FILE_DIR = CMakeFiles\VCP_F103RC.dir\Core\Src
-  TARGET_COMPILE_PDB = CMakeFiles\VCP_F103RC.dir\
-  TARGET_PDB = VCP_F103RC.pdb
+  OBJECT_DIR = CMakeFiles\TEST_F103RC.dir
+  OBJECT_FILE_DIR = CMakeFiles\TEST_F103RC.dir\Core\Src
+  TARGET_COMPILE_PDB = CMakeFiles\TEST_F103RC.dir\
+  TARGET_PDB = TEST_F103RC.pdb
 
-build CMakeFiles/VCP_F103RC.dir/startup_stm32f103xe.s.obj: ASM_COMPILER__VCP_F103RC_unscanned_Debug C$:/GitHub/TEST/Software/startup_stm32f103xe.s || cmake_object_order_depends_target_VCP_F103RC
+build CMakeFiles/TEST_F103RC.dir/startup_stm32f103xe.s.obj: ASM_COMPILER__TEST_F103RC_unscanned_Debug C$:/GitHub/TEST/Software/startup_stm32f103xe.s || cmake_object_order_depends_target_TEST_F103RC
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F103xE -DUSE_HAL_DRIVER
-  DEP_FILE = CMakeFiles\VCP_F103RC.dir\startup_stm32f103xe.s.obj.d
+  DEP_FILE = CMakeFiles\TEST_F103RC.dir\startup_stm32f103xe.s.obj.d
   FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m3  -x assembler-with-cpp -MMD -MP -g
   INCLUDES = -IC:/GitHub/TEST/Software/App/Inc -IC:/GitHub/TEST/Software/Core/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F1xx_HAL_Driver/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IC:/GitHub/TEST/Software/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IC:/GitHub/TEST/Software/Drivers/CMSIS/Include -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Core/Inc -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -IC:/GitHub/TEST/Software/swoTrace -IC:/GitHub/TEST/Software/dwt -isystem C:/GitHub/TEST/Software/etl/include
-  OBJECT_DIR = CMakeFiles\VCP_F103RC.dir
-  OBJECT_FILE_DIR = CMakeFiles\VCP_F103RC.dir
-  TARGET_COMPILE_PDB = CMakeFiles\VCP_F103RC.dir\
-  TARGET_PDB = VCP_F103RC.pdb
+  OBJECT_DIR = CMakeFiles\TEST_F103RC.dir
+  OBJECT_FILE_DIR = CMakeFiles\TEST_F103RC.dir
+  TARGET_COMPILE_PDB = CMakeFiles\TEST_F103RC.dir\
+  TARGET_PDB = TEST_F103RC.pdb
 
-build CMakeFiles/VCP_F103RC.dir/Core/Src/usbd_cdc_interface.c.obj: C_COMPILER__VCP_F103RC_unscanned_Debug C$:/GitHub/TEST/Software/Core/Src/usbd_cdc_interface.c || cmake_object_order_depends_target_VCP_F103RC
+build CMakeFiles/TEST_F103RC.dir/Core/Src/usbd_cdc_interface.c.obj: C_COMPILER__TEST_F103RC_unscanned_Debug C$:/GitHub/TEST/Software/Core/Src/usbd_cdc_interface.c || cmake_object_order_depends_target_TEST_F103RC
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F103xE -DUSE_HAL_DRIVER
-  DEP_FILE = CMakeFiles\VCP_F103RC.dir\Core\Src\usbd_cdc_interface.c.obj.d
+  DEP_FILE = CMakeFiles\TEST_F103RC.dir\Core\Src\usbd_cdc_interface.c.obj.d
   FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
   INCLUDES = -IC:/GitHub/TEST/Software/App/Inc -IC:/GitHub/TEST/Software/Core/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F1xx_HAL_Driver/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IC:/GitHub/TEST/Software/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IC:/GitHub/TEST/Software/Drivers/CMSIS/Include -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Core/Inc -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -IC:/GitHub/TEST/Software/swoTrace -IC:/GitHub/TEST/Software/dwt -isystem C:/GitHub/TEST/Software/etl/include
-  OBJECT_DIR = CMakeFiles\VCP_F103RC.dir
-  OBJECT_FILE_DIR = CMakeFiles\VCP_F103RC.dir\Core\Src
-  TARGET_COMPILE_PDB = CMakeFiles\VCP_F103RC.dir\
-  TARGET_PDB = VCP_F103RC.pdb
+  OBJECT_DIR = CMakeFiles\TEST_F103RC.dir
+  OBJECT_FILE_DIR = CMakeFiles\TEST_F103RC.dir\Core\Src
+  TARGET_COMPILE_PDB = CMakeFiles\TEST_F103RC.dir\
+  TARGET_PDB = TEST_F103RC.pdb
 
-build CMakeFiles/VCP_F103RC.dir/Core/Src/usbd_conf.c.obj: C_COMPILER__VCP_F103RC_unscanned_Debug C$:/GitHub/TEST/Software/Core/Src/usbd_conf.c || cmake_object_order_depends_target_VCP_F103RC
+build CMakeFiles/TEST_F103RC.dir/Core/Src/usbd_conf.c.obj: C_COMPILER__TEST_F103RC_unscanned_Debug C$:/GitHub/TEST/Software/Core/Src/usbd_conf.c || cmake_object_order_depends_target_TEST_F103RC
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F103xE -DUSE_HAL_DRIVER
-  DEP_FILE = CMakeFiles\VCP_F103RC.dir\Core\Src\usbd_conf.c.obj.d
+  DEP_FILE = CMakeFiles\TEST_F103RC.dir\Core\Src\usbd_conf.c.obj.d
   FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
   INCLUDES = -IC:/GitHub/TEST/Software/App/Inc -IC:/GitHub/TEST/Software/Core/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F1xx_HAL_Driver/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IC:/GitHub/TEST/Software/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IC:/GitHub/TEST/Software/Drivers/CMSIS/Include -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Core/Inc -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -IC:/GitHub/TEST/Software/swoTrace -IC:/GitHub/TEST/Software/dwt -isystem C:/GitHub/TEST/Software/etl/include
-  OBJECT_DIR = CMakeFiles\VCP_F103RC.dir
-  OBJECT_FILE_DIR = CMakeFiles\VCP_F103RC.dir\Core\Src
-  TARGET_COMPILE_PDB = CMakeFiles\VCP_F103RC.dir\
-  TARGET_PDB = VCP_F103RC.pdb
+  OBJECT_DIR = CMakeFiles\TEST_F103RC.dir
+  OBJECT_FILE_DIR = CMakeFiles\TEST_F103RC.dir\Core\Src
+  TARGET_COMPILE_PDB = CMakeFiles\TEST_F103RC.dir\
+  TARGET_PDB = TEST_F103RC.pdb
 
-build CMakeFiles/VCP_F103RC.dir/Core/Src/usbd_desc.c.obj: C_COMPILER__VCP_F103RC_unscanned_Debug C$:/GitHub/TEST/Software/Core/Src/usbd_desc.c || cmake_object_order_depends_target_VCP_F103RC
+build CMakeFiles/TEST_F103RC.dir/Core/Src/usbd_desc.c.obj: C_COMPILER__TEST_F103RC_unscanned_Debug C$:/GitHub/TEST/Software/Core/Src/usbd_desc.c || cmake_object_order_depends_target_TEST_F103RC
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F103xE -DUSE_HAL_DRIVER
-  DEP_FILE = CMakeFiles\VCP_F103RC.dir\Core\Src\usbd_desc.c.obj.d
+  DEP_FILE = CMakeFiles\TEST_F103RC.dir\Core\Src\usbd_desc.c.obj.d
   FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
   INCLUDES = -IC:/GitHub/TEST/Software/App/Inc -IC:/GitHub/TEST/Software/Core/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F1xx_HAL_Driver/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IC:/GitHub/TEST/Software/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IC:/GitHub/TEST/Software/Drivers/CMSIS/Include -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Core/Inc -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -IC:/GitHub/TEST/Software/swoTrace -IC:/GitHub/TEST/Software/dwt -isystem C:/GitHub/TEST/Software/etl/include
-  OBJECT_DIR = CMakeFiles\VCP_F103RC.dir
-  OBJECT_FILE_DIR = CMakeFiles\VCP_F103RC.dir\Core\Src
-  TARGET_COMPILE_PDB = CMakeFiles\VCP_F103RC.dir\
-  TARGET_PDB = VCP_F103RC.pdb
+  OBJECT_DIR = CMakeFiles\TEST_F103RC.dir
+  OBJECT_FILE_DIR = CMakeFiles\TEST_F103RC.dir\Core\Src
+  TARGET_COMPILE_PDB = CMakeFiles\TEST_F103RC.dir\
+  TARGET_PDB = TEST_F103RC.pdb
 
-build CMakeFiles/VCP_F103RC.dir/App/Src/application.cpp.obj: CXX_COMPILER__VCP_F103RC_unscanned_Debug C$:/GitHub/TEST/Software/App/Src/application.cpp || cmake_object_order_depends_target_VCP_F103RC
+build CMakeFiles/TEST_F103RC.dir/App/Src/application.cpp.obj: CXX_COMPILER__TEST_F103RC_unscanned_Debug C$:/GitHub/TEST/Software/App/Src/application.cpp || cmake_object_order_depends_target_TEST_F103RC
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F103xE -DUSE_HAL_DRIVER
-  DEP_FILE = CMakeFiles\VCP_F103RC.dir\App\Src\application.cpp.obj.d
+  DEP_FILE = CMakeFiles\TEST_F103RC.dir\App\Src\application.cpp.obj.d
   FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -fno-rtti -fno-exceptions -fno-threadsafe-statics -O0 -g3
   INCLUDES = -IC:/GitHub/TEST/Software/App/Inc -IC:/GitHub/TEST/Software/Core/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F1xx_HAL_Driver/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IC:/GitHub/TEST/Software/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IC:/GitHub/TEST/Software/Drivers/CMSIS/Include -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Core/Inc -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -IC:/GitHub/TEST/Software/swoTrace -IC:/GitHub/TEST/Software/dwt -isystem C:/GitHub/TEST/Software/etl/include
-  OBJECT_DIR = CMakeFiles\VCP_F103RC.dir
-  OBJECT_FILE_DIR = CMakeFiles\VCP_F103RC.dir\App\Src
-  TARGET_COMPILE_PDB = CMakeFiles\VCP_F103RC.dir\
-  TARGET_PDB = VCP_F103RC.pdb
+  OBJECT_DIR = CMakeFiles\TEST_F103RC.dir
+  OBJECT_FILE_DIR = CMakeFiles\TEST_F103RC.dir\App\Src
+  TARGET_COMPILE_PDB = CMakeFiles\TEST_F103RC.dir\
+  TARGET_PDB = TEST_F103RC.pdb
 
-build CMakeFiles/VCP_F103RC.dir/App/Src/application_callbacks.cpp.obj: CXX_COMPILER__VCP_F103RC_unscanned_Debug C$:/GitHub/TEST/Software/App/Src/application_callbacks.cpp || cmake_object_order_depends_target_VCP_F103RC
+build CMakeFiles/TEST_F103RC.dir/App/Src/application_callbacks.cpp.obj: CXX_COMPILER__TEST_F103RC_unscanned_Debug C$:/GitHub/TEST/Software/App/Src/application_callbacks.cpp || cmake_object_order_depends_target_TEST_F103RC
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F103xE -DUSE_HAL_DRIVER
-  DEP_FILE = CMakeFiles\VCP_F103RC.dir\App\Src\application_callbacks.cpp.obj.d
+  DEP_FILE = CMakeFiles\TEST_F103RC.dir\App\Src\application_callbacks.cpp.obj.d
   FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -fno-rtti -fno-exceptions -fno-threadsafe-statics -O0 -g3
   INCLUDES = -IC:/GitHub/TEST/Software/App/Inc -IC:/GitHub/TEST/Software/Core/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F1xx_HAL_Driver/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IC:/GitHub/TEST/Software/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IC:/GitHub/TEST/Software/Drivers/CMSIS/Include -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Core/Inc -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -IC:/GitHub/TEST/Software/swoTrace -IC:/GitHub/TEST/Software/dwt -isystem C:/GitHub/TEST/Software/etl/include
-  OBJECT_DIR = CMakeFiles\VCP_F103RC.dir
-  OBJECT_FILE_DIR = CMakeFiles\VCP_F103RC.dir\App\Src
-  TARGET_COMPILE_PDB = CMakeFiles\VCP_F103RC.dir\
-  TARGET_PDB = VCP_F103RC.pdb
+  OBJECT_DIR = CMakeFiles\TEST_F103RC.dir
+  OBJECT_FILE_DIR = CMakeFiles\TEST_F103RC.dir\App\Src
+  TARGET_COMPILE_PDB = CMakeFiles\TEST_F103RC.dir\
+  TARGET_PDB = TEST_F103RC.pdb
 
-build CMakeFiles/VCP_F103RC.dir/App/Src/application_pwm.cpp.obj: CXX_COMPILER__VCP_F103RC_unscanned_Debug C$:/GitHub/TEST/Software/App/Src/application_pwm.cpp || cmake_object_order_depends_target_VCP_F103RC
+build CMakeFiles/TEST_F103RC.dir/App/Src/application_pwm.cpp.obj: CXX_COMPILER__TEST_F103RC_unscanned_Debug C$:/GitHub/TEST/Software/App/Src/application_pwm.cpp || cmake_object_order_depends_target_TEST_F103RC
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F103xE -DUSE_HAL_DRIVER
-  DEP_FILE = CMakeFiles\VCP_F103RC.dir\App\Src\application_pwm.cpp.obj.d
+  DEP_FILE = CMakeFiles\TEST_F103RC.dir\App\Src\application_pwm.cpp.obj.d
   FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -fno-rtti -fno-exceptions -fno-threadsafe-statics -O0 -g3
   INCLUDES = -IC:/GitHub/TEST/Software/App/Inc -IC:/GitHub/TEST/Software/Core/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F1xx_HAL_Driver/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IC:/GitHub/TEST/Software/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IC:/GitHub/TEST/Software/Drivers/CMSIS/Include -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Core/Inc -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -IC:/GitHub/TEST/Software/swoTrace -IC:/GitHub/TEST/Software/dwt -isystem C:/GitHub/TEST/Software/etl/include
-  OBJECT_DIR = CMakeFiles\VCP_F103RC.dir
-  OBJECT_FILE_DIR = CMakeFiles\VCP_F103RC.dir\App\Src
-  TARGET_COMPILE_PDB = CMakeFiles\VCP_F103RC.dir\
-  TARGET_PDB = VCP_F103RC.pdb
+  OBJECT_DIR = CMakeFiles\TEST_F103RC.dir
+  OBJECT_FILE_DIR = CMakeFiles\TEST_F103RC.dir\App\Src
+  TARGET_COMPILE_PDB = CMakeFiles\TEST_F103RC.dir\
+  TARGET_PDB = TEST_F103RC.pdb
 
-build CMakeFiles/VCP_F103RC.dir/App/Src/application_measure.cpp.obj: CXX_COMPILER__VCP_F103RC_unscanned_Debug C$:/GitHub/TEST/Software/App/Src/application_measure.cpp || cmake_object_order_depends_target_VCP_F103RC
+build CMakeFiles/TEST_F103RC.dir/App/Src/application_measure.cpp.obj: CXX_COMPILER__TEST_F103RC_unscanned_Debug C$:/GitHub/TEST/Software/App/Src/application_measure.cpp || cmake_object_order_depends_target_TEST_F103RC
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F103xE -DUSE_HAL_DRIVER
-  DEP_FILE = CMakeFiles\VCP_F103RC.dir\App\Src\application_measure.cpp.obj.d
+  DEP_FILE = CMakeFiles\TEST_F103RC.dir\App\Src\application_measure.cpp.obj.d
   FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -fno-rtti -fno-exceptions -fno-threadsafe-statics -O0 -g3
   INCLUDES = -IC:/GitHub/TEST/Software/App/Inc -IC:/GitHub/TEST/Software/Core/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F1xx_HAL_Driver/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IC:/GitHub/TEST/Software/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IC:/GitHub/TEST/Software/Drivers/CMSIS/Include -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Core/Inc -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -IC:/GitHub/TEST/Software/swoTrace -IC:/GitHub/TEST/Software/dwt -isystem C:/GitHub/TEST/Software/etl/include
-  OBJECT_DIR = CMakeFiles\VCP_F103RC.dir
-  OBJECT_FILE_DIR = CMakeFiles\VCP_F103RC.dir\App\Src
-  TARGET_COMPILE_PDB = CMakeFiles\VCP_F103RC.dir\
-  TARGET_PDB = VCP_F103RC.pdb
+  OBJECT_DIR = CMakeFiles\TEST_F103RC.dir
+  OBJECT_FILE_DIR = CMakeFiles\TEST_F103RC.dir\App\Src
+  TARGET_COMPILE_PDB = CMakeFiles\TEST_F103RC.dir\
+  TARGET_PDB = TEST_F103RC.pdb
 
-build CMakeFiles/VCP_F103RC.dir/App/Src/application_transmit.cpp.obj: CXX_COMPILER__VCP_F103RC_unscanned_Debug C$:/GitHub/TEST/Software/App/Src/application_transmit.cpp || cmake_object_order_depends_target_VCP_F103RC
+build CMakeFiles/TEST_F103RC.dir/App/Src/application_transmit.cpp.obj: CXX_COMPILER__TEST_F103RC_unscanned_Debug C$:/GitHub/TEST/Software/App/Src/application_transmit.cpp || cmake_object_order_depends_target_TEST_F103RC
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F103xE -DUSE_HAL_DRIVER
-  DEP_FILE = CMakeFiles\VCP_F103RC.dir\App\Src\application_transmit.cpp.obj.d
+  DEP_FILE = CMakeFiles\TEST_F103RC.dir\App\Src\application_transmit.cpp.obj.d
   FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -fno-rtti -fno-exceptions -fno-threadsafe-statics -O0 -g3
   INCLUDES = -IC:/GitHub/TEST/Software/App/Inc -IC:/GitHub/TEST/Software/Core/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F1xx_HAL_Driver/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IC:/GitHub/TEST/Software/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IC:/GitHub/TEST/Software/Drivers/CMSIS/Include -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Core/Inc -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -IC:/GitHub/TEST/Software/swoTrace -IC:/GitHub/TEST/Software/dwt -isystem C:/GitHub/TEST/Software/etl/include
-  OBJECT_DIR = CMakeFiles\VCP_F103RC.dir
-  OBJECT_FILE_DIR = CMakeFiles\VCP_F103RC.dir\App\Src
-  TARGET_COMPILE_PDB = CMakeFiles\VCP_F103RC.dir\
-  TARGET_PDB = VCP_F103RC.pdb
+  OBJECT_DIR = CMakeFiles\TEST_F103RC.dir
+  OBJECT_FILE_DIR = CMakeFiles\TEST_F103RC.dir\App\Src
+  TARGET_COMPILE_PDB = CMakeFiles\TEST_F103RC.dir\
+  TARGET_PDB = TEST_F103RC.pdb
 
-build CMakeFiles/VCP_F103RC.dir/App/Src/pins.cpp.obj: CXX_COMPILER__VCP_F103RC_unscanned_Debug C$:/GitHub/TEST/Software/App/Src/pins.cpp || cmake_object_order_depends_target_VCP_F103RC
+build CMakeFiles/TEST_F103RC.dir/App/Src/pins.cpp.obj: CXX_COMPILER__TEST_F103RC_unscanned_Debug C$:/GitHub/TEST/Software/App/Src/pins.cpp || cmake_object_order_depends_target_TEST_F103RC
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F103xE -DUSE_HAL_DRIVER
-  DEP_FILE = CMakeFiles\VCP_F103RC.dir\App\Src\pins.cpp.obj.d
+  DEP_FILE = CMakeFiles\TEST_F103RC.dir\App\Src\pins.cpp.obj.d
   FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -fno-rtti -fno-exceptions -fno-threadsafe-statics -O0 -g3
   INCLUDES = -IC:/GitHub/TEST/Software/App/Inc -IC:/GitHub/TEST/Software/Core/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F1xx_HAL_Driver/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IC:/GitHub/TEST/Software/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IC:/GitHub/TEST/Software/Drivers/CMSIS/Include -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Core/Inc -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -IC:/GitHub/TEST/Software/swoTrace -IC:/GitHub/TEST/Software/dwt -isystem C:/GitHub/TEST/Software/etl/include
-  OBJECT_DIR = CMakeFiles\VCP_F103RC.dir
-  OBJECT_FILE_DIR = CMakeFiles\VCP_F103RC.dir\App\Src
-  TARGET_COMPILE_PDB = CMakeFiles\VCP_F103RC.dir\
-  TARGET_PDB = VCP_F103RC.pdb
+  OBJECT_DIR = CMakeFiles\TEST_F103RC.dir
+  OBJECT_FILE_DIR = CMakeFiles\TEST_F103RC.dir\App\Src
+  TARGET_COMPILE_PDB = CMakeFiles\TEST_F103RC.dir\
+  TARGET_PDB = TEST_F103RC.pdb
 
-build CMakeFiles/VCP_F103RC.dir/App/Src/tables.cpp.obj: CXX_COMPILER__VCP_F103RC_unscanned_Debug C$:/GitHub/TEST/Software/App/Src/tables.cpp || cmake_object_order_depends_target_VCP_F103RC
+build CMakeFiles/TEST_F103RC.dir/App/Src/tables.cpp.obj: CXX_COMPILER__TEST_F103RC_unscanned_Debug C$:/GitHub/TEST/Software/App/Src/tables.cpp || cmake_object_order_depends_target_TEST_F103RC
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F103xE -DUSE_HAL_DRIVER
-  DEP_FILE = CMakeFiles\VCP_F103RC.dir\App\Src\tables.cpp.obj.d
+  DEP_FILE = CMakeFiles\TEST_F103RC.dir\App\Src\tables.cpp.obj.d
   FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -fno-rtti -fno-exceptions -fno-threadsafe-statics -O0 -g3
   INCLUDES = -IC:/GitHub/TEST/Software/App/Inc -IC:/GitHub/TEST/Software/Core/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F1xx_HAL_Driver/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IC:/GitHub/TEST/Software/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IC:/GitHub/TEST/Software/Drivers/CMSIS/Include -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Core/Inc -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -IC:/GitHub/TEST/Software/swoTrace -IC:/GitHub/TEST/Software/dwt -isystem C:/GitHub/TEST/Software/etl/include
-  OBJECT_DIR = CMakeFiles\VCP_F103RC.dir
-  OBJECT_FILE_DIR = CMakeFiles\VCP_F103RC.dir\App\Src
-  TARGET_COMPILE_PDB = CMakeFiles\VCP_F103RC.dir\
-  TARGET_PDB = VCP_F103RC.pdb
+  OBJECT_DIR = CMakeFiles\TEST_F103RC.dir
+  OBJECT_FILE_DIR = CMakeFiles\TEST_F103RC.dir\App\Src
+  TARGET_COMPILE_PDB = CMakeFiles\TEST_F103RC.dir\
+  TARGET_PDB = TEST_F103RC.pdb
 
-build CMakeFiles/VCP_F103RC.dir/App/Src/tim.cpp.obj: CXX_COMPILER__VCP_F103RC_unscanned_Debug C$:/GitHub/TEST/Software/App/Src/tim.cpp || cmake_object_order_depends_target_VCP_F103RC
+build CMakeFiles/TEST_F103RC.dir/App/Src/tim.cpp.obj: CXX_COMPILER__TEST_F103RC_unscanned_Debug C$:/GitHub/TEST/Software/App/Src/tim.cpp || cmake_object_order_depends_target_TEST_F103RC
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F103xE -DUSE_HAL_DRIVER
-  DEP_FILE = CMakeFiles\VCP_F103RC.dir\App\Src\tim.cpp.obj.d
+  DEP_FILE = CMakeFiles\TEST_F103RC.dir\App\Src\tim.cpp.obj.d
   FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -fno-rtti -fno-exceptions -fno-threadsafe-statics -O0 -g3
   INCLUDES = -IC:/GitHub/TEST/Software/App/Inc -IC:/GitHub/TEST/Software/Core/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F1xx_HAL_Driver/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IC:/GitHub/TEST/Software/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IC:/GitHub/TEST/Software/Drivers/CMSIS/Include -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Core/Inc -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -IC:/GitHub/TEST/Software/swoTrace -IC:/GitHub/TEST/Software/dwt -isystem C:/GitHub/TEST/Software/etl/include
-  OBJECT_DIR = CMakeFiles\VCP_F103RC.dir
-  OBJECT_FILE_DIR = CMakeFiles\VCP_F103RC.dir\App\Src
-  TARGET_COMPILE_PDB = CMakeFiles\VCP_F103RC.dir\
-  TARGET_PDB = VCP_F103RC.pdb
+  OBJECT_DIR = CMakeFiles\TEST_F103RC.dir
+  OBJECT_FILE_DIR = CMakeFiles\TEST_F103RC.dir\App\Src
+  TARGET_COMPILE_PDB = CMakeFiles\TEST_F103RC.dir\
+  TARGET_PDB = TEST_F103RC.pdb
 
-build CMakeFiles/VCP_F103RC.dir/swoTrace/swoTrace.c.obj: C_COMPILER__VCP_F103RC_unscanned_Debug C$:/GitHub/TEST/Software/swoTrace/swoTrace.c || cmake_object_order_depends_target_VCP_F103RC
+build CMakeFiles/TEST_F103RC.dir/swoTrace/swoTrace.c.obj: C_COMPILER__TEST_F103RC_unscanned_Debug C$:/GitHub/TEST/Software/swoTrace/swoTrace.c || cmake_object_order_depends_target_TEST_F103RC
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F103xE -DUSE_HAL_DRIVER
-  DEP_FILE = CMakeFiles\VCP_F103RC.dir\swoTrace\swoTrace.c.obj.d
+  DEP_FILE = CMakeFiles\TEST_F103RC.dir\swoTrace\swoTrace.c.obj.d
   FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
   INCLUDES = -IC:/GitHub/TEST/Software/App/Inc -IC:/GitHub/TEST/Software/Core/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F1xx_HAL_Driver/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IC:/GitHub/TEST/Software/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IC:/GitHub/TEST/Software/Drivers/CMSIS/Include -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Core/Inc -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -IC:/GitHub/TEST/Software/swoTrace -IC:/GitHub/TEST/Software/dwt -isystem C:/GitHub/TEST/Software/etl/include
-  OBJECT_DIR = CMakeFiles\VCP_F103RC.dir
-  OBJECT_FILE_DIR = CMakeFiles\VCP_F103RC.dir\swoTrace
-  TARGET_COMPILE_PDB = CMakeFiles\VCP_F103RC.dir\
-  TARGET_PDB = VCP_F103RC.pdb
+  OBJECT_DIR = CMakeFiles\TEST_F103RC.dir
+  OBJECT_FILE_DIR = CMakeFiles\TEST_F103RC.dir\swoTrace
+  TARGET_COMPILE_PDB = CMakeFiles\TEST_F103RC.dir\
+  TARGET_PDB = TEST_F103RC.pdb
 
-build CMakeFiles/VCP_F103RC.dir/dwt/dwt.cpp.obj: CXX_COMPILER__VCP_F103RC_unscanned_Debug C$:/GitHub/TEST/Software/dwt/dwt.cpp || cmake_object_order_depends_target_VCP_F103RC
+build CMakeFiles/TEST_F103RC.dir/dwt/dwt.cpp.obj: CXX_COMPILER__TEST_F103RC_unscanned_Debug C$:/GitHub/TEST/Software/dwt/dwt.cpp || cmake_object_order_depends_target_TEST_F103RC
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F103xE -DUSE_HAL_DRIVER
-  DEP_FILE = CMakeFiles\VCP_F103RC.dir\dwt\dwt.cpp.obj.d
+  DEP_FILE = CMakeFiles\TEST_F103RC.dir\dwt\dwt.cpp.obj.d
   FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -fno-rtti -fno-exceptions -fno-threadsafe-statics -O0 -g3
   INCLUDES = -IC:/GitHub/TEST/Software/App/Inc -IC:/GitHub/TEST/Software/Core/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F1xx_HAL_Driver/Inc -IC:/GitHub/TEST/Software/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IC:/GitHub/TEST/Software/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IC:/GitHub/TEST/Software/Drivers/CMSIS/Include -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Core/Inc -IC:/GitHub/TEST/Software/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -IC:/GitHub/TEST/Software/swoTrace -IC:/GitHub/TEST/Software/dwt -isystem C:/GitHub/TEST/Software/etl/include
-  OBJECT_DIR = CMakeFiles\VCP_F103RC.dir
-  OBJECT_FILE_DIR = CMakeFiles\VCP_F103RC.dir\dwt
-  TARGET_COMPILE_PDB = CMakeFiles\VCP_F103RC.dir\
-  TARGET_PDB = VCP_F103RC.pdb
+  OBJECT_DIR = CMakeFiles\TEST_F103RC.dir
+  OBJECT_FILE_DIR = CMakeFiles\TEST_F103RC.dir\dwt
+  TARGET_COMPILE_PDB = CMakeFiles\TEST_F103RC.dir\
+  TARGET_PDB = TEST_F103RC.pdb
 
 
 # =============================================================================
-# Link build statements for EXECUTABLE target VCP_F103RC
+# Link build statements for EXECUTABLE target TEST_F103RC
 
 
 #############################################
-# Link the executable VCP_F103RC.elf
+# Link the executable TEST_F103RC.elf
 
-build VCP_F103RC.elf: CXX_EXECUTABLE_LINKER__VCP_F103RC_Debug cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32f1xx.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_usb.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c.obj cmake/stm32cubemx/CMakeFiles/USB_Device_Library.dir/__/__/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c.obj cmake/stm32cubemx/CMakeFiles/USB_Device_Library.dir/__/__/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c.obj cmake/stm32cubemx/CMakeFiles/USB_Device_Library.dir/__/__/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c.obj cmake/stm32cubemx/CMakeFiles/USB_Device_Library.dir/__/__/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src/usbd_cdc.c.obj CMakeFiles/VCP_F103RC.dir/Core/Src/main.cpp.obj CMakeFiles/VCP_F103RC.dir/Core/Src/stm32f1xx_it.c.obj CMakeFiles/VCP_F103RC.dir/Core/Src/stm32f1xx_hal_msp.c.obj CMakeFiles/VCP_F103RC.dir/Core/Src/sysmem.c.obj CMakeFiles/VCP_F103RC.dir/Core/Src/syscalls.c.obj CMakeFiles/VCP_F103RC.dir/startup_stm32f103xe.s.obj CMakeFiles/VCP_F103RC.dir/Core/Src/usbd_cdc_interface.c.obj CMakeFiles/VCP_F103RC.dir/Core/Src/usbd_conf.c.obj CMakeFiles/VCP_F103RC.dir/Core/Src/usbd_desc.c.obj CMakeFiles/VCP_F103RC.dir/App/Src/application.cpp.obj CMakeFiles/VCP_F103RC.dir/App/Src/application_callbacks.cpp.obj CMakeFiles/VCP_F103RC.dir/App/Src/application_pwm.cpp.obj CMakeFiles/VCP_F103RC.dir/App/Src/application_measure.cpp.obj CMakeFiles/VCP_F103RC.dir/App/Src/application_transmit.cpp.obj CMakeFiles/VCP_F103RC.dir/App/Src/pins.cpp.obj CMakeFiles/VCP_F103RC.dir/App/Src/tables.cpp.obj CMakeFiles/VCP_F103RC.dir/App/Src/tim.cpp.obj CMakeFiles/VCP_F103RC.dir/swoTrace/swoTrace.c.obj CMakeFiles/VCP_F103RC.dir/dwt/dwt.cpp.obj || cmake/stm32cubemx/STM32_Drivers cmake/stm32cubemx/USB_Device_Library
+build TEST_F103RC.elf: CXX_EXECUTABLE_LINKER__TEST_F103RC_Debug cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32f1xx.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_usb.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c.obj cmake/stm32cubemx/CMakeFiles/USB_Device_Library.dir/__/__/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c.obj cmake/stm32cubemx/CMakeFiles/USB_Device_Library.dir/__/__/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c.obj cmake/stm32cubemx/CMakeFiles/USB_Device_Library.dir/__/__/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c.obj cmake/stm32cubemx/CMakeFiles/USB_Device_Library.dir/__/__/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src/usbd_cdc.c.obj CMakeFiles/TEST_F103RC.dir/Core/Src/main.cpp.obj CMakeFiles/TEST_F103RC.dir/Core/Src/stm32f1xx_it.c.obj CMakeFiles/TEST_F103RC.dir/Core/Src/stm32f1xx_hal_msp.c.obj CMakeFiles/TEST_F103RC.dir/Core/Src/sysmem.c.obj CMakeFiles/TEST_F103RC.dir/Core/Src/syscalls.c.obj CMakeFiles/TEST_F103RC.dir/startup_stm32f103xe.s.obj CMakeFiles/TEST_F103RC.dir/Core/Src/usbd_cdc_interface.c.obj CMakeFiles/TEST_F103RC.dir/Core/Src/usbd_conf.c.obj CMakeFiles/TEST_F103RC.dir/Core/Src/usbd_desc.c.obj CMakeFiles/TEST_F103RC.dir/App/Src/application.cpp.obj CMakeFiles/TEST_F103RC.dir/App/Src/application_callbacks.cpp.obj CMakeFiles/TEST_F103RC.dir/App/Src/application_pwm.cpp.obj CMakeFiles/TEST_F103RC.dir/App/Src/application_measure.cpp.obj CMakeFiles/TEST_F103RC.dir/App/Src/application_transmit.cpp.obj CMakeFiles/TEST_F103RC.dir/App/Src/pins.cpp.obj CMakeFiles/TEST_F103RC.dir/App/Src/tables.cpp.obj CMakeFiles/TEST_F103RC.dir/App/Src/tim.cpp.obj CMakeFiles/TEST_F103RC.dir/swoTrace/swoTrace.c.obj CMakeFiles/TEST_F103RC.dir/dwt/dwt.cpp.obj || cmake/stm32cubemx/STM32_Drivers cmake/stm32cubemx/USB_Device_Library
   CONFIG = Debug
   FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -fno-rtti -fno-exceptions -fno-threadsafe-statics -O0 -g3
-  OBJECT_DIR = CMakeFiles\VCP_F103RC.dir
+  OBJECT_DIR = CMakeFiles\TEST_F103RC.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_COMPILE_PDB = CMakeFiles\VCP_F103RC.dir\
-  TARGET_FILE = VCP_F103RC.elf
-  TARGET_PDB = VCP_F103RC.pdb
+  TARGET_COMPILE_PDB = CMakeFiles\TEST_F103RC.dir\
+  TARGET_FILE = TEST_F103RC.elf
+  TARGET_PDB = TEST_F103RC.pdb
 
 
 #############################################
@@ -695,9 +695,9 @@ build dwt/rebuild_cache: phony dwt/CMakeFiles/rebuild_cache.util
 
 build STM32_Drivers: phony cmake/stm32cubemx/STM32_Drivers
 
-build USB_Device_Library: phony cmake/stm32cubemx/USB_Device_Library
+build TEST_F103RC: phony TEST_F103RC.elf
 
-build VCP_F103RC: phony VCP_F103RC.elf
+build USB_Device_Library: phony cmake/stm32cubemx/USB_Device_Library
 
 # =============================================================================
 # Folder targets.
@@ -707,7 +707,7 @@ build VCP_F103RC: phony VCP_F103RC.elf
 #############################################
 # Folder: C:/GitHub/TEST/Software/build/Debug
 
-build all: phony VCP_F103RC.elf etl/all cmake/stm32cubemx/all swoTrace/all dwt/all
+build all: phony TEST_F103RC.elf etl/all cmake/stm32cubemx/all swoTrace/all dwt/all
 
 # =============================================================================
 

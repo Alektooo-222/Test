@@ -60,7 +60,6 @@ void cmd_echo_handler(string_rx_mess &str);
 void cmd_help_handler(string_rx_mess &str);
 void cmd_pinout_handler(string_rx_mess &str);
 
-extern Pin ListPins[50];
 extern etl::map<TIM_TypeDef *, const char *, 12> tim_table;
 extern etl::map<uint32_t, const char *, 4> ch_table;
 extern etl::map<Pin_configured, const char *, 14> staus_table;
@@ -74,13 +73,12 @@ struct CommandEntry
 const CommandEntry commands[] = {
     {"ECHO", cmd_echo_handler},
     {"HELP", cmd_help_handler},
-    {"PINOUT\n", cmd_pinout_handler},
+    {"PINOUT", cmd_pinout_handler},
     {"CONFIG_GEN", cmd_config_gen_handler},
     {"GEN", cmd_gen_handler},
     {"CONFIG_MEASURE", cmd_config_measure_handler},
     {"MEASURE_PARAMS", cmd_measure_params_handler},
     {"FREQ", cmd_freq_handler},
-
 };
 
 etl::map<uint8_t *, size_t *, 2> table_len = {
@@ -90,8 +88,10 @@ etl::map<uint8_t *, size_t *, 2> table_len = {
 
 void CommandManager(uint8_t * BufPtr)
 {
-    etl::string<SIZE_RX_MESS> s(reinterpret_cast<char *>(BufPtr), reinterpret_cast<char *>(BufPtr) + static_cast<size_t>(*table_len[BufPtr]));
+    etl::string<SIZE_RX_MESS> s(reinterpret_cast<char *>(BufPtr), reinterpret_cast<char *>(BufPtr) + static_cast<size_t>(*table_len[BufPtr]) - 1);
     etl::string<SIZE_RX_MESS> str_cmd_name;
+
+    StringTxQueue mes("Have No This Command");
 
     size_t pos = s.find(' ');
     if (pos != etl::string<SIZE_RX_MESS>::npos)
@@ -121,6 +121,8 @@ void CommandManager(uint8_t * BufPtr)
             return;
         }
     }
+    push_with_timeout(tx_uart_queue, mes, 100);
+    return;
 }
 
 void cmd_echo_handler(string_rx_mess &str)
@@ -130,6 +132,7 @@ void cmd_echo_handler(string_rx_mess &str)
     /* while (!tx_usb_queue.push(StringTxQueue(str)))
         ; */
     push_with_timeout(tx_uart_queue, str, 100);
+    push_with_timeout(tx_uart_queue, StringTxQueue("\n"), 100);
 }
 
 void cmd_help_handler(string_rx_mess &str)

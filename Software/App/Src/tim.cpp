@@ -1,5 +1,6 @@
 #include "tim.h"
 #include "etl/map.h"
+#include "application.h"
 
 void TIM_Base_MspInit(TIM_HandleTypeDef *tim_baseHandle);
 
@@ -11,12 +12,12 @@ TIM_HandleTypeDef htim5;
 TIM_HandleTypeDef htim6;
 TIM_HandleTypeDef htim7;
 TIM_HandleTypeDef htim8;
-TIM_HandleTypeDef htim9;
+/* TIM_HandleTypeDef htim9;
 TIM_HandleTypeDef htim10;
 TIM_HandleTypeDef htim11;
 TIM_HandleTypeDef htim12;
 TIM_HandleTypeDef htim13;
-TIM_HandleTypeDef htim14;
+TIM_HandleTypeDef htim14; */
 
 extern etl::map<TIM_TypeDef *, TIM_HandleTypeDef *, 12> tim_handl_table;
 extern etl::map<TIM_TypeDef *, uint8_t, 12> tim_af_table;
@@ -28,11 +29,11 @@ uint32_t get_freq_clk_tim(const Peripheral_capabilities &tim)
 
   if (reinterpret_cast<unsigned long>(tim.timer) >= APB1PERIPH_BASE && reinterpret_cast<unsigned long>(tim.timer) < APB2PERIPH_BASE)
   {
-    tim_clk = 72000000;
+    tim_clk = TIM_CLK_APB1;
   }
   else
   {
-    tim_clk = 72000000;
+    tim_clk = TIM_CLK_APB2;
   }
 
   return tim_clk;

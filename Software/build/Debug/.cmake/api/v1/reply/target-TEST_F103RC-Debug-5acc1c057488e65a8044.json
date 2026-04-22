@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "VCP_F103RC.elf"
+			"path" : "TEST_F103RC.elf"
 		}
 	],
 	"backtrace" : 1,
@@ -332,7 +332,7 @@
 			"id" : "USB_Device_Library::@768a070a0fe75716b479"
 		}
 	],
-	"id" : "VCP_F103RC::@6890427a1f51a3e7e1df",
+	"id" : "TEST_F103RC::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -344,8 +344,8 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "VCP_F103RC",
-	"nameOnDisk" : "VCP_F103RC.elf",
+	"name" : "TEST_F103RC",
+	"nameOnDisk" : "TEST_F103RC.elf",
 	"paths" : 
 	{
 		"build" : ".",

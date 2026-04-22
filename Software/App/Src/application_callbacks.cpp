@@ -2,6 +2,7 @@
 #include "application_measure.h"
 #include "application_pwm.h"
 #include "tim.h"
+#include "etl/map.h"
 
 extern uint32_t software_counter_pwm;
 extern uint32_t software_counter_ic;
@@ -10,6 +11,8 @@ extern USBD_HandleTypeDef USBD_Device;
 
 extern UART_HandleTypeDef UartHandle;
 extern uint8_t UserTxBuffer[APP_TX_DATA_SIZE];
+
+extern etl::map<TIM_TypeDef *, TIM_HandleTypeDef *, 12> tim_handl_table;
 
 bool USBTxReady = 1;
 uint32_t tic = 0;
@@ -121,7 +124,7 @@ void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim)
 
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 {
-    if (htim7.State == HAL_TIM_STATE_BUSY)
+    if (tim_handl_table[TIM_SW_MEASURE]->State == HAL_TIM_STATE_BUSY)
     {
         software_counter_ic++;
     }

@@ -923,7 +923,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "C:/Program Files (x86)/VCP_F103RC"
+			"value" : "C:/Program Files (x86)/TEST_F103RC"
 		},
 		{
 			"name" : "CMAKE_INSTALL_RUNSTATEDIR",
@@ -1187,7 +1187,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "VCP_F103RC"
+			"value" : "TEST_F103RC"
 		},
 		{
 			"name" : "CMAKE_PROJECT_VERSION",
@@ -1598,7 +1598,7 @@
 			"value" : "OFF"
 		},
 		{
-			"name" : "VCP_F103RC_BINARY_DIR",
+			"name" : "TEST_F103RC_BINARY_DIR",
 			"properties" : 
 			[
 				{
@@ -1610,7 +1610,7 @@
 			"value" : "C:/GitHub/TEST/Software/build/Debug"
 		},
 		{
-			"name" : "VCP_F103RC_IS_TOP_LEVEL",
+			"name" : "TEST_F103RC_IS_TOP_LEVEL",
 			"properties" : 
 			[
 				{
@@ -1622,7 +1622,7 @@
 			"value" : "ON"
 		},
 		{
-			"name" : "VCP_F103RC_SOURCE_DIR",
+			"name" : "TEST_F103RC_SOURCE_DIR",
 			"properties" : 
 			[
 				{
@@ -1643,7 +1643,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/Program Files (x86)/VCP_F103RC"
+			"value" : "C:/Program Files (x86)/TEST_F103RC"
 		},
 		{
 			"name" : "dwt_BINARY_DIR",
