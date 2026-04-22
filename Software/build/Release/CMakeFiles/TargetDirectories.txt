@@ -1,0 +1,13 @@
+C:/GitHub/TEST/Software/build/Release/CMakeFiles/TEST_F103RC.dir
+C:/GitHub/TEST/Software/build/Release/CMakeFiles/edit_cache.dir
+C:/GitHub/TEST/Software/build/Release/CMakeFiles/rebuild_cache.dir
+C:/GitHub/TEST/Software/build/Release/etl/CMakeFiles/edit_cache.dir
+C:/GitHub/TEST/Software/build/Release/etl/CMakeFiles/rebuild_cache.dir
+C:/GitHub/TEST/Software/build/Release/cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir
+C:/GitHub/TEST/Software/build/Release/cmake/stm32cubemx/CMakeFiles/USB_Device_Library.dir
+C:/GitHub/TEST/Software/build/Release/cmake/stm32cubemx/CMakeFiles/edit_cache.dir
+C:/GitHub/TEST/Software/build/Release/cmake/stm32cubemx/CMakeFiles/rebuild_cache.dir
+C:/GitHub/TEST/Software/build/Release/swoTrace/CMakeFiles/edit_cache.dir
+C:/GitHub/TEST/Software/build/Release/swoTrace/CMakeFiles/rebuild_cache.dir
+C:/GitHub/TEST/Software/build/Release/dwt/CMakeFiles/edit_cache.dir
+C:/GitHub/TEST/Software/build/Release/dwt/CMakeFiles/rebuild_cache.dir
